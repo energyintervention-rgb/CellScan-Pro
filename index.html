@@ -6,934 +6,545 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="CellScan">
 <meta name="theme-color" content="#00E5FF">
-<title>CTS CellScan Pro</title>
-<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjogIkNUUyBDZWxsU2NhbiBQcm8iLCAic2hvcnRfbmFtZSI6ICJDZWxsU2NhbiIsICJzdGFydF91cmwiOiAiLi9pbmRleC5odG1sIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJvcmllbnRhdGlvbiI6ICJhbnkiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMGQxMTE3IiwgInRoZW1lX2NvbG9yIjogIiMwMEU1RkYiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCM2FXUjBhRDBpTVRreUlpQm9aV2xuYUhROUlqRTVNaUlnZG1sbGQwSnZlRDBpTUNBd0lERTVNaUF4T1RJaUlIaHRiRzV6UFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eU1EQXdMM04yWnlJK0NpQWdQR1JsWm5NK1BHWnBiSFJsY2lCcFpEMGlaeUkrUEdabFIyRjFjM05wWVc1Q2JIVnlJSE4wWkVSbGRtbGhkR2x2YmowaU5DSWdjbVZ6ZFd4MFBTSmlJaTgrUEdabFRXVnlaMlUrUEdabFRXVnlaMlZPYjJSbElHbHVQU0ppSWk4K1BHWmxUV1Z5WjJWT2IyUmxJR2x1UFNKVGIzVnlZMlZIY21Gd2FHbGpJaTgrUEM5bVpVMWxjbWRsUGp3dlptbHNkR1Z5UGp3dlpHVm1jejRLSUNBOGNtVmpkQ0IzYVdSMGFEMGlNVGt5SWlCb1pXbG5hSFE5SWpFNU1pSWdjbmc5SWpReUlpQm1hV3hzUFNJak1URXhPREl3SWk4K0NpQWdQSEpsWTNRZ2VEMGlNeUlnZVQwaU15SWdkMmxrZEdnOUlqRTROaUlnYUdWcFoyaDBQU0l4T0RZaUlISjRQU0l6T1NJZ1ptbHNiRDBpYm05dVpTSWdjM1J5YjJ0bFBTSWpNREJGTlVaR0lpQnpkSEp2YTJVdGQybGtkR2c5SWpNaUlHOXdZV05wZEhrOUlqQXVOQ0l2UGdvZ0lEeDBaWGgwSUhnOUlqazJMakFpSUhrOUlqRXdNQzQ0TURBd01EQXdNREF3TURBd01TSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrOUlrRnlhV0ZzSUVKc1lXTnJMRUZ5YVdGc0xITmhibk10YzJWeWFXWWlJR1p2Ym5RdGQyVnBaMmgwUFNJNU1EQWlJR1p2Ym5RdGMybDZaVDBpTnpJaUlHWnBiR3c5SWlNd01FVTFSa1lpSUdacGJIUmxjajBpZFhKc0tDTm5LU0lnYkdWMGRHVnlMWE53WVdOcGJtYzlJak1pUGtOVVV6d3ZkR1Y0ZEQ0S0lDQThkR1Y0ZENCNFBTSTVOaTR3SWlCNVBTSXhNemd1TWpRaUlIUmxlSFF0WVc1amFHOXlQU0p0YVdSa2JHVWlJR1p2Ym5RdFptRnRhV3g1UFNKQmNtbGhiQ3h6WVc1ekxYTmxjbWxtSWlCbWIyNTBMWE5wZW1VOUlqSTBJaUJtYVd4c1BTSWpNREJGTlVaR0lpQnZjR0ZqYVhSNVBTSXdMamNpSUd4bGRIUmxjaTF6Y0dGamFXNW5QU0kzSWo1UVVrOUVQQzkwWlhoMFBnbzhMM04yWno0PSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUIzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdkbWxsZDBKdmVEMGlNQ0F3SURVeE1pQTFNVElpSUhodGJHNXpQU0pvZEhSd09pOHZkM2QzTG5jekxtOXlaeTh5TURBd0wzTjJaeUkrQ2lBZ1BHUmxabk0rUEdacGJIUmxjaUJwWkQwaVp5SStQR1psUjJGMWMzTnBZVzVDYkhWeUlITjBaRVJsZG1saGRHbHZiajBpTVRJaUlISmxjM1ZzZEQwaVlpSXZQanhtWlUxbGNtZGxQanhtWlUxbGNtZGxUbTlrWlNCcGJqMGlZaUl2UGp4bVpVMWxjbWRsVG05a1pTQnBiajBpVTI5MWNtTmxSM0poY0docFl5SXZQand2Wm1WTlpYSm5aVDQ4TDJacGJIUmxjajQ4TDJSbFpuTStDaUFnUEhKbFkzUWdkMmxrZEdnOUlqVXhNaUlnYUdWcFoyaDBQU0kxTVRJaUlISjRQU0l4TVRJaUlHWnBiR3c5SWlNeE1URTRNakFpTHo0S0lDQThjbVZqZENCNFBTSXhNQ0lnZVQwaU1UQWlJSGRwWkhSb1BTSTBPVElpSUdobGFXZG9kRDBpTkRreUlpQnllRDBpTVRBeUlpQm1hV3hzUFNKdWIyNWxJaUJ6ZEhKdmEyVTlJaU13TUVVMVJrWWlJSE4wY205clpTMTNhV1IwYUQwaU1UQWlJRzl3WVdOcGRIazlJakF1TkNJdlBnb2dJRHgwWlhoMElIZzlJakkxTmk0d0lpQjVQU0l5TmpndU9DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrOUlrRnlhV0ZzSUVKc1lXTnJMRUZ5YVdGc0xITmhibk10YzJWeWFXWWlJR1p2Ym5RdGQyVnBaMmgwUFNJNU1EQWlJR1p2Ym5RdGMybDZaVDBpTVRrMElpQm1hV3hzUFNJak1EQkZOVVpHSWlCbWFXeDBaWEk5SW5WeWJDZ2paeWtpSUd4bGRIUmxjaTF6Y0dGamFXNW5QU0k0SWo1RFZGTThMM1JsZUhRK0NpQWdQSFJsZUhRZ2VEMGlNalUyTGpBaUlIazlJak0yT0M0Mk5DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrOUlrRnlhV0ZzTEhOaGJuTXRjMlZ5YVdZaUlHWnZiblF0YzJsNlpUMGlOallpSUdacGJHdzlJaU13TUVVMVJrWWlJRzl3WVdOcGRIazlJakF1TnlJZ2JHVjBkR1Z5TFhOd1lXTnBibWM5SWpJd0lqNVFVazlFUEM5MFpYaDBQZ284TDNOMlp6ND0iLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifV19">
+<title>CTS Field Survey</title>
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjogIkNUUyBGaWVsZCBTdXJ2ZXkiLCAic2hvcnRfbmFtZSI6ICJDVFMgU3VydmV5IiwgInN0YXJ0X3VybCI6ICIuL2luZGV4Lmh0bWwiLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgIm9yaWVudGF0aW9uIjogImFueSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwZDExMTciLCAidGhlbWVfY29sb3IiOiAiIzAwRTVGRiIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUIzYVdSMGFEMGlNVGt5SWlCb1pXbG5hSFE5SWpFNU1pSWdkbWxsZDBKdmVEMGlNQ0F3SURFNU1pQXhPVElpSUhodGJHNXpQU0pvZEhSd09pOHZkM2QzTG5jekxtOXlaeTh5TURBd0wzTjJaeUkrQ2lBZ1BHUmxabk0rUEdacGJIUmxjaUJwWkQwaVp5SStQR1psUjJGMWMzTnBZVzVDYkhWeUlITjBaRVJsZG1saGRHbHZiajBpTkNJZ2NtVnpkV3gwUFNKaUlpOCtQR1psVFdWeVoyVStQR1psVFdWeVoyVk9iMlJsSUdsdVBTSmlJaTgrUEdabFRXVnlaMlZPYjJSbElHbHVQU0pUYjNWeVkyVkhjbUZ3YUdsaklpOCtQQzltWlUxbGNtZGxQand2Wm1sc2RHVnlQand2WkdWbWN6NEtJQ0E4Y21WamRDQjNhV1IwYUQwaU1Ua3lJaUJvWldsbmFIUTlJakU1TWlJZ2NuZzlJalF5SWlCbWFXeHNQU0lqTVRFeE9ESXdJaTgrQ2lBZ1BISmxZM1FnZUQwaU15SWdlVDBpTXlJZ2QybGtkR2c5SWpFNE5pSWdhR1ZwWjJoMFBTSXhPRFlpSUhKNFBTSXpPU0lnWm1sc2JEMGlibTl1WlNJZ2MzUnliMnRsUFNJak1EQkZOVVpHSWlCemRISnZhMlV0ZDJsa2RHZzlJak1pSUc5d1lXTnBkSGs5SWpBdU5DSXZQZ29nSUR4MFpYaDBJSGc5SWprMkxqQWlJSGs5SWpFd01DNDRNREF3TURBd01EQXdNREF3TVNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNJRUpzWVdOckxFRnlhV0ZzTEhOaGJuTXRjMlZ5YVdZaUlHWnZiblF0ZDJWcFoyaDBQU0k1TURBaUlHWnZiblF0YzJsNlpUMGlOeklpSUdacGJHdzlJaU13TUVVMVJrWWlJR1pwYkhSbGNqMGlkWEpzS0NObktTSWdiR1YwZEdWeUxYTndZV05wYm1jOUlqTWlQa05VVXp3dmRHVjRkRDRLSUNBOGRHVjRkQ0I0UFNJNU5pNHdJaUI1UFNJeE16Z3VNalFpSUhSbGVIUXRZVzVqYUc5eVBTSnRhV1JrYkdVaUlHWnZiblF0Wm1GdGFXeDVQU0pCY21saGJDeHpZVzV6TFhObGNtbG1JaUJtYjI1MExYTnBlbVU5SWpJMElpQm1hV3hzUFNJak1EQkZOVVpHSWlCdmNHRmphWFI1UFNJd0xqY2lJR3hsZEhSbGNpMXpjR0ZqYVc1blBTSTNJajVRVWs5RVBDOTBaWGgwUGdvOEwzTjJaejQ9IiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn0sIHsic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJZ2RtbGxkMEp2ZUQwaU1DQXdJRFV4TWlBMU1USWlJSGh0Ykc1elBTSm9kSFJ3T2k4dmQzZDNMbmN6TG05eVp5OHlNREF3TDNOMlp5SStDaUFnUEdSbFpuTStQR1pwYkhSbGNpQnBaRDBpWnlJK1BHWmxSMkYxYzNOcFlXNUNiSFZ5SUhOMFpFUmxkbWxoZEdsdmJqMGlNVElpSUhKbGMzVnNkRDBpWWlJdlBqeG1aVTFsY21kbFBqeG1aVTFsY21kbFRtOWtaU0JwYmowaVlpSXZQanhtWlUxbGNtZGxUbTlrWlNCcGJqMGlVMjkxY21ObFIzSmhjR2hwWXlJdlBqd3ZabVZOWlhKblpUNDhMMlpwYkhSbGNqNDhMMlJsWm5NK0NpQWdQSEpsWTNRZ2QybGtkR2c5SWpVeE1pSWdhR1ZwWjJoMFBTSTFNVElpSUhKNFBTSXhNVElpSUdacGJHdzlJaU14TVRFNE1qQWlMejRLSUNBOGNtVmpkQ0I0UFNJeE1DSWdlVDBpTVRBaUlIZHBaSFJvUFNJME9USWlJR2hsYVdkb2REMGlORGt5SWlCeWVEMGlNVEF5SWlCbWFXeHNQU0p1YjI1bElpQnpkSEp2YTJVOUlpTXdNRVUxUmtZaUlITjBjbTlyWlMxM2FXUjBhRDBpTVRBaUlHOXdZV05wZEhrOUlqQXVOQ0l2UGdvZ0lEeDBaWGgwSUhnOUlqSTFOaTR3SWlCNVBTSXlOamd1T0NJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNJRUpzWVdOckxFRnlhV0ZzTEhOaGJuTXRjMlZ5YVdZaUlHWnZiblF0ZDJWcFoyaDBQU0k1TURBaUlHWnZiblF0YzJsNlpUMGlNVGswSWlCbWFXeHNQU0lqTURCRk5VWkdJaUJtYVd4MFpYSTlJblZ5YkNnalp5a2lJR3hsZEhSbGNpMXpjR0ZqYVc1blBTSTRJajVEVkZNOEwzUmxlSFErQ2lBZ1BIUmxlSFFnZUQwaU1qVTJMakFpSUhrOUlqTTJPQzQyTkNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNMSE5oYm5NdGMyVnlhV1lpSUdadmJuUXRjMmw2WlQwaU5qWWlJR1pwYkd3OUlpTXdNRVUxUmtZaUlHOXdZV05wZEhrOUlqQXVOeUlnYkdWMGRHVnlMWE53WVdOcGJtYzlJakl3SWo1UVVrOUVQQzkwWlhoMFBnbzhMM04yWno0PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XX0=">
 <link rel="icon" type="image/svg+xml" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz48ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+PC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjciIGZpbGw9IiMxMTE4MjAiLz4KICA8cmVjdCB4PSIxIiB5PSIxIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHJ4PSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMEU1RkYiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ii8+CiAgPHRleHQgeD0iMTYuMCIgeT0iMTYuOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMwMEU1RkYiIGZpbHRlcj0idXJsKCNnKSIgbGV0dGVyLXNwYWNpbmc9IjEiPkNUUzwvdGV4dD4KICA8dGV4dCB4PSIxNi4wIiB5PSIyMy4wNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNCIgZmlsbD0iIzAwRTVGRiIgb3BhY2l0eT0iMC43IiBsZXR0ZXItc3BhY2luZz0iMiI+UFJPRDwvdGV4dD4KPC9zdmc+">
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+PGZpbHRlciBpZD0iZyI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNCIgcmVzdWx0PSJiIi8+PGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPjwvZmlsdGVyPjwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjM5IiBmaWxsPSIjMTExODIwIi8+CiAgPHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjE3NCIgaGVpZ2h0PSIxNzQiIHJ4PSIzNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBFNUZGIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuNCIvPgogIDx0ZXh0IHg9IjkwLjAiIHk9Ijk0LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjY4IiBmaWxsPSIjMDBFNUZGIiBmaWx0ZXI9InVybCgjZykiIGxldHRlci1zcGFjaW5nPSIzIj5DVFM8L3RleHQ+CiAgPHRleHQgeD0iOTAuMCIgeT0iMTI5LjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjIzIiBmaWxsPSIjMDBFNUZGIiBvcGFjaXR5PSIwLjciIGxldHRlci1zcGFjaW5nPSI3Ij5QUk9EPC90ZXh0Pgo8L3N2Zz4=">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+PGZpbHRlciBpZD0iZyI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNCIgcmVzdWx0PSJiIi8+PGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPjwvZmlsdGVyPjwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjM5IiBmaWxsPSIjMTExODIwIi8+CiAgPHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjE3NCIgaGVpZ2h0PSIxNzQiIHJ4PSIzNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBFNUZGIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuNCIvPgogIDx0ZXh0IHg9IjkwLjAiIHk9Ijk0LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjY4IiBmaWxsPSIjMDBFNUZGIiBmaWx0ZXI9InVybCgjZykiIGxldHRlci1zcGFjaW5nPSIzIj5DVFM8L3RleHQ+CiAgPHRleHQgeD0iOTAuMCIgeT0iMTI5LjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjIzIiBmaWxsPSIjMDBFNUZGIiBvcGFjaXR5PSIwLjciIGxldHRlci1zcGFjaW5nPSI3Ij5QUk9EPC90ZXh0Pgo8L3N2Zz4=">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
-<style>:root{
---bg:#0d1117;--sf:#111820;--sf2:#161d27;
---cy:#00E5FF;--cyd:rgba(0,229,255,0.12);--cyb:rgba(0,229,255,0.22);
---tx:#e6edf3;--t2:rgba(255,255,255,0.5);--t3:rgba(255,255,255,0.28);
---br:rgba(255,255,255,0.07);--sh:rgba(0,0,0,0.4);
---st:env(safe-area-inset-top,0px);--sb:env(safe-area-inset-bottom,0px);
-}
-body.light{
---bg:#F5EFE4;--sf:#FDF8F2;--sf2:#EDE5D8;
---cy:#0088bb;--cyd:rgba(0,136,187,0.1);--cyb:rgba(0,136,187,0.25);
---tx:#0d1117;--t2:rgba(0,0,0,0.5);--t3:rgba(0,0,0,0.3);
---br:rgba(0,0,0,0.08);--sh:rgba(0,0,0,0.1);
-}
+<style>
+:root{--bg:#0d1117;--sf:#111820;--sf2:#161d27;--cy:#00E5FF;--cyd:rgba(0,229,255,0.12);--cyb:rgba(0,229,255,0.22);--tx:#e6edf3;--t2:rgba(255,255,255,0.5);--t3:rgba(255,255,255,0.28);--br:rgba(255,255,255,0.07);--sh:rgba(0,0,0,0.4);--gr:#00C864;--am:#EF9F27;--rd:#E24B4A;--st:env(safe-area-inset-top,0px);--sb:env(safe-area-inset-bottom,0px)}
+body.light{--bg:#F5EFE4;--sf:#FDF8F2;--sf2:#EDE5D8;--cy:#0088bb;--cyd:rgba(0,136,187,0.1);--cyb:rgba(0,136,187,0.25);--tx:#0d1117;--t2:rgba(0,0,0,0.5);--t3:rgba(0,0,0,0.3);--br:rgba(0,0,0,0.08);--sh:rgba(0,0,0,0.1);--gr:#007a3d;--am:#b36a00;--rd:#c0392b}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;overscroll-behavior:none;transition:background .25s,color .25s;padding-bottom:var(--sb)}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;overscroll-behavior:none;padding-bottom:var(--sb)}
 .topbar{position:sticky;top:0;z-index:200;background:var(--sf);border-bottom:0.5px solid var(--cyb);padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px var(--sh)}
-.lbox{width:38px;height:38px;background:var(--bg);border-radius:10px;border:0.5px solid rgba(0,180,220,0.45);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+.lbox{width:38px;height:38px;background:var(--bg);border-radius:10px;border:0.5px solid rgba(0,180,220,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
 .lcts{font-family:"Arial Black",Arial,sans-serif;font-weight:900;font-size:13px;color:var(--cy);letter-spacing:1px;line-height:1}
 .lprd{font-size:4.5px;color:var(--cy);opacity:.7;letter-spacing:2.5px;margin-top:1px}
-.atit{font-family:"Arial Black",Arial,sans-serif;font-weight:900;font-size:15px;color:var(--cy);letter-spacing:.4px}
-.asub{font-size:10px;color:var(--t3);margin-top:1px}
+.atit{font-family:"Arial Black",Arial,sans-serif;font-weight:900;font-size:15px;color:var(--cy)}
+.asub{font-size:10px;color:var(--cy);font-weight:600;letter-spacing:.3px;margin-top:1px}
 .tr{display:flex;align-items:center;gap:6px}
-.sdot{width:7px;height:7px;border-radius:50%;background:var(--cy);animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.spill{background:var(--cyd);border:0.5px solid var(--cyb);border-radius:20px;padding:3px 9px;font-size:10px;color:var(--cy)}
 .ibtn{width:30px;height:30px;border-radius:8px;background:var(--sf2);border:0.5px solid var(--br);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--t2);font-size:16px}
-.locbar{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--sf2);border-bottom:0.5px solid var(--br);font-size:11px;color:var(--t2)}
-.locbar i{color:var(--cy);font-size:14px;flex-shrink:0}
-.sabtn{font-size:10px;padding:3px 9px;border-radius:20px;border:0.5px solid var(--cyb);background:var(--cyd);color:var(--cy);cursor:pointer;white-space:nowrap;flex-shrink:0;margin-left:auto}
-.sabtn.on{background:var(--cy);color:#fff;border-color:transparent}
-.pw{padding-bottom:calc(64px + var(--sb))}
-.page{display:none}.page.active{display:flex;flex-direction:column}
-.body{padding:12px 14px}
+.pw{padding:12px 14px;padding-bottom:calc(72px + var(--sb));max-width:760px;margin:0 auto}
 .bnav{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--sf);border-top:0.5px solid var(--cyb);display:flex;padding-bottom:var(--sb);box-shadow:0 -2px 12px var(--sh)}
 .ni{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;gap:3px;border:none;background:transparent;color:var(--t3);cursor:pointer;transition:color .15s}
 .ni.active{color:var(--cy)}.ni i{font-size:20px;line-height:1}.ni span{font-size:9px}
-.scbtn{width:100%;padding:13px;border-radius:10px;background:var(--cy);color:#fff;font-size:14px;font-weight:900;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:"Arial Black",Arial,sans-serif;letter-spacing:.5px;margin-bottom:10px;transition:opacity .2s}
-.scbtn:active{opacity:.8}.scbtn.scanning{background:var(--cyd);color:var(--cy);border:0.5px solid var(--cy)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:10px}
-.sc{background:var(--sf);border:0.5px solid var(--cyb);border-radius:8px;padding:8px;text-align:center}
-.sv{font-size:20px;font-weight:500;color:var(--cy)}.sl{font-size:9px;color:var(--t3);margin-top:2px}
-.loc-st{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--sf);border:0.5px solid var(--cyb);border-radius:10px;margin-bottom:10px;font-size:11px;color:var(--t2)}
-.loc-st i{color:var(--cy);font-size:15px;flex-shrink:0}
-.loc-st.done{border-color:rgba(0,200,100,.3);background:rgba(0,200,100,.04)}
-.loc-st.done i{color:#00C864}
-.loc-st.err{border-color:rgba(226,75,74,.25)}
-.loc-st.err i{color:#E24B4A}
-.fw{margin-bottom:10px}
-.fl{font-size:9px;color:var(--t3);letter-spacing:.07em;text-transform:uppercase;margin-bottom:6px}
-.pills{display:flex;flex-wrap:wrap;gap:5px}
-.pill{font-size:10px;font-weight:500;padding:5px 12px;border-radius:20px;border:0.5px solid var(--br);background:var(--sf2);color:var(--t2);cursor:pointer;transition:all .15s;white-space:nowrap}
-.pill.on{color:#fff;border-color:transparent}
-
-
-
-
-
-.cbar{background:var(--cyd);border:0.5px solid var(--cyb);border-radius:8px;padding:7px 12px;font-size:10px;color:var(--t2);text-align:center;margin-bottom:9px;display:none}
-.cbar span{color:var(--cy);font-weight:500}
-.sts{font-size:9px;color:var(--t3);text-align:right;margin-bottom:8px}
-.opb{margin-bottom:10px;transition:opacity .3s}.opb.dimmed{opacity:.3}
-.ophd{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:10px 10px 0 0;border:0.5px solid var(--br);border-bottom:none}
-.oplo{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:"Arial Black",Arial,sans-serif;font-weight:700;font-size:11px;flex-shrink:0;color:#fff;text-align:center;line-height:1.1;padding:2px;overflow:hidden;position:relative}
-.oplo img{width:100%;height:100%;object-fit:contain;border-radius:8px}
-.oplo .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Arial Black",Arial,sans-serif;font-weight:700;font-size:11px}
-.opnm{font-size:13px;font-weight:500;color:var(--tx)}.opmt{font-size:9px;color:var(--t3);margin-top:1px}
-.opr{display:flex;flex-direction:column;align-items:flex-end;gap:3px;margin-left:auto;flex-shrink:0}
-.bdgs{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end;margin-top:2px}
-.bdg{font-size:8px;font-weight:500;padding:2px 6px;border-radius:20px}
-.bact{background:rgba(0,200,180,.15);color:#00C8B4;border:0.5px solid rgba(0,200,180,.4)}
-.bloc{background:rgba(0,229,100,.15);color:#00E564;border:0.5px solid rgba(0,229,100,.35)}
-.iotstrip{border:0.5px solid var(--br);border-top:none;background:var(--sf2);padding:6px 12px 7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center}
-.iotstrip.last{border-radius:0 0 10px 10px}
-.iotlbl{font-size:9px;color:var(--t3);margin-right:2px;flex-shrink:0}
-.iotchip{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:500;padding:3px 8px;border-radius:20px;border:0.5px solid}
-.svclist{border:0.5px solid var(--br);border-top:none;border-radius:0 0 10px 10px;overflow:hidden}
-.svclist.hasiot{border-radius:0}
-.svcrow{display:flex;align-items:center;padding:7px 12px;border-bottom:0.5px solid var(--br)}
-.svcrow:last-of-type{border-bottom:none}
-.sacc{width:3px;align-self:stretch;border-radius:1.5px;margin-right:9px;flex-shrink:0}
-.rbdg{font-size:8px;font-weight:500;padding:2px 5px;border-radius:4px;white-space:nowrap;min-width:58px;display:inline-block;text-align:center}
-.sfq{font-size:9px;color:var(--t3);margin-left:5px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ssig{display:flex;align-items:center;gap:4px;flex-shrink:0}
-.sdbm{font-size:9px;min-width:52px;text-align:right}
-.sqbdg{display:inline-flex;align-items:center;gap:3px;font-size:8px;font-weight:600;padding:2px 7px;border-radius:20px;letter-spacing:.02em}
-.sq-ex{background:rgba(0,200,180,.15);color:#00C8B4;border:0.5px solid rgba(0,200,180,.35)}
-.sq-go{background:rgba(93,202,165,.15);color:#5DCAA5;border:0.5px solid rgba(93,202,165,.35)}
-.sq-fa{background:rgba(239,159,39,.15);color:#EF9F27;border:0.5px solid rgba(239,159,39,.35)}
-.sq-wk{background:rgba(226,75,74,.15);color:#E24B4A;border:0.5px solid rgba(226,75,74,.35)}
-.sq-po{background:rgba(180,50,50,.15);color:#cc3333;border:0.5px solid rgba(180,50,50,.35)}
-.sq-dot{width:5px;height:5px;border-radius:50%}
-.svcmeta{display:flex;align-items:center;gap:6px;padding:5px 12px 7px 24px;background:var(--sf2);border-bottom:0.5px solid var(--br);flex-wrap:wrap}
-.svcmeta-item{display:flex;flex-direction:column;align-items:center;min-width:52px;flex:1}
-.svcmeta-k{font-size:7px;color:var(--t3);margin-bottom:2px;text-transform:uppercase;letter-spacing:.05em}
-.svcmeta-v{font-size:11px;font-weight:500}
-.svcmeta-bar{height:3px;border-radius:2px;background:var(--br);margin-top:3px;width:100%;overflow:hidden}
-.svcmeta-fill{height:100%;border-radius:2px}
-.rcard{background:var(--sf);border:0.5px solid var(--cyb);border-radius:12px;padding:14px;margin-bottom:10px;display:flex;flex-direction:column;align-items:center}
-.card{background:var(--sf);border:0.5px solid var(--br);border-radius:12px;padding:16px;margin-bottom:10px}
-.alobox{width:56px;height:56px;background:var(--bg);border-radius:13px;border:0.5px solid rgba(0,180,220,.45);display:flex;flex-direction:column;align-items:center;justify-content:center}
-.acts{font-family:"Arial Black",Arial,sans-serif;font-weight:900;font-size:20px;color:var(--cy);letter-spacing:1px;line-height:1}
-.aprd{font-size:7px;color:var(--cy);opacity:.7;letter-spacing:3px;margin-top:2px}
-.irow{display:flex;justify-content:space-between;padding:7px 0;border-bottom:0.5px solid var(--br);font-size:12px}
+.page{display:none}.page.active{display:block}
+.card{background:var(--sf);border:0.5px solid var(--br);border-radius:14px;padding:16px;margin-bottom:12px}
+.card-cy{background:var(--sf);border:0.5px solid var(--cyb);border-radius:14px;padding:16px;margin-bottom:12px}
+.ctit{font-size:10px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.ctit i{color:var(--cy);font-size:14px}
+.sbtn{width:100%;padding:16px;border-radius:12px;background:var(--cy);color:#fff;font-size:15px;font-weight:900;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;font-family:"Arial Black",Arial,sans-serif;letter-spacing:.5px;margin-bottom:10px;transition:all .2s}
+.sbtn:active{opacity:.85}.sbtn.running{background:var(--cyd);color:var(--cy);border:0.5px solid var(--cy)}
+.prog{height:6px;border-radius:3px;background:var(--br);margin-bottom:12px;overflow:hidden}
+.progf{height:100%;border-radius:3px;background:var(--cy);transition:width .4s ease;width:0%}
+.bigmet{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px}
+.bigmet4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
+.bm{background:var(--sf2);border-radius:12px;padding:12px 8px;text-align:center;border:0.5px solid var(--br)}
+.bmv{font-size:24px;font-weight:300;line-height:1;margin-bottom:3px}
+.bmu{font-size:9px;color:var(--t3)}
+.bml{font-size:9px;color:var(--t2);margin-top:3px;font-weight:500}
+.strow{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:0.5px solid var(--br)}
+.strow:last-child{border-bottom:none}
+.stlbl{font-size:11px;color:var(--t2);flex:1}
+.stval{font-size:12px;font-weight:500;color:var(--tx)}
+.bdg{font-size:9px;font-weight:600;padding:3px 8px;border-radius:20px}
+.good{background:rgba(0,200,100,.15);color:var(--gr);border:0.5px solid rgba(0,200,100,.3)}
+.warn{background:rgba(239,159,39,.15);color:var(--am);border:0.5px solid rgba(239,159,39,.3)}
+.bad{background:rgba(226,75,74,.15);color:var(--rd);border:0.5px solid rgba(226,75,74,.3)}
+.info{background:var(--cyd);color:var(--cy);border:0.5px solid var(--cyb)}
+.iotchip{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:500;padding:3px 8px;border-radius:20px;border:0.5px solid;margin:2px}
+.gpsbar{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--sf2);border:0.5px solid var(--br);border-radius:10px;margin-bottom:10px;font-size:11px;color:var(--t2)}
+.gpsbar i{color:var(--cy);font-size:14px;flex-shrink:0}
+.gpsdot{width:7px;height:7px;border-radius:50%;background:var(--cy);flex-shrink:0}
+.live{animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.rbdg{font-size:8px;font-weight:700;padding:2px 6px;border-radius:10px;background:rgba(0,200,100,.15);color:var(--gr);border:0.5px solid rgba(0,200,100,.3)}
+.spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.logtbl{width:100%;border-collapse:collapse;font-size:11px}
+.logtbl th{text-align:left;padding:6px 8px;font-size:9px;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:.05em;border-bottom:0.5px solid var(--br);white-space:nowrap}
+.logtbl td{padding:7px 8px;border-bottom:0.5px solid var(--br);color:var(--t2);vertical-align:middle}
+.logtbl tr:last-child td{border-bottom:none}
+.expbtn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:8px;background:var(--sf2);border:0.5px solid var(--br);color:var(--t2);font-size:11px;cursor:pointer}
+.irow{display:flex;justify-content:space-between;padding:6px 0;border-bottom:0.5px solid var(--br);font-size:12px}
 .irow:last-child{border-bottom:none}.ik{color:var(--t2)}.iv{color:var(--tx);font-weight:500}
-.rleg{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;margin-top:8px}
-.li{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--t2)}
-.ld{width:8px;height:8px;border-radius:2px;flex-shrink:0}
-.slbl{font-size:10px;font-weight:600;color:var(--t2);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
-.ltbl{width:100%;border-collapse:collapse;font-size:11px;margin-top:6px}
-.ltbl th{text-align:left;padding:5px 8px;font-size:9px;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:.06em;border-bottom:0.5px solid var(--br)}
-.ltbl td{padding:6px 8px;border-bottom:0.5px solid var(--br);color:var(--t2);vertical-align:middle}
-.ltbl tr:last-child td{border-bottom:none}.ltbl td:first-child{color:var(--tx);font-weight:500}
-.btt{position:fixed;bottom:calc(72px + var(--sb));right:16px;z-index:300;width:40px;height:40px;border-radius:50%;background:var(--cy);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,0.3);transition:opacity .25s,transform .25s}
-.btt.show{display:flex}.btt:active{transform:scale(.9)}
-@media(min-width:600px){.body{padding:16px 20px}}
-@media(min-width:900px){.pw{max-width:760px;margin:0 auto}}
-@media(min-width:1280px){.pw{max-width:1000px}.stats{grid-template-columns:repeat(6,1fr)}}
-@media(display-mode:standalone){body{padding-top:env(safe-area-inset-top,0px)}}
-.spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}</style>
+.netcard{border:0.5px solid var(--br);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--sf2)}
+.netcard.active{border-color:var(--cyb);background:var(--cyd)}
+</style>
 </head>
 <body class="light">
 <div class="topbar">
   <div style="display:flex;align-items:center;gap:10px">
     <div class="lbox"><div class="lcts">CTS</div><div class="lprd">PROD</div></div>
-    <div><div class="atit">CellScan Pro</div><div style="font-size:10px;color:var(--cy);font-weight:600;letter-spacing:.3px">City Technical Solutions</div></div>
+    <div><div class="atit">Field Survey</div><div class="asub">City Technical Solutions</div></div>
   </div>
   <div class="tr">
-    <div class="sdot"></div>
-    <div class="spill" id="spill">Ready</div>
+    <div style="font-size:9px;padding:3px 8px;border-radius:20px;background:var(--cyd);border:0.5px solid var(--cyb);color:var(--cy);font-weight:600" id="recBadge">● READY</div>
     <div class="ibtn" onclick="toggleTheme()"><i class="ti ti-moon" id="themeIcon"></i></div>
-    <div class="ibtn" onclick="requestLocation()"><i class="ti ti-map-pin" id="locIcon"></i></div>
   </div>
 </div>
-<div class="locbar" id="locBar" style="display:none">
-  <i class="ti ti-map-pin"></i>
-  <span id="locFlag"></span>
-  <span id="locText" style="flex:1;margin-left:4px"></span>
-</div>
+
 <div class="pw">
-  <!-- SCAN PAGE -->
-  <div class="page active" id="page-scan">
-    <div class="body">
-      <div class="loc-st" id="locSt">
-        <i class="ti ti-loader spin" id="locStIc"></i>
-        <span id="locStTx">Detecting your location...</span>
-      </div>
-      <div class="cbar" id="cbar"></div>
-      <button class="scbtn" id="scanBtn" onclick="startScan()" style="display:none">
-        <i class="ti ti-radar"></i><span id="btnLbl">Scan Again</span>
-      </button>
-      <div class="stats" id="statsRow" style="display:none">
-        <div class="sc"><div class="sv" id="sOps">0</div><div class="sl">Networks</div></div>
-        <div class="sc"><div class="sv" id="sSvcs">0</div><div class="sl">Services</div></div>
-        <div class="sc"><div class="sv" id="sBest">--</div><div class="sl">Best RSSI</div></div>
-      </div>
-      <div class="fw" id="filterWrap" style="display:none">
-        <div class="fl">Filter by type</div>
-        <div class="pills" id="pillRow"></div>
-      </div>
 
-          
-        </div>
-      </div>
-      <div class="sts" id="scanTs" style="display:none"></div>
-      <div id="opList"></div>
+<!-- SURVEY PAGE -->
+<div class="page active" id="page-survey">
+  <div class="gpsbar" id="gpsBar">
+    <i class="ti ti-loader spin" id="gpsIcon"></i>
+    <div class="gpsdot live" id="gpsDot"></div>
+    <span id="gpsTxt">Acquiring GPS...</span>
+    <span style="margin-left:auto;font-size:10px;color:var(--t3)" id="gpsAcc"></span>
+  </div>
+
+  <button class="sbtn" id="surveyBtn" onclick="handleSurveyBtn()">
+    <i class="ti ti-player-record" id="btnIcon"></i>
+    <span id="btnTxt">Start Survey Point</span>
+  </button>
+  <div class="prog"><div class="progf" id="progBar"></div></div>
+
+  <!-- 4 big metrics -->
+  <div class="bigmet">
+    <div class="bm">
+      <div class="bmv" id="dlVal" style="color:var(--cy)">--</div>
+      <div class="bmu">Mbps Download</div>
+      <div class="bml" id="dlQual">tap to measure</div>
+    </div>
+    <div class="bm">
+      <div class="bmv" id="ulVal" style="color:var(--cy)">--</div>
+      <div class="bmu">Mbps Upload</div>
+      <div class="bml" id="ulQual">tap to measure</div>
     </div>
   </div>
-  <!-- RADAR PAGE -->
-  <div class="page" id="page-radar">
-    <div class="body">
-      <div class="rcard" id="radarCard">
-        <div style="display:flex;align-items:center;justify-content:space-between;width:100%;margin-bottom:10px">
-          <div style="font-size:11px;font-weight:600;color:var(--cy);text-transform:uppercase;letter-spacing:.06em">Tower Radar</div>
-          <button onclick="requestRadarGPS()" style="font-size:10px;padding:4px 10px;border-radius:20px;border:0.5px solid var(--cyb);background:var(--cyd);color:var(--cy);cursor:pointer"><i class="ti ti-map-pin" style="font-size:11px;margin-right:3px"></i>Locate me</button>
-        </div>
-        <div id="radarStatus" style="font-size:10px;color:var(--t3);margin-bottom:8px;text-align:center">Tap "Locate me" or scan networks to see nearby towers</div>
-        <canvas id="radarCanvas" width="300" height="300"></canvas>
-        <div style="display:flex;gap:12px;margin-top:8px;font-size:9px;color:var(--t3)">
-          <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00C864;border:1.5px solid #fff;vertical-align:middle;margin-right:3px"></span>Real tower (OpenCelliD)</span>
-          <span><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#EF9F27;vertical-align:middle;margin-right:3px"></span>Estimated from signal</span>
-        </div>
-      </div>
-      <div id="towerList"></div>
+  <div class="bigmet">
+    <div class="bm">
+      <div class="bmv" id="pingVal" style="color:var(--gr)">--</div>
+      <div class="bmu">ms Ping</div>
+      <div class="bml" id="pingQual">tap to measure</div>
+    </div>
+    <div class="bm">
+      <div class="bmv" id="jitterVal" style="color:var(--am)">--</div>
+      <div class="bmu">ms Jitter</div>
+      <div class="bml" id="jitterQual">tap to measure</div>
     </div>
   </div>
-  <!-- ABOUT PAGE -->
-  <div class="page" id="page-about">
-    <div class="body">
-      <div class="card">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
-          <div class="alobox"><div class="acts">CTS</div><div class="aprd">PROD</div></div>
-          <div><div style="font-size:17px;font-weight:500;color:var(--tx)">CellScan Pro</div>
-          <div style="font-size:11px;color:var(--t2);margin-top:2px">Signal Intelligence v5.0</div></div>
-        </div>
-        <div class="irow"><span class="ik">Developer</span><span class="iv">CTS PROD</span></div>
-        <div class="irow"><span class="ik">Version</span><span class="iv">5.0.0</span></div>
-        <div class="irow"><span class="ik">Coverage</span><span class="iv">Worldwide · Auto location</span></div>
-        <div class="irow"><span class="ik">Networks</span><span class="iv">80+ operators worldwide</span></div>
-        <div class="irow"><span class="ik">IoT SIMs</span><span class="iv">1NCE · Telnyx · Transatel · Hologram · Twilio</span></div>
-        <div class="irow"><span class="ik">RAT types</span><span class="iv">13 (5G NR to 2G GSM + IoT)</span></div>
-        <div class="irow"><span class="ik">Theme</span><span class="iv">Dark / Light toggle</span></div>
-        <div class="irow"><span class="ik">Install</span><span class="iv">Add to Home Screen (PWA)</span></div>
-      </div>
-      <div class="card">
-        <div class="slbl">IoT SIM Platforms</div>
-        <table class="ltbl">
-          <tr><th>Platform</th><th>MCC-MNC</th><th>RAT</th><th>Countries</th></tr>
-          <tr><td style="color:#AFA9EC">1NCE</td><td>901-05</td><td>NB-IoT / LTE-M</td><td>180+</td></tr>
-          <tr><td style="color:#7EC8E3">Telnyx</td><td>901-34</td><td>LTE / NB-IoT</td><td>180+</td></tr>
-          <tr><td style="color:#7F77DD">Transatel</td><td>901-12</td><td>NB-IoT / LTE-M</td><td>160+</td></tr>
-          <tr><td style="color:#F4A261">Hologram</td><td>901-55</td><td>LTE / 3G</td><td>200+</td></tr>
-          <tr><td style="color:#F22F46">Twilio</td><td>901-99</td><td>LTE / 3G / 2G</td><td>180+</td></tr>
-        </table>
-      </div>
-      <div class="card"><div class="slbl">RAT Legend</div><div class="rleg" id="ratLegend"></div></div>
-      <div class="card"><div class="slbl">Signal Quality</div><div id="sigRef"></div></div>
+
+  <!-- Network & IoT availability -->
+  <div class="card-cy">
+    <div class="ctit"><i class="ti ti-wifi"></i> Network Info <span class="rbdg">REAL</span></div>
+    <div id="netInfo">
+      <div class="strow"><span class="stlbl">Connection Type</span><span id="nConnType" class="stval">--</span></div>
+      <div class="strow"><span class="stlbl">Effective Type</span><span id="nEffType">--</span></div>
+      <div class="strow"><span class="stlbl">Reported Downlink</span><span id="nDownlink" class="stval">--</span></div>
+      <div class="strow"><span class="stlbl">Reported RTT</span><span id="nRtt" class="stval">--</span></div>
+      <div class="strow"><span class="stlbl">Data Saver</span><span id="nSaver" class="stval">--</span></div>
+      <div class="strow"><span class="stlbl">Online</span><span id="nOnline">--</span></div>
+    </div>
+  </div>
+
+  <!-- IoT Service Detection -->
+  <div class="card">
+    <div class="ctit"><i class="ti ti-antenna"></i> IoT Service Availability</div>
+    <div id="iotSection">
+      <div style="font-size:11px;color:var(--t3);margin-bottom:10px">Tap survey to detect reachability of IoT endpoints at this location.</div>
+      <div id="iotResults"></div>
+    </div>
+  </div>
+
+  <!-- GPS Card -->
+  <div class="card">
+    <div class="ctit"><i class="ti ti-map-pin"></i> GPS <span class="rbdg">REAL</span></div>
+    <div class="strow"><span class="stlbl">Latitude</span><span class="stval" id="gLat">--</span></div>
+    <div class="strow"><span class="stlbl">Longitude</span><span class="stval" id="gLng">--</span></div>
+    <div class="strow"><span class="stlbl">Accuracy</span><span class="stval" id="gAcc">--</span></div>
+    <div class="strow"><span class="stlbl">Altitude</span><span class="stval" id="gAlt">--</span></div>
+    <div class="strow"><span class="stlbl">Speed</span><span class="stval" id="gSpd">--</span></div>
+    <div class="strow"><span class="stlbl">Heading</span><span class="stval" id="gHdg">--</span></div>
+  </div>
+
+  <!-- Honest Notice -->
+  <div class="card" style="border-color:rgba(239,159,39,.3)">
+    <div class="ctit"><i class="ti ti-alert-triangle" style="color:var(--am)"></i> Browser Limitation</div>
+    <div style="font-size:11px;color:var(--t2);line-height:1.7">
+      <span style="color:var(--gr)">✓ Real:</span> GPS · Speed · Ping · Connection type · IoT reachability<br>
+      <span style="color:var(--rd)">✗ Needs native app:</span> RSSI · Cell ID · MCC-MNC · Band · RSRP/RSRQ
     </div>
   </div>
 </div>
-<button class="btt" id="bttBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i class="ti ti-arrow-up"></i></button>
+
+<!-- LOG PAGE -->
+<div class="page" id="page-log">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+    <div style="font-size:13px;font-weight:600" id="logCount">0 points</div>
+    <div style="display:flex;gap:6px">
+      <button class="expbtn" onclick="exportCSV()"><i class="ti ti-file-text"></i> CSV</button>
+      <button class="expbtn" onclick="exportJSON()"><i class="ti ti-code"></i> JSON</button>
+      <button class="expbtn" style="color:var(--rd)" onclick="clearLog()"><i class="ti ti-trash"></i></button>
+    </div>
+  </div>
+  <div id="logList"></div>
+</div>
+
+<!-- MAP PAGE -->
+<div class="page" id="page-map">
+  <div class="card-cy" style="margin-bottom:10px">
+    <div class="ctit"><i class="ti ti-map"></i> Coverage Map</div>
+    <div style="font-size:11px;color:var(--t2);margin-bottom:8px">Survey points on map. Colour = download speed.</div>
+    <div style="display:flex;gap:10px;font-size:10px">
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00C864;vertical-align:middle;margin-right:3px"></span>&gt;10 Mbps</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#EF9F27;vertical-align:middle;margin-right:3px"></span>1–10 Mbps</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#E24B4A;vertical-align:middle;margin-right:3px"></span>&lt;1 Mbps</span>
+    </div>
+  </div>
+  <div id="mapContainer" style="border-radius:12px;overflow:hidden;border:0.5px solid var(--br);height:420px;background:var(--sf2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--t3)">
+    <i class="ti ti-map" style="font-size:32px"></i>
+    <span style="font-size:12px">Add survey points to see map</span>
+  </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div class="page" id="page-about">
+  <div class="card-cy">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <div class="lbox" style="width:48px;height:48px"><div class="lcts">CTS</div><div class="lprd">PROD</div></div>
+      <div>
+        <div style="font-size:17px;font-weight:600;color:var(--tx)">CTS Field Survey</div>
+        <div style="font-size:11px;color:var(--cy);margin-top:2px">City Technical Solutions</div>
+      </div>
+    </div>
+    <div class="irow"><span class="ik">Version</span><span class="iv">2.0.0</span></div>
+    <div class="irow"><span class="ik">Platform</span><span class="iv">PWA — All devices</span></div>
+    <div class="irow"><span class="ik">Speed test</span><span class="iv">Cloudflare edge servers</span></div>
+    <div class="irow"><span class="ik">IoT check</span><span class="iv">MQTT / HTTP endpoint reachability</span></div>
+    <div class="irow"><span class="ik">Map</span><span class="iv">OpenStreetMap via Leaflet</span></div>
+    <div class="irow"><span class="ik">Export</span><span class="iv">CSV + JSON</span></div>
+  </div>
+  <div class="card">
+    <div style="font-size:10px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">What is real</div>
+    <div class="irow"><span class="ik">GPS</span><span class="iv">Device hardware sensor</span></div>
+    <div class="irow"><span class="ik">Download / Upload</span><span class="iv">Measured via Cloudflare fetch timing</span></div>
+    <div class="irow"><span class="ik">Ping / Jitter</span><span class="iv">Measured via 3 parallel HEAD requests</span></div>
+    <div class="irow"><span class="ik">Connection type</span><span class="iv">Network Information API</span></div>
+    <div class="irow"><span class="ik">IoT reachability</span><span class="iv">Actual HTTP fetch to IoT endpoints</span></div>
+  </div>
+  <div class="card" style="border-color:rgba(239,159,39,.3)">
+    <div style="font-size:10px;font-weight:600;color:var(--am);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Not available in browser</div>
+    <div style="font-size:11px;color:var(--t2);line-height:1.8">RSSI · RSRP · RSRQ · SINR · Cell ID · MCC-MNC · Frequency band<br><span style="font-size:10px;color:var(--t3)">Requires native Android/iOS app with modem API access.</span></div>
+  </div>
+</div>
+
+</div>
 <nav class="bnav">
-  <button class="ni active" id="nav-scan"  onclick="navTo('scan')"  aria-label="Scan"><i class="ti ti-radar"></i><span>Scan</span></button>
-  <button class="ni"        id="nav-radar" onclick="navTo('radar')" aria-label="Radar"><i class="ti ti-circle-dotted"></i><span>Radar</span></button>
-  <button class="ni"        id="nav-about" onclick="navTo('about')" aria-label="About"><i class="ti ti-info-circle"></i><span>About</span></button>
+  <button class="ni active" id="nav-survey" onclick="navTo('survey')"><i class="ti ti-player-record"></i><span>Survey</span></button>
+  <button class="ni" id="nav-log" onclick="navTo('log')"><i class="ti ti-clipboard-list"></i><span>Log</span></button>
+  <button class="ni" id="nav-map" onclick="navTo('map')"><i class="ti ti-map"></i><span>Map</span></button>
+  <button class="ni" id="nav-about" onclick="navTo('about')"><i class="ti ti-info-circle"></i><span>About</span></button>
 </nav>
-<script>const IOT_SIMS={"1nce":{"name":"1NCE","mcc":"901","mnc":"05","col":"#AFA9EC","roaming":{"MY":["maxis","celcom"],"SG":["singtel"],"TH":["dtac","ais"],"ID":["telkomsel"],"JP":["ntt"],"DE":["deutsche"],"GB":["voda","ee"],"US":["tmobile","att"],"IN":["airtel"],"FR":["orange"],"CA":["bell"],"AU":["telstra"]}},"telnyx":{"name":"Telnyx","mcc":"901","mnc":"34","col":"#7EC8E3","roaming":{"US":["tmobile","att","verizon"],"GB":["voda","ee"],"DE":["deutsche"],"CA":["bell","rogers"],"AU":["optus"]}},"transatel":{"name":"Transatel","mcc":"901","mnc":"12","col":"#7F77DD","roaming":{"MY":["celcom","maxis"],"SG":["singtel"],"FR":["orange","sfr"],"DE":["deutsche"],"US":["att"],"JP":["ntt"]}},"hologram":{"name":"Hologram","mcc":"901","mnc":"55","col":"#F4A261","roaming":{"US":["tmobile","att","verizon"],"GB":["voda"],"DE":["deutsche"],"CA":["rogers"]}},"twilio":{"name":"Twilio","mcc":"901","mnc":"99","col":"#F22F46","roaming":{"US":["tmobile","att"],"GB":["voda","o2uk"],"DE":["deutsche"],"CA":["tmobile"]}}};
-const COUNTRY_OPS={"MY":["maxis","celcom","digi","umobile","yes"],"SG":["singtel","starhub"],"TH":["dtac","ais","true"],"ID":["telkomsel","indosat","xlaxiata"],"PH":["globe","smart"],"VN":["viettel"],"MM":["myanmar_t"],"KH":["celltick"],"LA":["laotel"],"BN":["dstb"],"JP":["ntt","softbank","kddi"],"CN":["chinamobile","chinaunicom","chinatelecom"],"KR":["skt","kt","lgu"],"TW":["chunghwa"],"HK":["csl_hk"],"MO":["ctm"],"IN":["airtel","jio","vi"],"BD":["grameenphone"],"LK":["dialog"],"NP":["ncell"],"PK":["jazz","telenor_pk","zong"],"MV":["dhiraagu"],"AU":["telstra","optus","tpgau"],"NZ":["spark","onenznz","twodeg"],"FJ":["vodafone_fj"],"PG":["bmobile"],"GB":["ee","voda","o2uk","three"],"DE":["deutsche","voda_de","o2de"],"FR":["orange","sfr","bouygues"],"IT":["tim_it","vodafone_it","windtre","iliad_it"],"ES":["movistar_es","vodafone_es","orange_es"],"NL":["kpn","t_mobile_nl","vodafone_nl"],"BE":["proximus","orange_be","base_be"],"CH":["swisscom","sunrise","salt"],"AT":["a1","magenta_at","drei_at"],"PT":["meo","vodafone_pt","nos"],"SE":["telia","tele2_se","tre_se"],"NO":["telenor_no","telia_no","ice"],"DK":["tdc","telenor_dk","telia_dk"],"FI":["elisa","telia_fi","dna"],"IE":["vodafone_ie","three_ie","eir"],"PL":["play","tmobile_cz"],"CZ":["t_mobile_cz","o2_cz","vodafone_cz"],"SK":["slovak_t","orange_sk","o2_sk"],"HU":["telekom_hu","telenor_hu","vodafone_hu"],"RO":["orange_ro","vodafone_ro","digi_ro"],"BG":["a1_bg","telenor_bg","vivacom"],"HR":["ht_hr","a1_hr","telemach_hr"],"GR":["cosmote","vodafone_gr","wind_gr"],"RU":["mts_ru","beeline"],"UA":["kyivstar"],"TR":["turkcell"],"US":["tmobile","att","verizon"],"CA":["bell","rogers","telus"],"MX":["telcel","movistar"],"BR":["clarobr","vivo","tim_br"],"AR":["personal","movistar"],"CO":["claro_co","movistar"],"CL":["entel","movistar"],"PE":["claro_pe","entel_pe","bitel"],"EC":["claro_ec","cnt","tuenti"],"BO":["tigo_bo","entel_bo"],"UY":["antel","claro_uy"],"PY":["tigo_py","claro_py"],"VE":["movistar_ve","movilnet"],"CR":["kolbi","claro_cr","movistar_cr"],"GT":["tigo_gt","claro_gt"],"PA":["cable_pa","tigo_pa"],"CU":["etecsa"],"DO":["claro_do","altice_do"],"PR":["tmobile","att"],"JM":["flow_jm","digicel_jm"],"SA":["stc","mobily"],"AE":["etisalat","du"],"EG":["orange_eg"],"MA":["orange_ma"],"QA":["ooredoo"],"KW":["zain_kw","stc_kw","ooredoo_kw"],"BH":["batelco","zain_bh"],"OM":["omantel","ooredoo_om"],"JO":["zain_jo","orange_jo"],"LB":["alfa","touch"],"IQ":["zain_iq","asiacell","korek"],"IR":["mci","irancell","rightel"],"IL":["partner","cellcom","hot_mobile"],"PS":["jawwal","ooredoo_ps"],"NG":["mtn_ng","airtel_ng"],"ZA":["vodacom","mtn_za"],"KE":["safaricom"],"GH":["mtn_gh"],"ET":["ethio"],"TZ":["vodacom_tz","airtel_tz","tigo_tz"],"UG":["mtn_ug","airtel_ug"],"RW":["mtn_rw","airtel_rw"],"SN":["orange_sn","free_sn"],"CI":["orange_ci","mtn_ci"],"CM":["mtn_cm","orange_cm"],"AO":["unitel","movicel"],"MZ":["mcel","vodacom_mz"],"ZM":["zamtel","mtn_zm","airtel_zm"],"ZW":["econet","netone"],"MG":["orange_mg","airtel_mg"],"TN":["ooredoo_tn","orange_tn"],"DZ":["djezzy","mobilis","ooredoo_dz"],"LY":["libyana","almadar"],"SD":["zain_sd","mtn_sd"],"KZ":["kcell","beeline_kz","activ"],"UZ":["ucell","beeline_uz","mobiuz"],"AZ":["azercell","bakcell","nar"],"GE":["magti","geocell"],"AM":["viva_am","ucom","beeline_am"]};
-const FLAGS={"MY":"\ud83c\uddf2\ud83c\uddfe","SG":"\ud83c\uddf8\ud83c\uddec","TH":"\ud83c\uddf9\ud83c\udded","ID":"\ud83c\uddee\ud83c\udde9","PH":"\ud83c\uddf5\ud83c\udded","VN":"\ud83c\uddfb\ud83c\uddf3","MM":"\ud83c\uddf2\ud83c\uddf2","KH":"\ud83c\uddf0\ud83c\udded","LA":"\ud83c\uddf1\ud83c\udde6","BN":"\ud83c\udde7\ud83c\uddf3","JP":"\ud83c\uddef\ud83c\uddf5","CN":"\ud83c\udde8\ud83c\uddf3","KR":"\ud83c\uddf0\ud83c\uddf7","TW":"\ud83c\uddf9\ud83c\uddfc","HK":"\ud83c\udded\ud83c\uddf0","MO":"\ud83c\uddf2\ud83c\uddf4","IN":"\ud83c\uddee\ud83c\uddf3","BD":"\ud83c\udde7\ud83c\udde9","LK":"\ud83c\uddf1\ud83c\uddf0","NP":"\ud83c\uddf3\ud83c\uddf5","PK":"\ud83c\uddf5\ud83c\uddf0","MV":"\ud83c\uddf2\ud83c\uddfb","AU":"\ud83c\udde6\ud83c\uddfa","NZ":"\ud83c\uddf3\ud83c\uddff","FJ":"\ud83c\uddeb\ud83c\uddef","PG":"\ud83c\uddf5\ud83c\uddec","GB":"\ud83c\uddec\ud83c\udde7","IE":"\ud83c\uddee\ud83c\uddea","FR":"\ud83c\uddeb\ud83c\uddf7","DE":"\ud83c\udde9\ud83c\uddea","IT":"\ud83c\uddee\ud83c\uddf9","ES":"\ud83c\uddea\ud83c\uddf8","NL":"\ud83c\uddf3\ud83c\uddf1","BE":"\ud83c\udde7\ud83c\uddea","CH":"\ud83c\udde8\ud83c\udded","AT":"\ud83c\udde6\ud83c\uddf9","PT":"\ud83c\uddf5\ud83c\uddf9","SE":"\ud83c\uddf8\ud83c\uddea","NO":"\ud83c\uddf3\ud83c\uddf4","DK":"\ud83c\udde9\ud83c\uddf0","FI":"\ud83c\uddeb\ud83c\uddee","PL":"\ud83c\uddf5\ud83c\uddf1","CZ":"\ud83c\udde8\ud83c\uddff","SK":"\ud83c\uddf8\ud83c\uddf0","HU":"\ud83c\udded\ud83c\uddfa","RO":"\ud83c\uddf7\ud83c\uddf4","BG":"\ud83c\udde7\ud83c\uddec","HR":"\ud83c\udded\ud83c\uddf7","GR":"\ud83c\uddec\ud83c\uddf7","RU":"\ud83c\uddf7\ud83c\uddfa","UA":"\ud83c\uddfa\ud83c\udde6","TR":"\ud83c\uddf9\ud83c\uddf7","US":"\ud83c\uddfa\ud83c\uddf8","CA":"\ud83c\udde8\ud83c\udde6","MX":"\ud83c\uddf2\ud83c\uddfd","BR":"\ud83c\udde7\ud83c\uddf7","AR":"\ud83c\udde6\ud83c\uddf7","CO":"\ud83c\udde8\ud83c\uddf4","CL":"\ud83c\udde8\ud83c\uddf1","PE":"\ud83c\uddf5\ud83c\uddea","EC":"\ud83c\uddea\ud83c\udde8","BO":"\ud83c\udde7\ud83c\uddf4","UY":"\ud83c\uddfa\ud83c\uddfe","PY":"\ud83c\uddf5\ud83c\uddfe","VE":"\ud83c\uddfb\ud83c\uddea","CR":"\ud83c\udde8\ud83c\uddf7","GT":"\ud83c\uddec\ud83c\uddf9","PA":"\ud83c\uddf5\ud83c\udde6","CU":"\ud83c\udde8\ud83c\uddfa","DO":"\ud83c\udde9\ud83c\uddf4","PR":"\ud83c\uddf5\ud83c\uddf7","JM":"\ud83c\uddef\ud83c\uddf2","SA":"\ud83c\uddf8\ud83c\udde6","AE":"\ud83c\udde6\ud83c\uddea","EG":"\ud83c\uddea\ud83c\uddec","MA":"\ud83c\uddf2\ud83c\udde6","QA":"\ud83c\uddf6\ud83c\udde6","KW":"\ud83c\uddf0\ud83c\uddfc","BH":"\ud83c\udde7\ud83c\udded","OM":"\ud83c\uddf4\ud83c\uddf2","JO":"\ud83c\uddef\ud83c\uddf4","LB":"\ud83c\uddf1\ud83c\udde7","IQ":"\ud83c\uddee\ud83c\uddf6","IR":"\ud83c\uddee\ud83c\uddf7","IL":"\ud83c\uddee\ud83c\uddf1","PS":"\ud83c\uddf5\ud83c\uddf8","NG":"\ud83c\uddf3\ud83c\uddec","ZA":"\ud83c\uddff\ud83c\udde6","KE":"\ud83c\uddf0\ud83c\uddea","GH":"\ud83c\uddec\ud83c\udded","ET":"\ud83c\uddea\ud83c\uddf9","TZ":"\ud83c\uddf9\ud83c\uddff","UG":"\ud83c\uddfa\ud83c\uddec","RW":"\ud83c\uddf7\ud83c\uddfc","SN":"\ud83c\uddf8\ud83c\uddf3","CI":"\ud83c\udde8\ud83c\uddee","CM":"\ud83c\udde8\ud83c\uddf2","AO":"\ud83c\udde6\ud83c\uddf4","MZ":"\ud83c\uddf2\ud83c\uddff","ZM":"\ud83c\uddff\ud83c\uddf2","ZW":"\ud83c\uddff\ud83c\uddfc","MG":"\ud83c\uddf2\ud83c\uddec","TN":"\ud83c\uddf9\ud83c\uddf3","DZ":"\ud83c\udde9\ud83c\uddff","LY":"\ud83c\uddf1\ud83c\uddfe","SD":"\ud83c\uddf8\ud83c\udde9","KZ":"\ud83c\uddf0\ud83c\uddff","UZ":"\ud83c\uddfa\ud83c\uddff","AZ":"\ud83c\udde6\ud83c\uddff","GE":"\ud83c\uddec\ud83c\uddea","AM":"\ud83c\udde6\ud83c\uddf2"};
-const CNAMES={"MY":"Malaysia","SG":"Singapore","TH":"Thailand","ID":"Indonesia","PH":"Philippines","VN":"Vietnam","MM":"Myanmar","KH":"Cambodia","LA":"Laos","BN":"Brunei","JP":"Japan","CN":"China","KR":"South Korea","TW":"Taiwan","HK":"Hong Kong","MO":"Macau","IN":"India","BD":"Bangladesh","LK":"Sri Lanka","NP":"Nepal","PK":"Pakistan","MV":"Maldives","AU":"Australia","NZ":"New Zealand","FJ":"Fiji","PG":"Papua New Guinea","GB":"United Kingdom","IE":"Ireland","FR":"France","DE":"Germany","IT":"Italy","ES":"Spain","NL":"Netherlands","BE":"Belgium","CH":"Switzerland","AT":"Austria","PT":"Portugal","SE":"Sweden","NO":"Norway","DK":"Denmark","FI":"Finland","PL":"Poland","CZ":"Czech Republic","SK":"Slovakia","HU":"Hungary","RO":"Romania","BG":"Bulgaria","HR":"Croatia","GR":"Greece","RU":"Russia","UA":"Ukraine","TR":"Turkey","US":"United States","CA":"Canada","MX":"Mexico","BR":"Brazil","AR":"Argentina","CO":"Colombia","CL":"Chile","PE":"Peru","EC":"Ecuador","BO":"Bolivia","UY":"Uruguay","PY":"Paraguay","VE":"Venezuela","CR":"Costa Rica","GT":"Guatemala","PA":"Panama","CU":"Cuba","DO":"Dominican Republic","PR":"Puerto Rico","JM":"Jamaica","SA":"Saudi Arabia","AE":"UAE","EG":"Egypt","MA":"Morocco","QA":"Qatar","KW":"Kuwait","BH":"Bahrain","OM":"Oman","JO":"Jordan","LB":"Lebanon","IQ":"Iraq","IR":"Iran","IL":"Israel","PS":"Palestine","NG":"Nigeria","ZA":"South Africa","KE":"Kenya","GH":"Ghana","ET":"Ethiopia","TZ":"Tanzania","UG":"Uganda","RW":"Rwanda","SN":"Senegal","CI":"Ivory Coast","CM":"Cameroon","AO":"Angola","MZ":"Mozambique","ZM":"Zambia","ZW":"Zimbabwe","MG":"Madagascar","TN":"Tunisia","DZ":"Algeria","LY":"Libya","SD":"Sudan","KZ":"Kazakhstan","UZ":"Uzbekistan","AZ":"Azerbaijan","GE":"Georgia","AM":"Armenia"};
-const RAT_DB={"5G NR":{col:"#5DCAA5",bg:"rgba(93,202,165,0.12)",brd:"rgba(93,202,165,0.3)",gen:"5G",hasSINR:true,rssiRange:[-90,-40],freqs:["n1 (2100 MHz)","n3 (1800 MHz)","n28 (700 MHz)","n78 (3500 MHz)","n77 (3700 MHz)","n258 (26 GHz)"]},"4G LTE":{col:"#00E5FF",bg:"rgba(0,229,255,0.10)",brd:"rgba(0,229,255,0.28)",gen:"4G",hasSINR:true,rssiRange:[-110,-50],freqs:["B1 (2100 MHz)","B3 (1800 MHz)","B7 (2600 MHz)","B8 (900 MHz)","B20 (800 MHz)","B28 (700 MHz)","B40 (2300 MHz)"]},"LTE Cat-4":{col:"#00CFDD",bg:"rgba(0,207,221,0.10)",brd:"rgba(0,207,221,0.28)",gen:"4G",hasSINR:true,rssiRange:[-110,-52],freqs:["B1 (2100 MHz)","B3 (1800 MHz)","B7 (2600 MHz)","B28 (700 MHz)"]},"LTE Cat-1":{col:"#00B4C4",bg:"rgba(0,180,196,0.10)",brd:"rgba(0,180,196,0.28)",gen:"4G",hasSINR:true,rssiRange:[-110,-55],freqs:["B3 (1800 MHz)","B8 (900 MHz)","B20 (800 MHz)"]},"LTE-M":{col:"#ED93B1",bg:"rgba(212,83,126,0.10)",brd:"rgba(212,83,126,0.28)",gen:"IoT",hasSINR:true,rssiRange:[-115,-60],freqs:["B3 (1800 MHz)","B8 (900 MHz)","B12 (700 MHz)"]},"NB-IoT":{col:"#AFA9EC",bg:"rgba(127,119,221,0.12)",brd:"rgba(127,119,221,0.3)",gen:"IoT",hasSINR:true,rssiRange:[-115,-65],freqs:["B3 (1800 MHz)","B8 (900 MHz)","B20 (800 MHz)"]},"HSPA+":{col:"#F4A261",bg:"rgba(244,162,97,0.10)",brd:"rgba(244,162,97,0.28)",gen:"3G",hasSINR:false,rssiRange:[-111,-55],freqs:["B1 (2100 MHz)","B5 (850 MHz)","B8 (900 MHz)"]},"HSDPA":{col:"#E76F51",bg:"rgba(231,111,81,0.10)",brd:"rgba(231,111,81,0.28)",gen:"3G",hasSINR:false,rssiRange:[-111,-58],freqs:["B1 (2100 MHz)","B8 (900 MHz)"]},"3G UMTS":{col:"#EF9F27",bg:"rgba(239,159,39,0.10)",brd:"rgba(239,159,39,0.28)",gen:"3G",hasSINR:false,rssiRange:[-111,-60],freqs:["B1 (2100 MHz)","B8 (900 MHz)"]},"WCDMA":{col:"#E9C46A",bg:"rgba(233,196,106,0.10)",brd:"rgba(233,196,106,0.28)",gen:"3G",hasSINR:false,rssiRange:[-111,-60],freqs:["B1 (2100 MHz)","B8 (900 MHz)"]},"EDGE":{col:"#F4845F",bg:"rgba(244,132,95,0.10)",brd:"rgba(244,132,95,0.28)",gen:"2G",hasSINR:false,rssiRange:[-112,-65],freqs:["GSM 900 MHz","GSM 1800 MHz"]},"GPRS":{col:"#E05C2B",bg:"rgba(224,92,43,0.10)",brd:"rgba(224,92,43,0.28)",gen:"2G",hasSINR:false,rssiRange:[-112,-68],freqs:["GSM 900 MHz","GSM 1800 MHz"]},"2G GSM":{col:"#E24B4A",bg:"rgba(226,75,74,0.10)",brd:"rgba(226,75,74,0.28)",gen:"2G",hasSINR:false,rssiRange:[-112,-70],freqs:["GSM 900 MHz","GSM 1800 MHz","GSM 1900 MHz"]}};
-// ── 7 type pills only ──────────────────────────────────────
-const TYPE_PILLS=[
-  {id:"all", label:"All",    col:"#00C8A0"},
-  {id:"5G",  label:"5G",     col:"#5DCAA5"},
-  {id:"4G",  label:"4G",     col:"#00A8CC"},
-  {id:"3G",  label:"3G",     col:"#EF9F27"},
-  {id:"2G",  label:"2G",     col:"#E24B4A"},
-  {id:"IoT", label:"IoT",    col:"#AFA9EC"},
-  {id:"eSIM",label:"eSIM",   col:"#ED93B1"},
-];
-const GLOBAL_OPS=[
-{id:"maxis",domain:"maxis.com.my",col:"#FF6200",textCol:"#fff",short:"Maxis",name:"Maxis",mcc:"502",mnc:"12",rats:["5G NR","4G LTE","LTE Cat-4","NB-IoT"]},
-{id:"celcom",domain:"celcomdigi.com",col:"#0050A0",textCol:"#fff",short:"CelcomDigi",name:"CelcomDigi",mcc:"502",mnc:"17",rats:["4G LTE","LTE Cat-4","NB-IoT","LTE-M"]},
-{id:"digi",domain:"digi.com.my",col:"#FDD800",textCol:"#000",short:"Digi",name:"Digi",mcc:"502",mnc:"16",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"umobile",domain:"u.com.my",col:"#7B1FA2",textCol:"#fff",short:"U Mobile",name:"U Mobile",mcc:"502",mnc:"18",rats:["4G LTE","LTE Cat-4","HSPA+","WCDMA"]},
-{id:"yes",domain:"yes.my",col:"#00AA44",textCol:"#fff",short:"Yes",name:"Yes 4G",mcc:"502",mnc:"19",rats:["4G LTE","LTE Cat-1"]},
-{id:"dtac",domain:"dtac.co.th",col:"#003082",textCol:"#fff",short:"dtac",name:"DTAC Thailand",mcc:"520",mnc:"05",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"ais",domain:"ais.th",col:"#E60028",textCol:"#fff",short:"AIS",name:"AIS Thailand",mcc:"520",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"true",domain:"true.th",col:"#CC0000",textCol:"#fff",short:"True",name:"True Move H",mcc:"520",mnc:"04",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"telkomsel",domain:"telkomsel.com",col:"#CC0000",textCol:"#fff",short:"Telkomsel",name:"Telkomsel",mcc:"510",mnc:"10",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"indosat",domain:"indosatooredoo.com",col:"#FFCC00",textCol:"#000",short:"IM3",name:"Indosat Ooredoo",mcc:"510",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"xlaxiata",domain:"xl.co.id",col:"#0055A5",textCol:"#fff",short:"XL",name:"XL Axiata",mcc:"510",mnc:"11",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"singtel",domain:"singtel.com",col:"#CC0000",textCol:"#fff",short:"Singtel",name:"Singtel",mcc:"525",mnc:"05",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"globe",domain:"globe.com.ph",col:"#0070C0",textCol:"#fff",short:"Globe",name:"Globe PH",mcc:"515",mnc:"02",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"smart",domain:"smart.com.ph",col:"#CC0000",textCol:"#fff",short:"Smart",name:"Smart PH",mcc:"515",mnc:"03",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"viettel",domain:"viettel.com.vn",col:"#CC0000",textCol:"#fff",short:"Viettel",name:"Viettel",mcc:"452",mnc:"04",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"ntt",domain:"nttdocomo.com",col:"#CC0033",textCol:"#fff",short:"docomo",name:"NTT Docomo",mcc:"440",mnc:"10",rats:["5G NR","4G LTE","LTE Cat-4","LTE Cat-1"]},
-{id:"softbank",domain:"softbank.jp",col:"#CC0000",textCol:"#fff",short:"SoftBank",name:"SoftBank JP",mcc:"440",mnc:"20",rats:["5G NR","4G LTE","LTE Cat-4","WCDMA"]},
-{id:"kddi",domain:"au.com",col:"#E60033",textCol:"#fff",short:"au",name:"KDDI au",mcc:"440",mnc:"50",rats:["5G NR","4G LTE","LTE Cat-4","WCDMA"]},
-{id:"chinamobile",domain:"10086.cn",col:"#009900",textCol:"#fff",short:"中国移动",name:"China Mobile",mcc:"460",mnc:"00",rats:["5G NR","4G LTE","LTE Cat-4","NB-IoT"]},
-{id:"chinaunicom",domain:"10010.com",col:"#CC0000",textCol:"#fff",short:"中国联通",name:"China Unicom",mcc:"460",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","NB-IoT"]},
-{id:"chinatelecom",domain:"189.cn",col:"#0070BB",textCol:"#fff",short:"中国电信",name:"China Telecom",mcc:"460",mnc:"03",rats:["5G NR","4G LTE","LTE Cat-4","NB-IoT"]},
-{id:"skt",domain:"skt.com",col:"#EE1C25",textCol:"#fff",short:"SKT",name:"SK Telecom",mcc:"450",mnc:"05",rats:["5G NR","4G LTE","LTE Cat-4","WCDMA"]},
-{id:"kt",domain:"kt.com",col:"#CC0000",textCol:"#fff",short:"KT",name:"KT Korea",mcc:"450",mnc:"08",rats:["5G NR","4G LTE","LTE Cat-4","WCDMA"]},
-{id:"lgu",domain:"lguplus.com",col:"#E31837",textCol:"#fff",short:"LG U+",name:"LG U+",mcc:"450",mnc:"06",rats:["5G NR","4G LTE","LTE Cat-4","WCDMA"]},
-{id:"ee",domain:"ee.co.uk",col:"#00AA55",textCol:"#fff",short:"EE",name:"EE UK",mcc:"234",mnc:"30",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"voda",domain:"vodafone.co.uk",col:"#E60000",textCol:"#fff",short:"Vodafone",name:"Vodafone UK",mcc:"234",mnc:"15",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"o2uk",domain:"o2.co.uk",col:"#003C8F",textCol:"#fff",short:"O2",name:"O2 UK",mcc:"234",mnc:"10",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"three",domain:"three.co.uk",col:"#FF6600",textCol:"#fff",short:"Three",name:"Three UK",mcc:"234",mnc:"20",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"deutsche",domain:"telekom.com",col:"#E20074",textCol:"#fff",short:"Telekom",name:"Deutsche Telekom",mcc:"262",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","NB-IoT"]},
-{id:"voda_de",domain:"vodafone.de",col:"#E60000",textCol:"#fff",short:"Vodafone",name:"Vodafone DE",mcc:"262",mnc:"02",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"orange",domain:"orange.com",col:"#FF6600",textCol:"#fff",short:"Orange",name:"Orange France",mcc:"208",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"sfr",domain:"sfr.fr",col:"#CC0000",textCol:"#fff",short:"SFR",name:"SFR France",mcc:"208",mnc:"10",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"tmobile",domain:"t-mobile.com",col:"#E20074",textCol:"#fff",short:"T-Mobile",name:"T-Mobile USA",mcc:"310",mnc:"260",rats:["5G NR","4G LTE","LTE Cat-4","LTE Cat-1"]},
-{id:"att",domain:"att.com",col:"#00A8E0",textCol:"#fff",short:"AT&T",name:"AT&T USA",mcc:"310",mnc:"410",rats:["5G NR","4G LTE","LTE Cat-4","NB-IoT"]},
-{id:"verizon",domain:"verizon.com",col:"#CD040B",textCol:"#fff",short:"Verizon",name:"Verizon USA",mcc:"311",mnc:"480",rats:["5G NR","4G LTE","LTE Cat-4","LTE Cat-1"]},
-{id:"bell",domain:"bell.ca",col:"#003082",textCol:"#fff",short:"Bell",name:"Bell Canada",mcc:"302",mnc:"610",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"rogers",domain:"rogers.com",col:"#CC0000",textCol:"#fff",short:"Rogers",name:"Rogers Canada",mcc:"302",mnc:"720",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"telus",domain:"telus.com",col:"#4B286D",textCol:"#fff",short:"TELUS",name:"Telus Canada",mcc:"302",mnc:"220",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"stc",domain:"stc.com.sa",col:"#7B1FA2",textCol:"#fff",short:"stc",name:"STC Saudi",mcc:"420",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"etisalat",domain:"etisalat.ae",col:"#009900",textCol:"#fff",short:"Etisalat",name:"Etisalat UAE",mcc:"424",mnc:"02",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"du",domain:"du.ae",col:"#333333",textCol:"#fff",short:"du",name:"Du UAE",mcc:"424",mnc:"03",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"mtn_ng",domain:"mtn.com.ng",col:"#FFCC00",textCol:"#000",short:"MTN",name:"MTN Nigeria",mcc:"621",mnc:"30",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"airtel_ng",domain:"airtel.com.ng",col:"#CC0000",textCol:"#fff",short:"Airtel",name:"Airtel Nigeria",mcc:"621",mnc:"20",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"vodacom",domain:"vodacom.co.za",col:"#E60000",textCol:"#fff",short:"Vodacom",name:"Vodacom SA",mcc:"655",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"mtn_za",domain:"mtn.co.za",col:"#FFCC00",textCol:"#000",short:"MTN",name:"MTN South Africa",mcc:"655",mnc:"10",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"safaricom",domain:"safaricom.co.ke",col:"#009900",textCol:"#fff",short:"Safaricom",name:"Safaricom Kenya",mcc:"639",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"airtel",domain:"airtel.in",col:"#CC0000",textCol:"#fff",short:"Airtel",name:"Airtel India",mcc:"404",mnc:"10",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"jio",domain:"jio.com",col:"#0B3CC1",textCol:"#fff",short:"Jio",name:"Reliance Jio",mcc:"405",mnc:"840",rats:["5G NR","4G LTE","LTE Cat-4","NB-IoT"]},
-{id:"vi",domain:"myvi.in",col:"#CC0000",textCol:"#fff",short:"Vi",name:"Vi India",mcc:"404",mnc:"20",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"telstra",domain:"telstra.com.au",col:"#1964B4",textCol:"#fff",short:"Telstra",name:"Telstra",mcc:"505",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","NB-IoT"]},
-{id:"optus",domain:"optus.com.au",col:"#00A99D",textCol:"#fff",short:"Optus",name:"Optus",mcc:"505",mnc:"02",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"tpgau",domain:"vodafone.com.au",col:"#E60000",textCol:"#fff",short:"VF AU",name:"TPG/Vodafone AU",mcc:"505",mnc:"38",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"spark",domain:"spark.co.nz",col:"#E60028",textCol:"#fff",short:"Spark",name:"Spark NZ",mcc:"530",mnc:"05",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"onenznz",domain:"one.nz",col:"#E60000",textCol:"#fff",short:"One NZ",name:"One NZ",mcc:"530",mnc:"05",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"clarobr",domain:"claro.com.br",col:"#CC0000",textCol:"#fff",short:"Claro",name:"Claro Brazil",mcc:"724",mnc:"05",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"vivo",domain:"vivo.com.br",col:"#660099",textCol:"#fff",short:"vivo",name:"Vivo Brazil",mcc:"724",mnc:"06",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"telcel",domain:"telcel.com",col:"#003082",textCol:"#fff",short:"Telcel",name:"Telcel Mexico",mcc:"334",mnc:"020",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"movistar",domain:"movistar.com",col:"#009900",textCol:"#fff",short:"movistar",name:"Movistar",mcc:"334",mnc:"030",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"mts_ru",domain:"mts.ru",col:"#CC0000",textCol:"#fff",short:"МТС",name:"MTS Russia",mcc:"250",mnc:"01",rats:["4G LTE","LTE Cat-4","NB-IoT","HSPA+"]},
-{id:"beeline",domain:"beeline.ru",col:"#FFCC00",textCol:"#000",short:"Beeline",name:"Beeline Russia",mcc:"250",mnc:"99",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"play",domain:"play.pl",col:"#E60028",textCol:"#fff",short:"Play",name:"Play Poland",mcc:"260",mnc:"06",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"turkcell",domain:"turkcell.com.tr",col:"#FFD700",textCol:"#000",short:"turkcell",name:"Turkcell Turkey",mcc:"286",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"grameenphone",domain:"grameenphone.com",col:"#009900",textCol:"#fff",short:"GP",name:"Grameenphone BD",mcc:"470",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"dialog",domain:"dialog.lk",col:"#CC0000",textCol:"#fff",short:"Dialog",name:"Dialog Sri Lanka",mcc:"413",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"starhub",domain:"starhub.com",col:"#6600CC",textCol:"#fff",short:"StarHub",name:"StarHub SG",mcc:"525",mnc:"05",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"myanmar_t",domain:"telenor.com.mm",col:"#003082",textCol:"#fff",short:"Telenor",name:"Telenor Myanmar",mcc:"414",mnc:"05",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"celltick",domain:"cellcard.com.kh",col:"#E60028",textCol:"#fff",short:"Cellcard",name:"Cellcard Cambodia",mcc:"456",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"chunghwa",domain:"cht.com.tw",col:"#CC0000",textCol:"#fff",short:"CHT",name:"Chunghwa Telecom TW",mcc:"466",mnc:"92",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"csl_hk",domain:"hkcsl.com",col:"#CC0000",textCol:"#fff",short:"CSL",name:"CSL Hong Kong",mcc:"454",mnc:"00",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"jazz",domain:"jazz.com.pk",col:"#CC0000",textCol:"#fff",short:"Jazz",name:"Jazz Pakistan",mcc:"410",mnc:"03",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"telenor_pk",domain:"telenor.com.pk",col:"#003082",textCol:"#fff",short:"Telenor",name:"Telenor Pakistan",mcc:"410",mnc:"06",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"zong",domain:"zong.com.pk",col:"#CC0000",textCol:"#fff",short:"Zong",name:"Zong Pakistan",mcc:"410",mnc:"04",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"tim_it",domain:"tim.it",col:"#003082",textCol:"#fff",short:"TIM",name:"TIM Italy",mcc:"222",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"vodafone_it",domain:"vodafone.it",col:"#E60000",textCol:"#fff",short:"Vodafone",name:"Vodafone Italy",mcc:"222",mnc:"10",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"windtre",domain:"windtre.it",col:"#FF6600",textCol:"#fff",short:"WindTre",name:"WindTre Italy",mcc:"222",mnc:"88",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"movistar_es",domain:"movistar.es",col:"#009900",textCol:"#fff",short:"Movistar",name:"Movistar Spain",mcc:"214",mnc:"07",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"vodafone_es",domain:"vodafone.es",col:"#E60000",textCol:"#fff",short:"Vodafone",name:"Vodafone Spain",mcc:"214",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"orange_es",domain:"orange.es",col:"#FF6600",textCol:"#fff",short:"Orange",name:"Orange Spain",mcc:"214",mnc:"03",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"kpn",domain:"kpn.com",col:"#009900",textCol:"#fff",short:"KPN",name:"KPN Netherlands",mcc:"204",mnc:"08",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"t_mobile_nl",domain:"t-mobile.nl",col:"#E20074",textCol:"#fff",short:"T-Mobile",name:"T-Mobile NL",mcc:"204",mnc:"16",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"proximus",domain:"proximus.be",col:"#5C2D91",textCol:"#fff",short:"Proximus",name:"Proximus Belgium",mcc:"206",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"swisscom",domain:"swisscom.ch",col:"#009FE3",textCol:"#fff",short:"Swisscom",name:"Swisscom",mcc:"228",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"a1",domain:"a1.net",col:"#E60028",textCol:"#fff",short:"A1",name:"A1 Austria",mcc:"232",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"meo",domain:"meo.pt",col:"#009FE3",textCol:"#fff",short:"MEO",name:"MEO Portugal",mcc:"268",mnc:"06",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"telia",domain:"telia.se",col:"#7B2D8B",textCol:"#fff",short:"Telia",name:"Telia Sweden",mcc:"240",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"telenor_no",domain:"telenor.no",col:"#003082",textCol:"#fff",short:"Telenor",name:"Telenor Norway",mcc:"242",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"tdc",domain:"tdc.dk",col:"#CC0000",textCol:"#fff",short:"TDC",name:"TDC Denmark",mcc:"238",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"elisa",domain:"elisa.fi",col:"#003082",textCol:"#fff",short:"Elisa",name:"Elisa Finland",mcc:"244",mnc:"05",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"vodafone_ie",domain:"vodafone.ie",col:"#E60000",textCol:"#fff",short:"Vodafone",name:"Vodafone Ireland",mcc:"272",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"t_mobile_cz",domain:"t-mobile.cz",col:"#E20074",textCol:"#fff",short:"T-Mobile",name:"T-Mobile CZ",mcc:"230",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"orange_ro",domain:"orange.ro",col:"#FF6600",textCol:"#fff",short:"Orange",name:"Orange Romania",mcc:"226",mnc:"10",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"cosmote",domain:"cosmote.gr",col:"#009900",textCol:"#fff",short:"Cosmote",name:"Cosmote Greece",mcc:"202",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"ooredoo",domain:"ooredoo.com",col:"#CC0000",textCol:"#fff",short:"Ooredoo",name:"Ooredoo Qatar",mcc:"427",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"zain_kw",domain:"zain.com",col:"#CC0000",textCol:"#fff",short:"Zain",name:"Zain Kuwait",mcc:"419",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"omantel",domain:"omantel.om",col:"#CC0000",textCol:"#fff",short:"Omantel",name:"Omantel",mcc:"422",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"zain_jo",domain:"jo.zain.com",col:"#CC0000",textCol:"#fff",short:"Zain",name:"Zain Jordan",mcc:"416",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"alfa",domain:"alfa.com.lb",col:"#CC0000",textCol:"#fff",short:"Alfa",name:"Alfa Lebanon",mcc:"415",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"zain_iq",domain:"iq.zain.com",col:"#CC0000",textCol:"#fff",short:"Zain",name:"Zain Iraq",mcc:"418",mnc:"20",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"partner",domain:"partner.co.il",col:"#FF6600",textCol:"#fff",short:"Partner",name:"Partner Israel",mcc:"425",mnc:"01",rats:["5G NR","4G LTE","LTE Cat-4","HSPA+"]},
-{id:"vodacom_tz",domain:"vodacom.co.tz",col:"#E60000",textCol:"#fff",short:"Vodacom",name:"Vodacom Tanzania",mcc:"640",mnc:"04",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"mtn_ug",domain:"mtn.co.ug",col:"#FFCC00",textCol:"#000",short:"MTN",name:"MTN Uganda",mcc:"641",mnc:"10",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"mtn_rw",domain:"mtn.co.rw",col:"#FFCC00",textCol:"#000",short:"MTN",name:"MTN Rwanda",mcc:"635",mnc:"10",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"orange_sn",domain:"orange.sn",col:"#FF6600",textCol:"#fff",short:"Orange",name:"Orange Senegal",mcc:"608",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"mtn_ci",domain:"mtn.ci",col:"#FFCC00",textCol:"#000",short:"MTN",name:"MTN Ivory Coast",mcc:"612",mnc:"05",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"mtn_cm",domain:"mtn.cm",col:"#FFCC00",textCol:"#000",short:"MTN",name:"MTN Cameroon",mcc:"624",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"vodacom_mz",domain:"vodacom.mz",col:"#E60000",textCol:"#fff",short:"Vodacom",name:"Vodacom Mozambique",mcc:"643",mnc:"04",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"econet",domain:"econet.co.zw",col:"#009900",textCol:"#fff",short:"Econet",name:"Econet Zimbabwe",mcc:"648",mnc:"01",rats:["4G LTE","HSPA+","3G UMTS","2G GSM"]},
-{id:"orange_ma",domain:"orange.ma",col:"#FF7900",textCol:"#fff",short:"Orange",name:"Orange Morocco",mcc:"604",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"djezzy",domain:"djezzy.dz",col:"#CC0000",textCol:"#fff",short:"Djezzy",name:"Djezzy Algeria",mcc:"603",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"kcell",domain:"kcell.kz",col:"#009900",textCol:"#fff",short:"Kcell",name:"Kcell Kazakhstan",mcc:"401",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"ucell",domain:"ucell.uz",col:"#FF6600",textCol:"#fff",short:"Ucell",name:"Ucell Uzbekistan",mcc:"434",mnc:"05",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"azercell",domain:"azercell.com",col:"#009FE3",textCol:"#fff",short:"Azercell",name:"Azercell Azerbaijan",mcc:"400",mnc:"01",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"magti",domain:"magticom.ge",col:"#CC0000",textCol:"#fff",short:"Magti",name:"Magti Georgia",mcc:"282",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"viva_am",domain:"vivacell.am",col:"#CC0000",textCol:"#fff",short:"Viva-MTS",name:"Viva-MTS Armenia",mcc:"283",mnc:"05",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"claro_pe",domain:"claro.com.pe",col:"#CC0000",textCol:"#fff",short:"Claro",name:"Claro Peru",mcc:"716",mnc:"10",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"tigo_bo",domain:"tigo.com.bo",col:"#009900",textCol:"#fff",short:"Tigo",name:"Tigo Bolivia",mcc:"736",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"antel",domain:"antel.com.uy",col:"#003082",textCol:"#fff",short:"Antel",name:"Antel Uruguay",mcc:"748",mnc:"00",rats:["4G LTE","LTE Cat-4","HSPA+","2G GSM"]},
-{id:"movistar_ve",domain:"movistar.com.ve",col:"#009900",textCol:"#fff",short:"Movistar",name:"Movistar Venezuela",mcc:"734",mnc:"04",rats:["4G LTE","HSPA+","3G UMTS","2G GSM"]},
-{id:"tigo_gt",domain:"tigo.com.gt",col:"#009900",textCol:"#fff",short:"Tigo",name:"Tigo Guatemala",mcc:"704",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"tigo_pa",domain:"tigo.com.pa",col:"#009900",textCol:"#fff",short:"Tigo",name:"Tigo Panama",mcc:"714",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-{id:"claro_do",domain:"claro.com.do",col:"#CC0000",textCol:"#fff",short:"Claro",name:"Claro Dominican Rep",mcc:"370",mnc:"02",rats:["4G LTE","LTE Cat-4","HSPA+","3G UMTS"]},
-];
-// ── HELPERS ───────────────────────────────────────────────────
-function rnd(a,b){return Math.floor(Math.random()*(b-a+1))+a}
-function pick(a){return a[Math.floor(Math.random()*a.length)]}
-function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
-function nowTs(){return new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit",second:"2-digit"})}
-function hrgb(h){return parseInt(h.slice(1,3),16)+","+parseInt(h.slice(3,5),16)+","+parseInt(h.slice(5,7),16)}
-function sBars(r){return r>=-70?5:r>=-82?4:r>=-93?3:r>=-104?2:1}
-function sCls(r){return r>=-80?"s":r>=-94?"m":"w"}
-function iCol(p){
-  if(p>=0.6)return{c:"var(--cy)",bg:"rgba(0,200,220,0.6)"};
-  if(p>=0.35)return{c:"#EF9F27",bg:"rgba(239,159,39,0.6)"};
-  return{c:"#E24B4A",bg:"rgba(226,75,74,0.6)"};
+
+<script>
+var surveyLog=[], currentGPS=null, isSurveying=false, isDark=false, mapLoaded=false, leafletMap=null, markers=[];
+
+// ── THEME / NAV ───────────────────────────────────
+function toggleTheme(){isDark=!isDark;document.body.classList.toggle('light',!isDark);document.getElementById('themeIcon').className=isDark?'ti ti-sun':'ti ti-moon';if(leafletMap)leafletMap.invalidateSize();}
+function navTo(id){document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});document.querySelectorAll('.ni').forEach(function(n){n.classList.remove('active');});document.getElementById('page-'+id).classList.add('active');document.getElementById('nav-'+id).classList.add('active');if(id==='log')renderLog();if(id==='map')renderMap();}
+function s(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
+
+// ── GPS ───────────────────────────────────────────
+function startGPS(){
+  if(!navigator.geolocation){s('gpsTxt','GPS not available');return;}
+  document.getElementById('gpsDot').classList.add('live');
+  navigator.geolocation.watchPosition(function(pos){
+    currentGPS=pos;var c=pos.coords;
+    document.getElementById('gpsTxt').textContent=c.latitude.toFixed(5)+', '+c.longitude.toFixed(5);
+    document.getElementById('gpsAcc').textContent='±'+Math.round(c.accuracy)+'m';
+    document.getElementById('gpsIcon').className='ti ti-map-pin';
+    document.getElementById('gpsDot').style.background='var(--gr)';
+    s('gLat',c.latitude.toFixed(7)+'°');s('gLng',c.longitude.toFixed(7)+'°');
+    s('gAcc',Math.round(c.accuracy)+'m');
+    s('gAlt',c.altitude!=null?Math.round(c.altitude)+'m':'N/A');
+    s('gSpd',c.speed!=null?(c.speed*3.6).toFixed(1)+' km/h':'N/A');
+    s('gHdg',c.heading!=null?Math.round(c.heading)+'°':'N/A');
+  },function(){
+    document.getElementById('gpsIcon').className='ti ti-map-pin-off';
+    document.getElementById('gpsDot').style.background='var(--rd)';
+    s('gpsTxt','GPS denied');
+  },{enableHighAccuracy:true,maximumAge:5000,timeout:15000});
 }
-function mbH(nb,cls){
-  var h="",hs=[5,8,11,14,16];
-  for(var i=0;i<5;i++) h+='<div style="width:4px;height:'+hs[i]+'px;border-radius:1px;background:'+(i<nb?('var(--cy)'):'var(--br)')+'"></div>';
-  return '<div style="display:flex;align-items:flex-end;gap:2px;height:16px">'+h+'</div>';
+
+// ── CONNECTION INFO ────────────────────────────────
+function updateConn(){
+  var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+  if(nc){
+    var t=nc.type||''; var e=nc.effectiveType||'--';
+    s('nConnType',t?t.toUpperCase()+' / '+e.toUpperCase():e.toUpperCase());
+    var ec=e==='4g'?'good':e==='3g'?'warn':'bad';
+    document.getElementById('nEffType').innerHTML='<span class="bdg '+ec+'">'+e.toUpperCase()+'</span>';
+    s('nDownlink',nc.downlink!=null?nc.downlink+' Mbps':'N/A');
+    s('nRtt',nc.rtt!=null?nc.rtt+' ms':'N/A');
+    s('nSaver',nc.saveData?'On':'Off');
+    if(nc.onchange!==undefined)nc.onchange=updateConn;
+  }else{s('nConnType','API not supported');}
+  var ol=navigator.onLine;
+  document.getElementById('nOnline').innerHTML=ol?'<span class="bdg good">✓ Online</span>':'<span class="bdg bad">✗ Offline</span>';
 }
-function genRat(name){
-  var m=RAT_DB[name],lo=m.rssiRange[0],hi=m.rssiRange[1],rssi=rnd(lo,hi);
-  return{name:name,rssi:rssi,rsrp:rnd(-140,lo+30),rsrq:rnd(-18,-3),
-    sinr:m.hasSINR?rnd(-5,28):null,freq:pick(m.freqs),m:m,nb:sBars(rssi),cls:sCls(rssi),ts:nowTs()};
-}
-function sigQuality(rssi){
-  if(rssi>=-70)return{lbl:"Excellent",cls:"sq-ex",col:"#00C8B4",bars:5};
-  if(rssi>=-82)return{lbl:"Good",cls:"sq-go",col:"#5DCAA5",bars:4};
-  if(rssi>=-93)return{lbl:"Fair",cls:"sq-fa",col:"#EF9F27",bars:3};
-  if(rssi>=-104)return{lbl:"Weak",cls:"sq-wk",col:"#E24B4A",bars:2};
-  return{lbl:"Poor",cls:"sq-po",col:"#cc3333",bars:1};
-}
-// ── RENDER SERVICE ────────────────────────────────────────────
-function renderSvc(s){
-  var rp=clamp((s.rsrp+140)/80,0,1),rq=clamp((s.rsrq+20)/17,0,1);
-  var sp=s.sinr!=null?clamp((s.sinr+10)/38,0,1):null;
-  var rc=iCol(clamp((s.rssi+115)/65,0,1)),rpc=iCol(rp),rqc=iCol(rq);
-  var sc=sp!=null?iCol(sp):null;
-  var sq=sigQuality(s.rssi);
-  var rssiPct=clamp((s.rssi+115)/65,0,1);
-  var sqBadge='<span class="sqbdg '+sq.cls+'"><div class="sq-dot" style="background:'+sq.col+'"></div>'+sq.lbl+'</span>';
-  var srow='<div class="svcrow">'
-    +'<div class="sacc" style="background:'+s.m.col+'"></div>'
-    +'<div style="min-width:62px"><span class="rbdg" style="background:'+s.m.bg+';color:'+s.m.col+';border:0.5px solid '+s.m.brd+'">'+s.name+'</span></div>'
-    +'<div class="sfq">'+s.freq+'</div>'
-    +'<div class="ssig">'+mbH(sq.bars,sq.cls)
-    +'<span class="sdbm" style="color:'+rc.c+'">'+s.rssi+' dBm</span>'+sqBadge+'</div>'
-    +'</div>';
-  var mrow='<div class="svcmeta">'
-    +'<div class="svcmeta-item"><div class="svcmeta-k">RSSI</div><div class="svcmeta-v" style="color:'+rc.c+'">'+s.rssi+' dBm</div><div class="svcmeta-bar"><div class="svcmeta-fill" style="width:'+Math.round(rssiPct*100)+'%;background:'+rc.c+'"></div></div></div>'
-    +'<div class="svcmeta-item"><div class="svcmeta-k">RSRP</div><div class="svcmeta-v" style="color:'+rpc.c+'">'+s.rsrp+' dBm</div><div class="svcmeta-bar"><div class="svcmeta-fill" style="width:'+Math.round(rp*100)+'%;background:'+rpc.c+'"></div></div></div>'
-    +'<div class="svcmeta-item"><div class="svcmeta-k">RSRQ</div><div class="svcmeta-v" style="color:'+rqc.c+'">'+s.rsrq+' dB</div><div class="svcmeta-bar"><div class="svcmeta-fill" style="width:'+Math.round(rq*100)+'%;background:'+rqc.c+'"></div></div></div>'
-    +'<div class="svcmeta-item"><div class="svcmeta-k">SINR</div><div class="svcmeta-v" style="color:'+(sc?sc.c:'var(--t3)')+'">'+((s.sinr!=null)?s.sinr+' dB':'N/A')+'</div>'+(sp!=null?'<div class="svcmeta-bar"><div class="svcmeta-fill" style="width:'+Math.round(sp*100)+'%;background:'+sc.c+'"></div></div>':'<div class="svcmeta-bar"></div>')+'</div>'
-    +'</div>';
-  return srow+mrow;
-}
-// ── RENDER IOT STRIP ─────────────────────────────────────────
-function renderIoTStrip(opId){
-  var cc=detectedCountry||"US";
-  var roamers=[];
-  Object.keys(IOT_SIMS).forEach(function(sid){
-    var sim=IOT_SIMS[sid];
-    var partners=sim.roaming[cc]||sim.roaming["US"]||[];
-    if(partners.indexOf(opId)>=0)roamers.push(sim);
+
+// ── FAST PING ─────────────────────────────────────
+// Uses 3 parallel HEAD requests with 2s timeout each
+async function measurePing(){
+  var urls=['https://1.1.1.1/cdn-cgi/trace','https://8.8.8.8','https://www.cloudflare.com/cdn-cgi/trace'];
+  var promises=urls.map(function(url){
+    return new Promise(function(resolve){
+      var t0=performance.now();
+      var ctrl=new AbortController();
+      var timer=setTimeout(function(){ctrl.abort();resolve(null);},2000);
+      fetch(url+'?t='+Date.now(),{method:'HEAD',cache:'no-store',mode:'no-cors',signal:ctrl.signal})
+        .then(function(){clearTimeout(timer);resolve(performance.now()-t0);})
+        .catch(function(){clearTimeout(timer);resolve(null);});
+    });
   });
-  if(!roamers.length)return "";
-  var chips=roamers.map(function(s){
-    return '<span class="iotchip" style="color:'+s.col+';background:rgba('+hrgb(s.col)+',0.1);border-color:rgba('+hrgb(s.col)+',0.3)"><i class="ti ti-sim-card" style="font-size:10px"></i>'+s.name+' <span style="opacity:.6;font-size:8px">'+s.mcc+'-'+s.mnc+'</span></span>';
-  }).join("");
-  return '<div class="iotstrip last"><span class="iotlbl"><i class="ti ti-antenna" style="font-size:10px;margin-right:3px"></i>IoT SIMs roaming here: </span>'+chips+'</div>';
+  var results=(await Promise.all(promises)).filter(function(v){return v!==null;});
+  if(!results.length){
+    var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+    return{ping:nc&&nc.rtt?nc.rtt:99,jitter:0};
+  }
+  var avg=results.reduce(function(a,b){return a+b;})/results.length;
+  var jitter=results.length>1?Math.round(Math.max.apply(null,results)-Math.min.apply(null,results)):0;
+  return{ping:Math.round(avg),jitter:jitter};
 }
-// ── RENDER OPERATOR BLOCK ─────────────────────────────────────
-function renderOpBlock(d,isActive){
-  var op=d.op,svcs=d.svcs;
-  var best=svcs.reduce(function(a,b){return a.rssi>b.rssi?a:b});
-  var bp=clamp((best.rssi+115)/65,0,1),bc=iCol(bp);
-  var isLocal=!localOpIds||localOpIds.indexOf(op.id)>=0;
-  var iotStrip=renderIoTStrip(op.id);
-  var hasIot=iotStrip.length>0;
-  var tc=op.textCol||"#fff";
-  var domain=op.domain||"";
-  var fallback='<div class="fb" style="color:'+tc+'">'+op.short+'</div>';
-  var logoDiv=domain
-    ?'<div class="oplo" style="background:'+op.col+'"><img src="https://www.google.com/s2/favicons?domain='+domain+'&sz=64" alt="'+op.name+'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\'" onload="this.nextSibling.style.display=\'none\'">'+fallback+'</div>'
-    :'<div class="oplo" style="background:'+op.col+';color:'+tc+'">'+op.short+'</div>';
-  var actBdg=isActive?'<span class="bdg bact">&#10003; Active</span>':"";
-  var locBdg=(isLocal&&localOpIds)?'<span class="bdg bloc">&#x25CF; Local</span>':"";
-  return '<div class="opb" data-opid="'+op.id+'">'
-    +'<div class="ophd" style="background:rgba('+hrgb(op.col)+',0.08);border-color:rgba('+hrgb(op.col)+',0.2)">'
-    +logoDiv
-    +'<div style="flex:1;min-width:0"><div class="opnm">'+op.name+'</div>'
-    +'<div class="opmt">'+op.mcc+'-'+op.mnc+' &middot; '+op.region+' &middot; <span id="sc-'+op.id+'">'+svcs.length+'</span> RATs</div></div>'
-    +'<div class="opr"><span style="font-size:12px;font-weight:500;color:'+bc.c+'">'+best.rssi+' dBm</span>'
-    +'<div class="bdgs">'+actBdg+locBdg+'</div></div></div>'
-    +'<div class="svclist'+(hasIot?" hasiot":"")+'" id="sl-'+op.id+'">'+svcs.map(renderSvc).join("")+'</div>'
-    +iotStrip+'</div>';
+
+// ── FAST DOWNLOAD ─────────────────────────────────
+// Fetches from Cloudflare CDN with 5s hard timeout
+async function measureDownload(){
+  var sizes=[1000000,500000,200000];
+  for(var i=0;i<sizes.length;i++){
+    try{
+      var ctrl=new AbortController();
+      var t=setTimeout(function(){ctrl.abort();},5000);
+      var t0=performance.now();
+      var r=await fetch('https://speed.cloudflare.com/__down?bytes='+sizes[i]+'&nonce='+Date.now(),{cache:'no-store',signal:ctrl.signal});
+      var buf=await r.arrayBuffer();
+      clearTimeout(t);
+      var sec=(performance.now()-t0)/1000;
+      if(sec<0.1)continue;
+      return Math.round((buf.byteLength*8)/(sec*1e6)*10)/10;
+    }catch(e){continue;}
+  }
+  var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+  return nc&&nc.downlink?nc.downlink:null;
 }
-// ── STATE ─────────────────────────────────────────────────────
-var scanData=[],towers=[];
-var detectedCountry=null,localOpIds=null;
-var currentFilter="all";
-// ── FILTER (type pills) ───────────────────────────────────────
-function applyFilter(f){
-  currentFilter=f;
-  document.querySelectorAll(".pill").forEach(function(p){
-    var pid=p.dataset.pid,pdef=TYPE_PILLS.find(function(x){return x.id===pid});
-    if(pid===f){p.classList.add("on");p.style.background=pdef?pdef.col:"var(--cy)";p.style.color="#fff";p.style.borderColor="transparent";}
-    else{p.classList.remove("on");p.style.background="";p.style.color="";p.style.borderColor="";}
-  });
-  var vo=0,vs=0;
-  scanData.forEach(function(d){
-    var op=d.op,svcs=d.svcs,fl;
-    var cc=detectedCountry||"US";
-    if(f==="all") fl=svcs;
-    else if(f==="eSIM"){
-      var hasIot=Object.values(IOT_SIMS).some(function(s){
-        var p=s.roaming[cc]||s.roaming["US"]||[];
-        return p.indexOf(op.id)>=0;
-      });
-      fl=hasIot?svcs:[];
-    }
-    else fl=svcs.filter(function(s){return s.m.gen===f});
-    var bl=document.querySelector('.opb[data-opid="'+op.id+'"]');
-    if(!bl)return;
-    if(!fl.length){bl.style.display="none";}
-    else{
-      bl.style.display="block";
-      document.getElementById("sl-"+op.id).innerHTML=fl.map(renderSvc).join("");
-      var c=document.getElementById("sc-"+op.id);if(c)c.textContent=fl.length;
-      vo++;vs+=fl.length;
-    }
-  });
-  document.getElementById("sOps").textContent=vo;
-  document.getElementById("sSvcs").textContent=vs;
-}
-function buildPills(){
-  var row=document.getElementById("pillRow");
-  row.innerHTML=TYPE_PILLS.map(function(p){
-    var on=p.id==="all";
-    return '<div class="pill'+(on?" on":"")+'" data-pid="'+p.id+'"'+(on?' style="background:'+p.col+';color:#fff;border-color:transparent"':'')+'>'+(p.id==="eSIM"?'<i class="ti ti-sim-card" style="font-size:10px;margin-right:3px"></i>':'')+p.label+'</div>';
-  }).join("");
-  row.querySelectorAll(".pill").forEach(function(el){
-    el.addEventListener("click",function(){applyFilter(this.dataset.pid);});
-  });
-}
-// ── SORT ─────────────────────────────────────────────────────
-// ── LOCATION ─────────────────────────────────────────────────
-function setLocSt(cls,icon,msg){
-  var el=document.getElementById("locSt"),ic=document.getElementById("locStIc"),tx=document.getElementById("locStTx");
-  if(el)el.className="loc-st"+(cls?" "+cls:"");
-  if(ic)ic.className="ti "+icon;
-  if(tx)tx.textContent=msg;
-}
-function requestLocation(){
-  document.getElementById("locIcon").className="ti ti-loader spin";
-  setLocSt("","ti-loader spin","Detecting your location...");
-  if(!navigator.geolocation){guessTZ();return;}
-  navigator.geolocation.getCurrentPosition(onLocOK,onLocFail,{timeout:8000,maximumAge:60000});
-}
-async function onLocOK(pos){
+
+// ── FAST UPLOAD ───────────────────────────────────
+async function measureUpload(){
   try{
-    var r=await fetch("https://nominatim.openstreetmap.org/reverse?lat="+pos.coords.latitude+"&lon="+pos.coords.longitude+"&format=json");
-    var d=await r.json();
-    var cc=(d.address&&d.address.country_code||"").toUpperCase();
-    radarLat=pos.coords.latitude; radarLng=pos.coords.longitude;
-    setCountry(cc,d.address&&d.address.country||"");
-  }catch(e){guessTZ();}
-}
-function onLocFail(){
-  document.getElementById("locIcon").className="ti ti-map-pin-off";
-  setLocSt("err","ti-map-pin-off","Location unavailable — showing all networks");
-  guessTZ();
-}
-function guessTZ(){
-  var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||"";
-  var map={"Kuala_Lumpur":"MY","Singapore":"SG","Bangkok":"TH","Jakarta":"ID","Manila":"PH","Ho_Chi_Minh":"VN","Rangoon":"MM","Phnom_Penh":"KH","Vientiane":"LA","Brunei":"BN","Tokyo":"JP","Shanghai":"CN","Seoul":"KR","Taipei":"TW","Hong_Kong":"HK","Macau":"MO","Kolkata":"IN","Calcutta":"IN","Dhaka":"BD","Colombo":"LK","Kathmandu":"NP","Karachi":"PK","Islamabad":"PK","Lahore":"PK","Male":"MV","Sydney":"AU","Melbourne":"AU","Brisbane":"AU","Perth":"AU","Adelaide":"AU","Auckland":"NZ","Wellington":"NZ","Fiji":"FJ","Port_Moresby":"PG","London":"GB","Dublin":"IE","Paris":"FR","Berlin":"DE","Rome":"IT","Madrid":"ES","Amsterdam":"NL","Brussels":"BE","Zurich":"CH","Vienna":"AT","Lisbon":"PT","Stockholm":"SE","Oslo":"NO","Copenhagen":"DK","Helsinki":"FI","Warsaw":"PL","Prague":"CZ","Bratislava":"SK","Budapest":"HU","Bucharest":"RO","Sofia":"BG","Zagreb":"HR","Athens":"GR","Moscow":"RU","Kiev":"UA","Istanbul":"TR","Kyiv":"UA","New_York":"US","Chicago":"US","Los_Angeles":"US","Denver":"US","Phoenix":"US","Anchorage":"US","Honolulu":"US","Toronto":"CA","Vancouver":"CA","Montreal":"CA","Calgary":"CA","Mexico_City":"MX","Guadalajara":"MX","Monterrey":"MX","Sao_Paulo":"BR","Rio_de_Janeiro":"BR","Brasilia":"BR","Buenos_Aires":"AR","Bogota":"CO","Santiago":"CL","Lima":"PE","Guayaquil":"EC","La_Paz":"BO","Montevideo":"UY","Asuncion":"PY","Caracas":"VE","Costa_Rica":"CR","Guatemala":"GT","Panama":"PA","Havana":"CU","Santo_Domingo":"DO","Jamaica":"JM","Riyadh":"SA","Dubai":"AE","Cairo":"EG","Casablanca":"MA","Doha":"QA","Kuwait":"KW","Bahrain":"BH","Muscat":"OM","Amman":"JO","Beirut":"LB","Baghdad":"IQ","Tehran":"IR","Jerusalem":"IL","Gaza":"PS","Lagos":"NG","Johannesburg":"ZA","Nairobi":"KE","Accra":"GH","Addis_Ababa":"ET","Dar_es_Salaam":"TZ","Kampala":"UG","Kigali":"RW","Dakar":"SN","Abidjan":"CI","Douala":"CM","Luanda":"AO","Maputo":"MZ","Lusaka":"ZM","Harare":"ZW","Antananarivo":"MG","Tunis":"TN","Algiers":"DZ","Tripoli":"LY","Khartoum":"SD","Almaty":"KZ","Tashkent":"UZ","Baku":"AZ","Tbilisi":"GE","Yerevan":"AM"};
-  var cc="";
-  Object.keys(map).forEach(function(k){if(tz.indexOf(k)>=0)cc=map[k];});
-  if(cc)setCountry(cc,CNAMES[cc]||cc); else skipLocation();
-}
-function getRegion(cc){
-var r={
-  MY:"SE Asia",SG:"SE Asia",TH:"SE Asia",ID:"SE Asia",PH:"SE Asia",VN:"SE Asia",MM:"SE Asia",KH:"SE Asia",LA:"SE Asia",BN:"SE Asia",
-  JP:"East Asia",CN:"East Asia",KR:"East Asia",TW:"East Asia",HK:"East Asia",MO:"East Asia",
-  IN:"South Asia",BD:"South Asia",LK:"South Asia",NP:"South Asia",PK:"South Asia",MV:"South Asia",
-  AU:"Oceania",NZ:"Oceania",FJ:"Oceania",PG:"Oceania",
-  GB:"Europe",IE:"Europe",FR:"Europe",DE:"Europe",IT:"Europe",ES:"Europe",NL:"Europe",BE:"Europe",CH:"Europe",AT:"Europe",PT:"Europe",SE:"Europe",NO:"Europe",DK:"Europe",FI:"Europe",PL:"Europe",CZ:"Europe",SK:"Europe",HU:"Europe",RO:"Europe",BG:"Europe",HR:"Europe",GR:"Europe",RU:"Europe",UA:"Europe",TR:"Europe",
-  US:"North America",CA:"North America",MX:"North America",
-  BR:"South America",AR:"South America",CO:"South America",CL:"South America",PE:"South America",EC:"South America",BO:"South America",UY:"South America",PY:"South America",VE:"South America",CR:"Central America",GT:"Central America",PA:"Central America",CU:"Caribbean",DO:"Caribbean",PR:"Caribbean",JM:"Caribbean",
-  SA:"Middle East",AE:"Middle East",EG:"Middle East",MA:"Middle East",QA:"Middle East",KW:"Middle East",BH:"Middle East",OM:"Middle East",JO:"Middle East",LB:"Middle East",IQ:"Middle East",IR:"Middle East",IL:"Middle East",PS:"Middle East",
-  NG:"Africa",ZA:"Africa",KE:"Africa",GH:"Africa",ET:"Africa",TZ:"Africa",UG:"Africa",RW:"Africa",SN:"Africa",CI:"Africa",CM:"Africa",AO:"Africa",MZ:"Africa",ZM:"Africa",ZW:"Africa",MG:"Africa",TN:"Africa",DZ:"Africa",LY:"Africa",SD:"Africa",
-  KZ:"Central Asia",UZ:"Central Asia",AZ:"Central Asia",GE:"Central Asia",AM:"Central Asia"
-};
-return r[cc]||"Worldwide";
-}
-function setCountry(cc,name){
-  detectedCountry=cc;
-  localOpIds=COUNTRY_OPS[cc]||null;
-  document.getElementById("locIcon").className="ti ti-map-pin";
-  document.getElementById("scanBtn").style.display="flex";
-  document.getElementById("locBar").style.display="flex";
-  document.getElementById("locFlag").textContent=FLAGS[cc]||"🌐";
-  document.getElementById("locText").innerHTML="<strong>"+(CNAMES[cc]||name)+"</strong> · "+getRegion(cc);
-  
-  var cnt=localOpIds?localOpIds.length:GLOBAL_OPS.length;
-  setLocSt("done","ti-map-pin","📍 "+(CNAMES[cc]||name)+" — "+cnt+" local operators found");
-  if(!scanning)startScan();
-}
-function skipLocation(){
-  detectedCountry=null;localOpIds=null;
-  document.getElementById("locIcon").className="ti ti-world";
-  document.getElementById("scanBtn").style.display="flex";
-  
-  setLocSt("err","ti-world","Showing all worldwide networks");
-  if(!scanning)startScan();
+    var sz=300000;
+    var data=new Uint8Array(sz);
+    crypto.getRandomValues(data);
+    var ctrl=new AbortController();
+    var t=setTimeout(function(){ctrl.abort();},5000);
+    var t0=performance.now();
+    await fetch('https://speed.cloudflare.com/__up?nonce='+Date.now(),{method:'POST',body:new Blob([data]),cache:'no-store',signal:ctrl.signal,headers:{'Content-Type':'application/octet-stream'}});
+    clearTimeout(t);
+    var sec=(performance.now()-t0)/1000;
+    if(sec<0.05)throw new Error('skip');
+    return Math.round((sz*8)/(sec*1e6)*10)/10;
+  }catch(e){
+    var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+    return nc&&nc.downlink?Math.round(nc.downlink*0.4*10)/10:null;
+  }
 }
 
-// ── REAL TOWER RADAR ──────────────────────────────────────────
-var realTowers = [];
-var radarLat = null, radarLng = null;
+// ── IoT SERVICE DETECTION ─────────────────────────
+// Tests reachability of key IoT/cloud endpoints from current location
+var IOT_ENDPOINTS=[
+  {name:'Azure IoT Hub',  url:'https://global.azure-devices-provisioning.net',        icon:'ti-brand-azure',  col:'#0078D4',type:'Cloud IoT'},
+  {name:'AWS IoT Core',   url:'https://data.iot.us-east-1.amazonaws.com',             icon:'ti-brand-aws',    col:'#FF9900',type:'Cloud IoT'},
+  {name:'1NCE API',       url:'https://api.1nce.com',                                 icon:'ti-sim-card',     col:'#AFA9EC',type:'IoT SIM'},
+  {name:'Telnyx API',     url:'https://api.telnyx.com',                               icon:'ti-sim-card',     col:'#7EC8E3',type:'IoT SIM'},
+  {name:'Cloudflare',     url:'https://www.cloudflare.com/cdn-cgi/trace',             icon:'ti-cloud',        col:'#F48120',type:'CDN'},
+  {name:'MQTT (HiveMQ)',  url:'https://broker.hivemq.com',                            icon:'ti-antenna',      col:'#00C864',type:'MQTT Broker'},
+  {name:'Google DNS',     url:'https://dns.google',                                   icon:'ti-brand-google', col:'#4285F4',type:'DNS'},
+  {name:'Nominatim/OSM',  url:'https://nominatim.openstreetmap.org',                  icon:'ti-map',          col:'#7EBC6F',type:'Location'},
+];
 
-function fetchRealTowers(lat, lng) {
-  radarLat = lat; radarLng = lng;
-  var radarCard = document.getElementById("radarCard");
-  var radarStatus = document.getElementById("radarStatus");
-  if(radarStatus) radarStatus.textContent = "Fetching real towers near you...";
-
-  // Mozilla Location Services - geolocation API returns nearby cell towers
-  // We use the reverse approach: send our GPS, get nearby towers
-  var url = "https://location.services.mozilla.com/v1/geolocate?key=geoclue";
-  
-  // MLS doesn't directly return tower lists from GPS.
-  // Use OpenCelliD (free tier) or fall back to our scan data
-  // Best free option: use Unwired Labs (free tier) or OpenBMap
-  // Actually use: https://api.mylnikov.org/geolocation/cell - free no key
-  // OR: Use the scan data we already have + GPS to estimate real bearings
-
-  // Real approach: use GPS + our scanned operator data to show estimated towers
-  // with real compass bearings based on known tower density patterns
-  buildRadarFromScanAndGPS(lat, lng);
-}
-
-function buildRadarFromScanAndGPS(lat, lng) {
-  // Use Mozilla Location API to get nearby cell info
-  // This API accepts wifi/cell hints and returns location + accuracy
-  // We use it in reverse: send GPS, infer towers from scan data
-  
-  var radarStatus = document.getElementById("radarStatus");
-  
-  // Try to get real tower data from OpenCelliD compatible API
-  // mylnikov.org is free and doesn't require key for basic queries
-  fetch("https://opencellid.org/ajax/searchCell.php?mcc=502&net=&area=&cell=&lat="+lat+"&lon="+lng+"&zoom=12")
-  .then(function(r){ return r.json(); })
-  .then(function(d){ processOpenCellData(d, lat, lng); })
-  .catch(function(){
-    // Fallback: use scanned operators with GPS-derived estimates
-    buildFallbackRadar(lat, lng);
+async function checkIoTEndpoints(){
+  var container=document.getElementById('iotResults');
+  container.innerHTML='<div style="font-size:11px;color:var(--t3)"><i class="ti ti-loader spin" style="margin-right:6px"></i>Checking IoT endpoints...</div>';
+  var results=await Promise.all(IOT_ENDPOINTS.map(async function(ep){
+    var t0=performance.now();
+    var ok=false;var latency=null;
+    try{
+      var ctrl=new AbortController();
+      var timer=setTimeout(function(){ctrl.abort();},4000);
+      var r=await fetch(ep.url+'?_='+Date.now(),{method:'HEAD',cache:'no-store',mode:'no-cors',signal:ctrl.signal});
+      clearTimeout(timer);
+      ok=true;latency=Math.round(performance.now()-t0);
+    }catch(e){latency=Math.round(performance.now()-t0);}
+    return{...ep,ok:ok,latency:latency};
+  }));
+  var html='';
+  results.forEach(function(r){
+    var status=r.ok?'<span class="bdg good">✓ Reachable</span>':'<span class="bdg bad">✗ Unreachable</span>';
+    var lat=r.latency!==null?'<span style="font-size:10px;color:var(--t3);margin-left:6px">'+r.latency+'ms</span>':'';
+    html+='<div class="strow">'
+      +'<i class="ti '+r.icon+'" style="font-size:14px;color:'+r.col+';flex-shrink:0;margin-right:6px"></i>'
+      +'<div style="flex:1"><div style="font-size:11px;font-weight:500;color:var(--tx)">'+r.name+'</div>'
+      +'<div style="font-size:9px;color:var(--t3)">'+r.type+'</div></div>'
+      +status+lat
+      +'</div>';
   });
+  container.innerHTML=html;
+  return results;
 }
 
-function processOpenCellData(data, lat, lng) {
-  var radarStatus = document.getElementById("radarStatus");
-  if(data && data.cells && data.cells.length) {
-    realTowers = data.cells.map(function(c) {
-      var bearing = getBearing(lat, lng, parseFloat(c.lat)||lat, parseFloat(c.lon)||lng);
-      var dist = getDistance(lat, lng, parseFloat(c.lat)||lat, parseFloat(c.lon)||lng);
-      return {
-        lat: parseFloat(c.lat)||lat, lng: parseFloat(c.lon)||lng,
-        bearing: bearing, dist: Math.round(dist),
-        mcc: c.mcc||"", mnc: c.mnc||"", lac: c.lac||"", cid: c.cellid||"",
-        signal: c.averageSignalStrength||-85,
-        real: true
-      };
-    });
-    if(radarStatus) radarStatus.textContent = realTowers.length + " real towers found nearby";
-    drawRealRadar();
-    renderRealTowerList();
-  } else {
-    buildFallbackRadar(lat, lng);
-  }
+// ── SURVEY RUNNER ─────────────────────────────────
+function setP(pct){var e=document.getElementById('progBar');if(e)e.style.width=pct+'%';}
+
+async function runSurvey(){
+  isSurveying=true;
+  var btn=document.getElementById('surveyBtn');
+  document.getElementById('btnIcon').className='ti ti-loader spin';
+  document.getElementById('btnTxt').textContent='Testing...';
+  btn.classList.add('running');
+  document.getElementById('recBadge').textContent='● TESTING';
+  setP(5);
+
+  // GPS snap
+  var gps=currentGPS;
+  if(!gps){for(var w=0;w<10;w++){await sleep(300);if(currentGPS){gps=currentGPS;break;}}}
+  setP(15);
+
+  // All tests in parallel for maximum speed
+  updateConn();
+  var [pingRes, dlMbps, ulMbps, iotResults] = await Promise.all([
+    measurePing(),
+    measureDownload(),
+    measureUpload(),
+    checkIoTEndpoints()
+  ]);
+  setP(90);
+
+  // Update UI
+  s('pingVal', pingRes.ping); s('jitterVal', pingRes.jitter);
+  s('pingQual', pingRes.ping<50?'Excellent':pingRes.ping<100?'Good':pingRes.ping<200?'Fair':'High');
+  s('jitterQual', pingRes.jitter<20?'Stable':pingRes.jitter<50?'Moderate':'Unstable');
+  s('dlVal', dlMbps!==null?dlMbps:'--');
+  s('dlQual', dlMbps!==null?(dlMbps>=10?'Excellent':dlMbps>=2?'Good':dlMbps>=0.5?'Fair':'Slow'):'Failed');
+  s('ulVal', ulMbps!==null?ulMbps:'--');
+  s('ulQual', ulMbps!==null?(ulMbps>=5?'Excellent':ulMbps>=1?'Good':ulMbps>=0.3?'Fair':'Slow'):'Failed');
+
+  // Save point
+  var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+  var pt={
+    id:surveyLog.length+1, ts:new Date().toISOString(),
+    tsLocal:new Date().toLocaleString(),
+    lat:gps?gps.coords.latitude:null, lng:gps?gps.coords.longitude:null,
+    accuracy:gps?Math.round(gps.coords.accuracy):null,
+    altitude:gps&&gps.coords.altitude!=null?Math.round(gps.coords.altitude):null,
+    dl:dlMbps, ul:ulMbps, ping:pingRes.ping, jitter:pingRes.jitter,
+    effType:nc?nc.effectiveType||'unknown':'unknown',
+    connType:nc?nc.type||nc.effectiveType||'unknown':'unknown',
+    rtt:nc?nc.rtt:null, dlReported:nc?nc.downlink:null,
+    online:navigator.onLine,
+    iotReachable:iotResults.filter(function(r){return r.ok;}).map(function(r){return r.name;}).join('; '),
+  };
+  surveyLog.push(pt);
+  setP(100);
+
+  // Reset button
+  document.getElementById('recBadge').textContent='● LIVE';
+  document.getElementById('recBadge').style.cssText='';
+  btn.classList.remove('running');
+  document.getElementById('btnIcon').className='ti ti-player-record';
+  document.getElementById('btnTxt').textContent='New Point (#'+(surveyLog.length+1)+')';
+  isSurveying=false;
+  setTimeout(function(){setP(0);},2000);
 }
 
-function buildFallbackRadar(lat, lng) {
-  // Use Mozilla Location Services geolocate with our scan data as hints
-  var radarStatus = document.getElementById("radarStatus");
-  
-  if(!scanData.length) {
-    if(radarStatus) radarStatus.textContent = "Scan networks first to see towers";
-    return;
-  }
+function handleSurveyBtn(){if(!isSurveying)runSurvey();}
 
-  // Build plausible tower estimates from scan results
-  // Each operator with strong signal → nearby tower estimate
-  // Use real compass directions based on typical tower grid patterns
-  realTowers = [];
-  var usedBearings = [];
-  
-  scanData.forEach(function(d, i) {
-    d.svcs.forEach(function(svc, j) {
-      if(j > 0) return; // one tower per operator
-      // Spread towers around compass using golden angle
-      var bearing = Math.round((i * 137.5 + j * 45) % 360);
-      // Estimate distance from RSSI: stronger = closer
-      var rssi = svc.rssi;
-      var estDist = Math.round(Math.pow(10, (-rssi - 40) / 20) * 100);
-      estDist = Math.max(100, Math.min(8000, estDist));
-      // Calculate estimated lat/lng of tower
-      var towerPos = getDestination(lat, lng, bearing, estDist);
-      realTowers.push({
-        lat: towerPos.lat, lng: towerPos.lng,
-        bearing: bearing, dist: estDist,
-        name: d.op.name, rat: svc.name, rssi: svc.rssi,
-        mcc: d.op.mcc, mnc: d.op.mnc,
-        cid: "CID-" + (Math.floor(Math.random()*90000)+10000),
-        signal: rssi, real: false, col: d.op.col
-      });
-    });
+// ── LOG ───────────────────────────────────────────
+function renderLog(){
+  s('logCount',surveyLog.length+' point'+(surveyLog.length!==1?'s':''));
+  var el=document.getElementById('logList');
+  if(!surveyLog.length){el.innerHTML='<div class="card" style="text-align:center;padding:32px"><i class="ti ti-clipboard-list" style="font-size:28px;color:var(--t3);display:block;margin-bottom:8px"></i><div style="color:var(--t3);font-size:13px">No survey points yet</div></div>';return;}
+  var html='<div class="card" style="padding:0;overflow:hidden"><div style="overflow-x:auto"><table class="logtbl"><thead><tr><th>#</th><th>Time</th><th>DL</th><th>UL</th><th>Ping</th><th>Type</th><th>IoT OK</th><th>GPS</th></tr></thead><tbody>';
+  surveyLog.slice().reverse().forEach(function(p){
+    var dc=p.dl>=10?'var(--gr)':p.dl>=2?'var(--am)':'var(--rd)';
+    var pc=p.ping<50?'var(--gr)':p.ping<150?'var(--am)':'var(--rd)';
+    var iotCount=p.iotReachable?p.iotReachable.split('; ').length:0;
+    html+='<tr><td>'+p.id+'</td>'
+      +'<td style="white-space:nowrap;font-size:10px">'+p.tsLocal.split(',')[1].trim()+'</td>'
+      +'<td style="color:'+dc+';font-weight:600">'+(p.dl||'--')+'</td>'
+      +'<td>'+(p.ul||'--')+'</td>'
+      +'<td style="color:'+pc+'">'+(p.ping||'--')+'</td>'
+      +'<td><span class="bdg info">'+p.effType.toUpperCase()+'</span></td>'
+      +'<td><span class="bdg '+(iotCount>=4?'good':iotCount>=2?'warn':'bad')+'">'+iotCount+'/'+IOT_ENDPOINTS.length+'</span></td>'
+      +'<td style="font-size:10px;color:var(--t3)">'+(p.lat?p.lat.toFixed(4)+','+p.lng.toFixed(4):'--')+'</td>'
+      +'</tr>';
   });
-  
-  realTowers.sort(function(a,b){return a.dist-b.dist;});
-  if(radarStatus) {
-    radarStatus.textContent = "Estimated tower positions from signal strength (GPS: "+lat.toFixed(4)+", "+lng.toFixed(4)+")";
+  html+='</tbody></table></div></div>';
+  if(surveyLog.length>1){
+    var dls=surveyLog.filter(function(p){return p.dl!==null;}).map(function(p){return p.dl;});
+    var pings=surveyLog.map(function(p){return p.ping;});
+    var avgDl=dls.length?Math.round(dls.reduce(function(a,b){return a+b;})/dls.length*10)/10:'--';
+    var avgPing=Math.round(pings.reduce(function(a,b){return a+b;})/pings.length);
+    html+='<div class="card-cy" style="margin-top:10px"><div class="ctit"><i class="ti ti-chart-bar"></i> Summary</div>'
+      +'<div class="strow"><span class="stlbl">Points</span><span class="stval">'+surveyLog.length+'</span></div>'
+      +(dls.length?'<div class="strow"><span class="stlbl">Avg Download</span><span class="stval" style="color:var(--cy)">'+avgDl+' Mbps</span></div>':'')
+      +(dls.length?'<div class="strow"><span class="stlbl">Best / Worst DL</span><span class="stval">'+Math.max.apply(null,dls)+' / '+Math.min.apply(null,dls)+' Mbps</span></div>':'')
+      +'<div class="strow"><span class="stlbl">Avg Ping</span><span class="stval">'+avgPing+' ms</span></div>'
+      +'</div>';
   }
-  drawRealRadar();
-  renderRealTowerList();
+  el.innerHTML=html;
 }
 
-// ── MATH HELPERS ─────────────────────────────────────────────
-function getBearing(lat1,lon1,lat2,lon2){
-  var dLon=(lon2-lon1)*Math.PI/180;
-  var y=Math.sin(dLon)*Math.cos(lat2*Math.PI/180);
-  var x=Math.cos(lat1*Math.PI/180)*Math.sin(lat2*Math.PI/180)-Math.sin(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.cos(dLon);
-  return((Math.atan2(y,x)*180/Math.PI)+360)%360;
+// ── MAP ───────────────────────────────────────────
+function renderMap(){
+  var pts=surveyLog.filter(function(p){return p.lat&&p.lng;});
+  if(!pts.length){document.getElementById('mapContainer').innerHTML='<i class="ti ti-map-pin-off" style="font-size:28px;color:var(--t3)"></i><span style="font-size:12px;color:var(--t3)">No GPS data yet</span>';return;}
+  if(!mapLoaded){
+    document.getElementById('mapContainer').innerHTML='<div id="leafletMap" style="width:100%;height:420px"></div>';
+    var css=document.createElement('link');css.rel='stylesheet';css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';document.head.appendChild(css);
+    var scr=document.createElement('script');scr.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    scr.onload=function(){initMap(pts);};document.head.appendChild(scr);mapLoaded=true;
+  }else if(leafletMap){updateMarkers(pts);}
 }
-function getDistance(lat1,lon1,lat2,lon2){
-  var R=6371000;
-  var dLat=(lat2-lat1)*Math.PI/180;
-  var dLon=(lon2-lon1)*Math.PI/180;
-  var a=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);
-  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+function initMap(pts){
+  leafletMap=L.map('leafletMap').setView([pts[0].lat,pts[0].lng],15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap',maxZoom:19}).addTo(leafletMap);
+  updateMarkers(pts);
 }
-function getDestination(lat,lng,bearing,distM){
-  var R=6371000;
-  var d=distM/R;
-  var b=bearing*Math.PI/180;
-  var lat1=lat*Math.PI/180;
-  var lon1=lng*Math.PI/180;
-  var lat2=Math.asin(Math.sin(lat1)*Math.cos(d)+Math.cos(lat1)*Math.sin(d)*Math.cos(b));
-  var lon2=lon1+Math.atan2(Math.sin(b)*Math.sin(d)*Math.cos(lat1),Math.cos(d)-Math.sin(lat1)*Math.sin(lat2));
-  return{lat:lat2*180/Math.PI, lng:lon2*180/Math.PI};
-}
-
-// ── DRAW REAL RADAR ───────────────────────────────────────────
-function drawRealRadar(){
-  var cv=document.getElementById("radarCanvas");
-  if(!cv)return;
-  var W=cv.width,ctx=cv.getContext("2d"),cx=W/2,cy=W/2,R=W*0.4;
-  var il=document.body.classList.contains("light");
-  var gc=il?"rgba(0,100,130,0.12)":"rgba(0,229,255,0.1)";
-  var lc=il?"rgba(0,100,130,0.45)":"rgba(0,229,255,0.35)";
-  var TC=["#00C8B4","#5DCAA5","#EF9F27","#E24B4A","#AFA9EC","#ED93B1","#F4A261","#3B82F6","#00E5FF","#FF6B35"];
-  ctx.clearRect(0,0,W,W);
-  // Grid rings with distance labels
-  var maxDist = realTowers.length ? Math.max.apply(null,realTowers.map(function(t){return t.dist;})) : 5000;
-  maxDist = Math.max(maxDist * 1.1, 500);
-  [0.33,0.66,1].forEach(function(f,i){
-    var r=R*f;
-    ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);
-    ctx.strokeStyle=gc;ctx.lineWidth=1;ctx.stroke();
-    // Distance label
-    var distLabel = Math.round(maxDist*f);
-    var label = distLabel>=1000?(distLabel/1000).toFixed(1)+"km":distLabel+"m";
-    ctx.fillStyle=lc;ctx.font=Math.round(W*0.028)+"px Arial";ctx.textAlign="center";
-    ctx.fillText(label,cx+r+2,cy+10);
+function updateMarkers(pts){
+  markers.forEach(function(m){leafletMap.removeLayer(m);});markers=[];
+  pts.forEach(function(p){
+    var col=p.dl>=10?'#00C864':p.dl>=2?'#EF9F27':'#E24B4A';
+    var icon=L.divIcon({html:'<div style="width:14px;height:14px;border-radius:50%;background:'+col+';border:2.5px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.4)"></div>',iconSize:[14,14],iconAnchor:[7,7],className:''});
+    var m=L.marker([p.lat,p.lng],{icon:icon})
+      .bindPopup('<b>#'+p.id+'</b> '+p.tsLocal+'<br>DL: '+(p.dl||'--')+' Mbps &nbsp; Ping: '+p.ping+' ms<br>Type: '+p.effType.toUpperCase()+'<br>IoT: '+p.iotReachable)
+      .addTo(leafletMap);
+    markers.push(m);
   });
-  // Compass
-  [["N",cx,cy-R-10],["S",cx,cy+R+14],["W",cx-R-12,cy],["E",cx+R+7,cy]].forEach(function(x){
-    ctx.fillStyle=lc;ctx.font=Math.round(W*0.038)+"px Arial";ctx.textAlign="center";ctx.fillText(x[0],x[1],x[2]);
-  });
-  // Sweep effect
-  ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,R,-Math.PI/2,Math.PI/6);
-  ctx.fillStyle=il?"rgba(0,100,130,0.04)":"rgba(0,229,255,0.05)";ctx.fill();
-  // North line
-  ctx.beginPath();ctx.moveTo(cx,cy-R);ctx.lineTo(cx,cy);
-  ctx.strokeStyle=il?"rgba(0,100,130,0.4)":"rgba(0,229,255,0.45)";ctx.lineWidth=1.5;ctx.stroke();
-  // Center dot (you are here)
-  ctx.beginPath();ctx.arc(cx,cy,6,0,Math.PI*2);
-  ctx.fillStyle=il?"#0088aa":"#00E5FF";ctx.fill();
-  ctx.beginPath();ctx.arc(cx,cy,3,0,Math.PI*2);
-  ctx.fillStyle="#fff";ctx.fill();
-  // Tower dots
-  if(!realTowers.length){
-    ctx.fillStyle=lc;ctx.font=Math.round(W*0.04)+"px Arial";ctx.textAlign="center";
-    ctx.fillText("Scan to see towers",cx,cy+R+35);
-    return;
-  }
-  realTowers.slice(0,12).forEach(function(t,i){
-    var a=(t.bearing-90)*Math.PI/180;
-    var r2=Math.min(R-8,(t.dist/maxDist)*(R-8)+8);
-    var x=cx+Math.cos(a)*r2,y=cy+Math.sin(a)*r2;
-    // Tower circle
-    ctx.beginPath();ctx.arc(x,y,t.real?7:5,0,Math.PI*2);
-    ctx.fillStyle=t.col||TC[i%TC.length];ctx.fill();
-    if(t.real){
-      ctx.beginPath();ctx.arc(x,y,7,0,Math.PI*2);
-      ctx.strokeStyle="#fff";ctx.lineWidth=1.5;ctx.stroke();
-    }
-    // Label
-    ctx.fillStyle=il?"rgba(0,0,0,0.6)":"rgba(255,255,255,0.8)";
-    ctx.font="bold "+Math.round(W*0.028)+"px Arial";ctx.textAlign="center";
-    var dLabel=t.dist>=1000?(t.dist/1000).toFixed(1)+"km":t.dist+"m";
-    ctx.fillText(dLabel,x,y+16);
-    // Operator name
-    ctx.font=Math.round(W*0.026)+"px Arial";
-    var opLabel=t.name?t.name.split(" ")[0]:(t.mcc+"-"+t.mnc);
-    ctx.fillText(opLabel,x,y+26);
-  });
+  if(pts.length>1)leafletMap.fitBounds(L.latLngBounds(pts.map(function(p){return[p.lat,p.lng];}))),{padding:[20,20]};
 }
 
-// ── RENDER REAL TOWER LIST ────────────────────────────────────
-function renderRealTowerList(){
-  var TC=["#00C8B4","#5DCAA5","#EF9F27","#E24B4A","#AFA9EC","#ED93B1","#F4A261","#3B82F6","#00E5FF","#FF6B35"];
-  var html2='<div style="background:var(--sf);border:0.5px solid var(--br);border-radius:10px;overflow:hidden;margin-top:4px">';
-  if(!realTowers.length){
-    html2+='<div style="padding:16px;text-align:center;font-size:12px;color:var(--t2)">Scan networks first to populate tower list</div>';
-  } else {
-    realTowers.slice(0,12).forEach(function(t,i){
-      var col=t.col||TC[i%TC.length];
-      var distStr=t.dist>=1000?(t.dist/1000).toFixed(2)+" km":t.dist+" m";
-      var sigStr=t.signal?t.signal+" dBm":"--";
-      var realBadge=t.real?'<span style="font-size:8px;padding:1px 5px;border-radius:10px;background:rgba(0,200,100,0.15);color:#00C864;border:0.5px solid rgba(0,200,100,0.3);margin-left:4px">REAL</span>':'<span style="font-size:8px;padding:1px 5px;border-radius:10px;background:rgba(239,159,39,0.12);color:#EF9F27;border:0.5px solid rgba(239,159,39,0.3);margin-left:4px">EST</span>';
-      html2+='<div style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:0.5px solid var(--br)'+(i===Math.min(realTowers.length,12)-1?";border-bottom:none":"")+'"><div style="width:32px;height:32px;border-radius:50%;background:rgba('+hrgb(col)+',0.15);color:'+col+';display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0"><i class="ti ti-antenna"></i></div>'
-        +'<div style="flex:1;min-width:0">'
-        +'<div style="font-size:12px;font-weight:500;color:var(--tx)">'+(t.name||("MCC "+t.mcc+"-"+t.mnc))+realBadge+'</div>'
-        +'<div style="font-size:10px;color:var(--t3)">'+(t.rat||"")+(t.cid?" &middot; "+t.cid:"")+" &middot; "+t.bearing.toFixed(0)+"&deg;"+'</div>'
-        +'</div>'
-        +'<div style="text-align:right;flex-shrink:0">'
-        +'<div style="font-size:12px;font-weight:500;color:'+col+'">'+distStr+'</div>'
-        +'<div style="font-size:10px;color:var(--t3)">'+sigStr+'</div>'
-        +'</div></div>';
-    });
-  }
-  document.getElementById("towerList").innerHTML=html2+"</div>";
+// ── EXPORT ────────────────────────────────────────
+function exportCSV(){
+  if(!surveyLog.length){alert('No data.');return;}
+  var k=['id','tsLocal','lat','lng','accuracy','altitude','dl','ul','ping','jitter','effType','connType','rtt','dlReported','iotReachable'];
+  var rows=[k.join(',')].concat(surveyLog.map(function(p){return k.map(function(f){var v=p[f];if(v==null)return'';if(typeof v==='string'&&v.indexOf(',')>=0)return'"'+v+'"';return v;}).join(',');}));
+  dl('CTS_Survey_'+new Date().toISOString().slice(0,10)+'.csv',rows.join('\n'),'text/csv');
 }
+function exportJSON(){
+  if(!surveyLog.length){alert('No data.');return;}
+  dl('CTS_Survey_'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify({survey:surveyLog,exported:new Date().toISOString(),app:'CTS Field Survey v2.0'},null,2),'application/json');
+}
+function dl(name,content,type){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type:type}));a.download=name;a.click();}
+function clearLog(){if(surveyLog.length&&confirm('Clear '+surveyLog.length+' points?')){surveyLog=[];renderLog();if(leafletMap){markers.forEach(function(m){leafletMap.removeLayer(m);});markers=[];}};}
 
-
-function requestRadarGPS(){
-  var status=document.getElementById("radarStatus");
-  if(status)status.textContent="Getting your GPS location...";
-  if(!navigator.geolocation){
-    if(status)status.textContent="GPS not available on this device";
-    return;
-  }
-  navigator.geolocation.getCurrentPosition(
-    function(pos){fetchRealTowers(pos.coords.latitude,pos.coords.longitude);},
-    function(){
-      if(status)status.textContent="GPS denied — using scan signal estimates";
-      if(radarLat&&radarLng){buildFallbackRadar(radarLat,radarLng);}
-      else if(scanData.length){buildFallbackRadar(3.147,101.695);} // fallback coord
-    },
-    {timeout:8000,maximumAge:30000}
-  );
-}
-
-
-function buildAbout(){
-  var rl=document.getElementById("ratLegend");
-  var sr=document.getElementById("sigRef");
-  if(rl)rl.innerHTML=Object.keys(RAT_DB).map(function(n){
-    var m=RAT_DB[n];
-    return '<div class="li"><div class="ld" style="background:'+m.col+'"></div>'+n+'<span style="color:var(--t3);margin-left:3px">('+m.gen+')</span></div>';
-  }).join("");
-  if(sr)sr.innerHTML=
-    '<div class="irow"><span class="ik">Excellent</span><span class="iv" style="color:#00C8B4">&ge; &minus;70 dBm</span></div>'
-   +'<div class="irow"><span class="ik">Good</span><span class="iv" style="color:#5DCAA5">&minus;71 to &minus;82 dBm</span></div>'
-   +'<div class="irow"><span class="ik">Fair</span><span class="iv" style="color:#EF9F27">&minus;83 to &minus;93 dBm</span></div>'
-   +'<div class="irow"><span class="ik">Weak</span><span class="iv" style="color:#E24B4A">&minus;94 to &minus;104 dBm</span></div>'
-   +'<div class="irow"><span class="ik">Poor</span><span class="iv" style="color:#E24B4A">&le; &minus;105 dBm</span></div>';
-}
-var isDark=false;
-function toggleTheme(){
-  isDark=!isDark;
-  document.body.classList.toggle("light",!isDark);
-  document.getElementById("themeIcon").className=isDark?"ti ti-sun":"ti ti-moon";
-  if(realTowers.length)setTimeout(drawRealRadar,50);
-}
-function navTo(id){
-  document.querySelectorAll(".page").forEach(function(p){p.classList.remove("active");});
-  document.querySelectorAll(".ni").forEach(function(n){n.classList.remove("active");});
-  document.getElementById("page-"+id).classList.add("active");
-  document.getElementById("nav-"+id).classList.add("active");
-  if(id==="radar"){setTimeout(function(){resizeRadar();if(realTowers.length){drawRealRadar();renderRealTowerList();}else{requestRadarGPS();}},50);}
-}
-var scanning=false;
-function startScan(){
-  if(scanning)return;
-  scanning=true;
-  var btn=document.getElementById("scanBtn");
-  btn.classList.add("scanning");
-  document.getElementById("btnLbl").textContent="Scanning…";
-  document.getElementById("spill").textContent="Scanning";
-  document.getElementById("opList").innerHTML="";
-  document.getElementById("statsRow").style.display="none";
-  document.getElementById("scanTs").style.display="none";
-  document.getElementById("filterWrap").style.display="none";
-  if(navigator.connection){
-    var c=navigator.connection,bar=document.getElementById("cbar");
-    bar.style.display="block";
-    bar.innerHTML="Device: <span>"+(c.effectiveType||c.type||"?").toUpperCase()+"</span> &middot; DL <span>"+(c.downlink||"?")+" Mbps</span> &middot; RTT <span>"+(c.rtt||"?")+" ms</span>";
-  }
-  setTimeout(function(){
-    var opsToScan=localOpIds?GLOBAL_OPS.filter(function(op){return localOpIds.indexOf(op.id)>=0;}):GLOBAL_OPS;
-    scanData=opsToScan.map(function(op){
-      var svcs=op.rats.map(function(r){return genRat(r);});
-      svcs.sort(function(a,b){return b.rssi-a.rssi;});
-      return{op:op,svcs:svcs};
-    }).sort(function(a,b){return b.svcs[0].rssi-a.svcs[0].rssi;});
-    towers=genTowers?genTowers():[];
-    var html2="",total=0,best=-999;
-    scanData.forEach(function(d,i){
-      total+=d.svcs.length;
-      if(d.svcs[0].rssi>best)best=d.svcs[0].rssi;
-      html2+=renderOpBlock(d,i===0);
-    });
-    document.getElementById("opList").innerHTML=html2;
-    document.getElementById("sOps").textContent=scanData.length;
-    document.getElementById("sSvcs").textContent=total;
-    document.getElementById("sBest").textContent=best;
-    document.getElementById("statsRow").style.display="grid";
-    buildPills();currentFilter="all";
-    document.getElementById("filterWrap").style.display="block";
-    
-    var ts=document.getElementById("scanTs");
-    ts.style.display="block";
-    ts.textContent="Scanned "+nowTs()+" · "+scanData.length+" operators · "+total+" services found";
-    btn.classList.remove("scanning");
-    document.getElementById("btnLbl").textContent="Scan Again";
-    document.getElementById("spill").textContent="Live";
-    scanning=false;
-    // Update radar with signal-based tower estimates if GPS available
-    if(radarLat&&radarLng){buildFallbackRadar(radarLat,radarLng);}
-    if(document.getElementById("page-radar").classList.contains("active")){resizeRadar();if(realTowers.length){drawRealRadar();renderRealTowerList();}}
-  },2800);
-}
-function genTowers(){return [];}
-
-function resizeRadar(){
-  var cv=document.getElementById("radarCanvas");if(!cv)return;
-  var w=Math.min(cv.parentElement.offsetWidth-28,520);
-  cv.width=w;cv.height=w;if(realTowers.length)drawRealRadar();
-}
-window.addEventListener("resize",resizeRadar);
-window.addEventListener("scroll",function(){
-  var btn=document.getElementById("bttBtn");
-  if(!btn)return;
-  btn.classList.toggle("show",window.scrollY>200);
-});
-resizeRadar();
-buildAbout();
-requestLocation();</script>
+// ── INIT ─────────────────────────────────────────
+startGPS();
+updateConn();
+window.addEventListener('online', updateConn);
+window.addEventListener('offline', updateConn);
+</script>
 </body>
 </html>
