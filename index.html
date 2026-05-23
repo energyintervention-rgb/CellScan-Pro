@@ -7,173 +7,174 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#00E5FF">
-<title>CTS Field Survey</title>
-<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjogIkNUUyBGaWVsZCBTdXJ2ZXkiLCAic2hvcnRfbmFtZSI6ICJDVFMgU3VydmV5IiwgInN0YXJ0X3VybCI6ICIuL2luZGV4Lmh0bWwiLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgIm9yaWVudGF0aW9uIjogImFueSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwZDExMTciLCAidGhlbWVfY29sb3IiOiAiIzAwRTVGRiIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUIzYVdSMGFEMGlNVGt5SWlCb1pXbG5hSFE5SWpFNU1pSWdkbWxsZDBKdmVEMGlNQ0F3SURFNU1pQXhPVElpSUhodGJHNXpQU0pvZEhSd09pOHZkM2QzTG5jekxtOXlaeTh5TURBd0wzTjJaeUkrQ2lBZ1BHUmxabk0rUEdacGJIUmxjaUJwWkQwaVp5SStQR1psUjJGMWMzTnBZVzVDYkhWeUlITjBaRVJsZG1saGRHbHZiajBpTkNJZ2NtVnpkV3gwUFNKaUlpOCtQR1psVFdWeVoyVStQR1psVFdWeVoyVk9iMlJsSUdsdVBTSmlJaTgrUEdabFRXVnlaMlZPYjJSbElHbHVQU0pUYjNWeVkyVkhjbUZ3YUdsaklpOCtQQzltWlUxbGNtZGxQand2Wm1sc2RHVnlQand2WkdWbWN6NEtJQ0E4Y21WamRDQjNhV1IwYUQwaU1Ua3lJaUJvWldsbmFIUTlJakU1TWlJZ2NuZzlJalF5SWlCbWFXeHNQU0lqTVRFeE9ESXdJaTgrQ2lBZ1BISmxZM1FnZUQwaU15SWdlVDBpTXlJZ2QybGtkR2c5SWpFNE5pSWdhR1ZwWjJoMFBTSXhPRFlpSUhKNFBTSXpPU0lnWm1sc2JEMGlibTl1WlNJZ2MzUnliMnRsUFNJak1EQkZOVVpHSWlCemRISnZhMlV0ZDJsa2RHZzlJak1pSUc5d1lXTnBkSGs5SWpBdU5DSXZQZ29nSUR4MFpYaDBJSGc5SWprMkxqQWlJSGs5SWpFd01DNDRNREF3TURBd01EQXdNREF3TVNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNJRUpzWVdOckxFRnlhV0ZzTEhOaGJuTXRjMlZ5YVdZaUlHWnZiblF0ZDJWcFoyaDBQU0k1TURBaUlHWnZiblF0YzJsNlpUMGlOeklpSUdacGJHdzlJaU13TUVVMVJrWWlJR1pwYkhSbGNqMGlkWEpzS0NObktTSWdiR1YwZEdWeUxYTndZV05wYm1jOUlqTWlQa05VVXp3dmRHVjRkRDRLSUNBOGRHVjRkQ0I0UFNJNU5pNHdJaUI1UFNJeE16Z3VNalFpSUhSbGVIUXRZVzVqYUc5eVBTSnRhV1JrYkdVaUlHWnZiblF0Wm1GdGFXeDVQU0pCY21saGJDeHpZVzV6TFhObGNtbG1JaUJtYjI1MExYTnBlbVU5SWpJMElpQm1hV3hzUFNJak1EQkZOVVpHSWlCdmNHRmphWFI1UFNJd0xqY2lJR3hsZEhSbGNpMXpjR0ZqYVc1blBTSTNJajVRVWs5RVBDOTBaWGgwUGdvOEwzTjJaejQ9IiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn0sIHsic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJZ2RtbGxkMEp2ZUQwaU1DQXdJRFV4TWlBMU1USWlJSGh0Ykc1elBTSm9kSFJ3T2k4dmQzZDNMbmN6TG05eVp5OHlNREF3TDNOMlp5SStDaUFnUEdSbFpuTStQR1pwYkhSbGNpQnBaRDBpWnlJK1BHWmxSMkYxYzNOcFlXNUNiSFZ5SUhOMFpFUmxkbWxoZEdsdmJqMGlNVElpSUhKbGMzVnNkRDBpWWlJdlBqeG1aVTFsY21kbFBqeG1aVTFsY21kbFRtOWtaU0JwYmowaVlpSXZQanhtWlUxbGNtZGxUbTlrWlNCcGJqMGlVMjkxY21ObFIzSmhjR2hwWXlJdlBqd3ZabVZOWlhKblpUNDhMMlpwYkhSbGNqNDhMMlJsWm5NK0NpQWdQSEpsWTNRZ2QybGtkR2c5SWpVeE1pSWdhR1ZwWjJoMFBTSTFNVElpSUhKNFBTSXhNVElpSUdacGJHdzlJaU14TVRFNE1qQWlMejRLSUNBOGNtVmpkQ0I0UFNJeE1DSWdlVDBpTVRBaUlIZHBaSFJvUFNJME9USWlJR2hsYVdkb2REMGlORGt5SWlCeWVEMGlNVEF5SWlCbWFXeHNQU0p1YjI1bElpQnpkSEp2YTJVOUlpTXdNRVUxUmtZaUlITjBjbTlyWlMxM2FXUjBhRDBpTVRBaUlHOXdZV05wZEhrOUlqQXVOQ0l2UGdvZ0lEeDBaWGgwSUhnOUlqSTFOaTR3SWlCNVBTSXlOamd1T0NJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNJRUpzWVdOckxFRnlhV0ZzTEhOaGJuTXRjMlZ5YVdZaUlHWnZiblF0ZDJWcFoyaDBQU0k1TURBaUlHWnZiblF0YzJsNlpUMGlNVGswSWlCbWFXeHNQU0lqTURCRk5VWkdJaUJtYVd4MFpYSTlJblZ5YkNnalp5a2lJR3hsZEhSbGNpMXpjR0ZqYVc1blBTSTRJajVEVkZNOEwzUmxlSFErQ2lBZ1BIUmxlSFFnZUQwaU1qVTJMakFpSUhrOUlqTTJPQzQyTkNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabTl1ZEMxbVlXMXBiSGs5SWtGeWFXRnNMSE5oYm5NdGMyVnlhV1lpSUdadmJuUXRjMmw2WlQwaU5qWWlJR1pwYkd3OUlpTXdNRVUxUmtZaUlHOXdZV05wZEhrOUlqQXVOeUlnYkdWMGRHVnlMWE53WVdOcGJtYzlJakl3SWo1UVVrOUVQQzkwWlhoMFBnbzhMM04yWno0PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XX0=">
+<title>CTS IoT Site Survey</title>
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjogIkNUUyBJb1QgU2l0ZSBTdXJ2ZXkiLCAic2hvcnRfbmFtZSI6ICJDVFMgSW9UIFN1cnZleSIsICJzdGFydF91cmwiOiAiLi9pbmRleC5odG1sIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJvcmllbnRhdGlvbiI6ICJhbnkiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMGQxMTE3IiwgInRoZW1lX2NvbG9yIjogIiMwMEU1RkYiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCM2FXUjBhRDBpTVRreUlpQm9aV2xuYUhROUlqRTVNaUlnZG1sbGQwSnZlRDBpTUNBd0lERTVNaUF4T1RJaUlIaHRiRzV6UFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eU1EQXdMM04yWnlJK0NpQWdQR1JsWm5NK1BHWnBiSFJsY2lCcFpEMGlaeUkrUEdabFIyRjFjM05wWVc1Q2JIVnlJSE4wWkVSbGRtbGhkR2x2YmowaU5DSWdjbVZ6ZFd4MFBTSmlJaTgrUEdabFRXVnlaMlUrUEdabFRXVnlaMlZPYjJSbElHbHVQU0ppSWk4K1BHWmxUV1Z5WjJWT2IyUmxJR2x1UFNKVGIzVnlZMlZIY21Gd2FHbGpJaTgrUEM5bVpVMWxjbWRsUGp3dlptbHNkR1Z5UGp3dlpHVm1jejRLSUNBOGNtVmpkQ0IzYVdSMGFEMGlNVGt5SWlCb1pXbG5hSFE5SWpFNU1pSWdjbmc5SWpReUlpQm1hV3hzUFNJak1URXhPREl3SWk4K0NpQWdQSEpsWTNRZ2VEMGlNeUlnZVQwaU15SWdkMmxrZEdnOUlqRTROaUlnYUdWcFoyaDBQU0l4T0RZaUlISjRQU0l6T1NJZ1ptbHNiRDBpYm05dVpTSWdjM1J5YjJ0bFBTSWpNREJGTlVaR0lpQnpkSEp2YTJVdGQybGtkR2c5SWpNaUlHOXdZV05wZEhrOUlqQXVOQ0l2UGdvZ0lEeDBaWGgwSUhnOUlqazJMakFpSUhrOUlqRXdNQzQ0TURBd01EQXdNREF3TURBd01TSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrOUlrRnlhV0ZzSUVKc1lXTnJMRUZ5YVdGc0xITmhibk10YzJWeWFXWWlJR1p2Ym5RdGQyVnBaMmgwUFNJNU1EQWlJR1p2Ym5RdGMybDZaVDBpTnpJaUlHWnBiR3c5SWlNd01FVTFSa1lpSUdacGJIUmxjajBpZFhKc0tDTm5LU0lnYkdWMGRHVnlMWE53WVdOcGJtYzlJak1pUGtOVVV6d3ZkR1Y0ZEQ0S0lDQThkR1Y0ZENCNFBTSTVOaTR3SWlCNVBTSXhNemd1TWpRaUlIUmxlSFF0WVc1amFHOXlQU0p0YVdSa2JHVWlJR1p2Ym5RdFptRnRhV3g1UFNKQmNtbGhiQ3h6WVc1ekxYTmxjbWxtSWlCbWIyNTBMWE5wZW1VOUlqSTBJaUJtYVd4c1BTSWpNREJGTlVaR0lpQnZjR0ZqYVhSNVBTSXdMamNpSUd4bGRIUmxjaTF6Y0dGamFXNW5QU0kzSWo1UVVrOUVQQzkwWlhoMFBnbzhMM04yWno0PSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUIzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdkbWxsZDBKdmVEMGlNQ0F3SURVeE1pQTFNVElpSUhodGJHNXpQU0pvZEhSd09pOHZkM2QzTG5jekxtOXlaeTh5TURBd0wzTjJaeUkrQ2lBZ1BHUmxabk0rUEdacGJIUmxjaUJwWkQwaVp5SStQR1psUjJGMWMzTnBZVzVDYkhWeUlITjBaRVJsZG1saGRHbHZiajBpTVRJaUlISmxjM1ZzZEQwaVlpSXZQanhtWlUxbGNtZGxQanhtWlUxbGNtZGxUbTlrWlNCcGJqMGlZaUl2UGp4bVpVMWxjbWRsVG05a1pTQnBiajBpVTI5MWNtTmxSM0poY0docFl5SXZQand2Wm1WTlpYSm5aVDQ4TDJacGJIUmxjajQ4TDJSbFpuTStDaUFnUEhKbFkzUWdkMmxrZEdnOUlqVXhNaUlnYUdWcFoyaDBQU0kxTVRJaUlISjRQU0l4TVRJaUlHWnBiR3c5SWlNeE1URTRNakFpTHo0S0lDQThjbVZqZENCNFBTSXhNQ0lnZVQwaU1UQWlJSGRwWkhSb1BTSTBPVElpSUdobGFXZG9kRDBpTkRreUlpQnllRDBpTVRBeUlpQm1hV3hzUFNKdWIyNWxJaUJ6ZEhKdmEyVTlJaU13TUVVMVJrWWlJSE4wY205clpTMTNhV1IwYUQwaU1UQWlJRzl3WVdOcGRIazlJakF1TkNJdlBnb2dJRHgwWlhoMElIZzlJakkxTmk0d0lpQjVQU0l5TmpndU9DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrOUlrRnlhV0ZzSUVKc1lXTnJMRUZ5YVdGc0xITmhibk10YzJWeWFXWWlJR1p2Ym5RdGQyVnBaMmgwUFNJNU1EQWlJR1p2Ym5RdGMybDZaVDBpTVRrMElpQm1hV3hzUFNJak1EQkZOVVpHSWlCbWFXeDBaWEk5SW5WeWJDZ2paeWtpSUd4bGRIUmxjaTF6Y0dGamFXNW5QU0k0SWo1RFZGTThMM1JsZUhRK0NpQWdQSFJsZUhRZ2VEMGlNalUyTGpBaUlIazlJak0yT0M0Mk5DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrOUlrRnlhV0ZzTEhOaGJuTXRjMlZ5YVdZaUlHWnZiblF0YzJsNlpUMGlOallpSUdacGJHdzlJaU13TUVVMVJrWWlJRzl3WVdOcGRIazlJakF1TnlJZ2JHVjBkR1Z5TFhOd1lXTnBibWM5SWpJd0lqNVFVazlFUEM5MFpYaDBQZ284TDNOMlp6ND0iLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifV19">
 <link rel="icon" type="image/svg+xml" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz48ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+PC9kZWZzPgogIDxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjciIGZpbGw9IiMxMTE4MjAiLz4KICA8cmVjdCB4PSIxIiB5PSIxIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHJ4PSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMEU1RkYiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ii8+CiAgPHRleHQgeD0iMTYuMCIgeT0iMTYuOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMwMEU1RkYiIGZpbHRlcj0idXJsKCNnKSIgbGV0dGVyLXNwYWNpbmc9IjEiPkNUUzwvdGV4dD4KICA8dGV4dCB4PSIxNi4wIiB5PSIyMy4wNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNCIgZmlsbD0iIzAwRTVGRiIgb3BhY2l0eT0iMC43IiBsZXR0ZXItc3BhY2luZz0iMiI+UFJPRDwvdGV4dD4KPC9zdmc+">
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+PGZpbHRlciBpZD0iZyI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNCIgcmVzdWx0PSJiIi8+PGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPjwvZmlsdGVyPjwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjM5IiBmaWxsPSIjMTExODIwIi8+CiAgPHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjE3NCIgaGVpZ2h0PSIxNzQiIHJ4PSIzNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBFNUZGIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuNCIvPgogIDx0ZXh0IHg9IjkwLjAiIHk9Ijk0LjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjY4IiBmaWxsPSIjMDBFNUZGIiBmaWx0ZXI9InVybCgjZykiIGxldHRlci1zcGFjaW5nPSIzIj5DVFM8L3RleHQ+CiAgPHRleHQgeD0iOTAuMCIgeT0iMTI5LjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjIzIiBmaWxsPSIjMDBFNUZGIiBvcGFjaXR5PSIwLjciIGxldHRlci1zcGFjaW5nPSI3Ij5QUk9EPC90ZXh0Pgo8L3N2Zz4=">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
-:root{--bg:#0d1117;--sf:#111820;--sf2:#161d27;--cy:#00E5FF;--cyd:rgba(0,229,255,0.12);--cyb:rgba(0,229,255,0.22);--tx:#e6edf3;--t2:rgba(255,255,255,0.5);--t3:rgba(255,255,255,0.28);--br:rgba(255,255,255,0.07);--sh:rgba(0,0,0,0.4);--gr:#00C864;--am:#EF9F27;--rd:#E24B4A;--st:env(safe-area-inset-top,0px);--sb:env(safe-area-inset-bottom,0px)}
-body.light{--bg:#F5EFE4;--sf:#FDF8F2;--sf2:#EDE5D8;--cy:#0088bb;--cyd:rgba(0,136,187,0.1);--cyb:rgba(0,136,187,0.25);--tx:#0d1117;--t2:rgba(0,0,0,0.5);--t3:rgba(0,0,0,0.3);--br:rgba(0,0,0,0.08);--sh:rgba(0,0,0,0.1);--gr:#007a3d;--am:#b36a00;--rd:#c0392b}
+:root{--bg:#0d1117;--sf:#111820;--sf2:#161d27;--cy:#00E5FF;--cyd:rgba(0,229,255,.12);--cyb:rgba(0,229,255,.22);--tx:#e6edf3;--t2:rgba(255,255,255,.5);--t3:rgba(255,255,255,.28);--br:rgba(255,255,255,.07);--sh:rgba(0,0,0,.4);--gr:#00C864;--am:#EF9F27;--rd:#E24B4A}
+body.light{--bg:#F5EFE4;--sf:#FDF8F2;--sf2:#EDE5D8;--cy:#0077aa;--cyd:rgba(0,119,170,.1);--cyb:rgba(0,119,170,.25);--tx:#0d1117;--t2:rgba(0,0,0,.55);--t3:rgba(0,0,0,.35);--br:rgba(0,0,0,.08);--sh:rgba(0,0,0,.1);--gr:#007a3d;--am:#b36a00;--rd:#c0392b}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;overscroll-behavior:none;padding-bottom:var(--sb)}
-.topbar{position:sticky;top:0;z-index:200;background:var(--sf);border-bottom:0.5px solid var(--cyb);padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px var(--sh)}
-.lbox{width:38px;height:38px;background:var(--bg);border-radius:10px;border:0.5px solid rgba(0,180,220,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;overscroll-behavior:none;padding-bottom:env(safe-area-inset-bottom,0px)}
+.topbar{position:sticky;top:0;z-index:200;background:var(--sf);border-bottom:.5px solid var(--cyb);padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px var(--sh)}
+.lbox{width:38px;height:38px;background:var(--bg);border-radius:10px;border:.5px solid rgba(0,180,220,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
 .lcts{font-family:"Arial Black",Arial,sans-serif;font-weight:900;font-size:13px;color:var(--cy);letter-spacing:1px;line-height:1}
 .lprd{font-size:4.5px;color:var(--cy);opacity:.7;letter-spacing:2.5px;margin-top:1px}
 .atit{font-family:"Arial Black",Arial,sans-serif;font-weight:900;font-size:15px;color:var(--cy)}
-.asub{font-size:10px;color:var(--cy);font-weight:600;letter-spacing:.3px;margin-top:1px}
+.asub{font-size:10px;color:var(--cy);font-weight:600;margin-top:1px}
 .tr{display:flex;align-items:center;gap:6px}
-.ibtn{width:30px;height:30px;border-radius:8px;background:var(--sf2);border:0.5px solid var(--br);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--t2);font-size:16px}
-.pw{padding:12px 14px;padding-bottom:calc(72px + var(--sb));max-width:760px;margin:0 auto}
-.bnav{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--sf);border-top:0.5px solid var(--cyb);display:flex;padding-bottom:var(--sb);box-shadow:0 -2px 12px var(--sh)}
+.ibtn{width:30px;height:30px;border-radius:8px;background:var(--sf2);border:.5px solid var(--br);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--t2);font-size:16px}
+.pw{padding:12px 14px;padding-bottom:calc(68px + env(safe-area-inset-bottom,0px));max-width:760px;margin:0 auto}
+.bnav{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--sf);border-top:.5px solid var(--cyb);display:flex;padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -2px 12px var(--sh)}
 .ni{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;gap:3px;border:none;background:transparent;color:var(--t3);cursor:pointer;transition:color .15s}
 .ni.active{color:var(--cy)}.ni i{font-size:20px;line-height:1}.ni span{font-size:9px}
 .page{display:none}.page.active{display:block}
-.card{background:var(--sf);border:0.5px solid var(--br);border-radius:14px;padding:16px;margin-bottom:12px}
-.card-cy{background:var(--sf);border:0.5px solid var(--cyb);border-radius:14px;padding:16px;margin-bottom:12px}
-.ctit{font-size:10px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.card{background:var(--sf);border:.5px solid var(--br);border-radius:14px;padding:14px;margin-bottom:10px}
+.cardcy{background:var(--sf);border:.5px solid var(--cyb);border-radius:14px;padding:14px;margin-bottom:10px}
+.ctit{font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
 .ctit i{color:var(--cy);font-size:14px}
-.sbtn{width:100%;padding:16px;border-radius:12px;background:var(--cy);color:#fff;font-size:15px;font-weight:900;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;font-family:"Arial Black",Arial,sans-serif;letter-spacing:.5px;margin-bottom:10px;transition:all .2s}
-.sbtn:active{opacity:.85}.sbtn.running{background:var(--cyd);color:var(--cy);border:0.5px solid var(--cy)}
-.prog{height:6px;border-radius:3px;background:var(--br);margin-bottom:12px;overflow:hidden}
-.progf{height:100%;border-radius:3px;background:var(--cy);transition:width .4s ease;width:0%}
-.bigmet{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px}
-.bigmet4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
-.bm{background:var(--sf2);border-radius:12px;padding:12px 8px;text-align:center;border:0.5px solid var(--br)}
-.bmv{font-size:24px;font-weight:300;line-height:1;margin-bottom:3px}
-.bmu{font-size:9px;color:var(--t3)}
-.bml{font-size:9px;color:var(--t2);margin-top:3px;font-weight:500}
-.strow{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:0.5px solid var(--br)}
+/* SCAN BUTTON */
+.scanbtn{width:100%;padding:15px;border-radius:12px;background:var(--cy);color:#fff;font-size:15px;font-weight:900;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;font-family:"Arial Black",Arial,sans-serif;letter-spacing:.5px;margin-bottom:10px;transition:all .2s}
+.scanbtn:active{opacity:.85}
+.scanbtn.running{background:var(--cyd);color:var(--cy);border:.5px solid var(--cy)}
+/* PROGRESS */
+.prog{height:5px;border-radius:3px;background:var(--br);margin-bottom:10px;overflow:hidden}
+.progf{height:100%;border-radius:3px;background:var(--cy);transition:width .3s ease;width:0}
+/* GPS BAR */
+.gpsbar{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--sf2);border:.5px solid var(--br);border-radius:10px;margin-bottom:10px;font-size:11px;color:var(--t2)}
+.gpsdot{width:8px;height:8px;border-radius:50%;background:var(--am);flex-shrink:0}
+.gpsdot.live{animation:blink 1.5s infinite}
+.gpsdot.ok{background:var(--gr)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+/* STROW */
+.strow{display:flex;align-items:center;padding:7px 0;border-bottom:.5px solid var(--br)}
 .strow:last-child{border-bottom:none}
 .stlbl{font-size:11px;color:var(--t2);flex:1}
 .stval{font-size:12px;font-weight:500;color:var(--tx)}
-.bdg{font-size:9px;font-weight:600;padding:3px 8px;border-radius:20px}
-.good{background:rgba(0,200,100,.15);color:var(--gr);border:0.5px solid rgba(0,200,100,.3)}
-.warn{background:rgba(239,159,39,.15);color:var(--am);border:0.5px solid rgba(239,159,39,.3)}
-.bad{background:rgba(226,75,74,.15);color:var(--rd);border:0.5px solid rgba(226,75,74,.3)}
-.info{background:var(--cyd);color:var(--cy);border:0.5px solid var(--cyb)}
-.iotchip{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:500;padding:3px 8px;border-radius:20px;border:0.5px solid;margin:2px}
-.gpsbar{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--sf2);border:0.5px solid var(--br);border-radius:10px;margin-bottom:10px;font-size:11px;color:var(--t2)}
-.gpsbar i{color:var(--cy);font-size:14px;flex-shrink:0}
-.gpsdot{width:7px;height:7px;border-radius:50%;background:var(--cy);flex-shrink:0}
-.live{animation:blink 1.5s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-.rbdg{font-size:8px;font-weight:700;padding:2px 6px;border-radius:10px;background:rgba(0,200,100,.15);color:var(--gr);border:0.5px solid rgba(0,200,100,.3)}
-.spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+/* BADGES */
+.bdg{font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px}
+.good{background:rgba(0,200,100,.15);color:var(--gr);border:.5px solid rgba(0,200,100,.3)}
+.warn{background:rgba(239,159,39,.15);color:var(--am);border:.5px solid rgba(239,159,39,.3)}
+.bad{background:rgba(226,75,74,.15);color:var(--rd);border:.5px solid rgba(226,75,74,.3)}
+.info{background:var(--cyd);color:var(--cy);border:.5px solid var(--cyb)}
+.nbdg{font-size:8px;font-weight:700;padding:2px 6px;border-radius:10px}
+.nb-yes{background:rgba(0,200,100,.15);color:var(--gr);border:.5px solid rgba(0,200,100,.3)}
+.nb-no{background:var(--sf2);color:var(--t3);border:.5px solid var(--br)}
+/* OPERATOR CARD */
+.opcard{border:.5px solid var(--br);border-radius:12px;margin-bottom:8px;overflow:hidden}
+.opcard.best{border-color:var(--cyb);box-shadow:0 0 12px rgba(0,229,255,.08)}
+.ophd{display:flex;align-items:center;gap:10px;padding:11px 12px;background:var(--sf)}
+.oplo{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:"Arial Black",Arial,sans-serif;flex-shrink:0;color:#fff;overflow:hidden;position:relative}
+.oplo img{width:100%;height:100%;object-fit:contain;border-radius:8px}
+.oplo .fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+.opnm{font-size:13px;font-weight:600;color:var(--tx)}
+.opmt{font-size:9px;color:var(--t3);margin-top:1px}
+.opr{margin-left:auto;text-align:right;flex-shrink:0}
+/* IoT TAGS row */
+.iotrow{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px;background:var(--sf2);border-top:.5px solid var(--br)}
+/* IoT SIM strip */
+.simstrip{padding:7px 12px;background:var(--sf2);border-top:.5px solid var(--br);display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.simchip{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:600;padding:3px 8px;border-radius:20px;border:.5px solid}
+/* SPEED METRICS */
+.mets{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px}
+.met{background:var(--sf2);border-radius:10px;padding:11px 8px;text-align:center;border:.5px solid var(--br)}
+.metv{font-size:22px;font-weight:300;line-height:1;margin-bottom:3px}
+.metu{font-size:9px;color:var(--t3)}
+.metl{font-size:9px;color:var(--t2);margin-top:3px;font-weight:500}
+/* LOG TABLE */
 .logtbl{width:100%;border-collapse:collapse;font-size:11px}
-.logtbl th{text-align:left;padding:6px 8px;font-size:9px;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:.05em;border-bottom:0.5px solid var(--br);white-space:nowrap}
-.logtbl td{padding:7px 8px;border-bottom:0.5px solid var(--br);color:var(--t2);vertical-align:middle}
+.logtbl th{text-align:left;padding:6px 8px;font-size:9px;color:var(--t3);font-weight:500;text-transform:uppercase;border-bottom:.5px solid var(--br);white-space:nowrap}
+.logtbl td{padding:7px 8px;border-bottom:.5px solid var(--br);vertical-align:middle}
 .logtbl tr:last-child td{border-bottom:none}
-.expbtn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:8px;background:var(--sf2);border:0.5px solid var(--br);color:var(--t2);font-size:11px;cursor:pointer}
-.irow{display:flex;justify-content:space-between;padding:6px 0;border-bottom:0.5px solid var(--br);font-size:12px}
+.expbtn{display:inline-flex;align-items:center;gap:5px;padding:7px 11px;border-radius:8px;background:var(--sf2);border:.5px solid var(--br);color:var(--t2);font-size:11px;cursor:pointer}
+.irow{display:flex;justify-content:space-between;padding:6px 0;border-bottom:.5px solid var(--br);font-size:12px}
 .irow:last-child{border-bottom:none}.ik{color:var(--t2)}.iv{color:var(--tx);font-weight:500}
-.netcard{border:0.5px solid var(--br);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--sf2)}
-.netcard.active{border-color:var(--cyb);background:var(--cyd)}
+/* RECOMMENDATION BOX */
+.recbox{border-radius:10px;padding:12px 14px;margin-bottom:8px;border:.5px solid}
+.recbox.green{background:rgba(0,200,100,.08);border-color:rgba(0,200,100,.3)}
+.recbox.amber{background:rgba(239,159,39,.08);border-color:rgba(239,159,39,.3)}
+.recbox.red{background:rgba(226,75,74,.08);border-color:rgba(226,75,74,.3)}
+.spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+@media(min-width:600px){.pw{padding:14px 20px;padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}}
 </style>
 </head>
 <body class="light">
+
 <div class="topbar">
   <div style="display:flex;align-items:center;gap:10px">
     <div class="lbox"><div class="lcts">CTS</div><div class="lprd">PROD</div></div>
-    <div><div class="atit">Field Survey</div><div class="asub">City Technical Solutions</div></div>
+    <div><div class="atit">IoT Site Survey</div><div class="asub">City Technical Solutions</div></div>
   </div>
   <div class="tr">
-    <div style="font-size:9px;padding:3px 8px;border-radius:20px;background:var(--cyd);border:0.5px solid var(--cyb);color:var(--cy);font-weight:600" id="recBadge">● READY</div>
+    <div id="recBadge" style="font-size:9px;padding:3px 8px;border-radius:20px;background:var(--cyd);border:.5px solid var(--cyb);color:var(--cy);font-weight:700">● READY</div>
     <div class="ibtn" onclick="toggleTheme()"><i class="ti ti-moon" id="themeIcon"></i></div>
   </div>
 </div>
 
 <div class="pw">
 
-<!-- SURVEY PAGE -->
+<!-- ── SURVEY PAGE ─────────────────────────────── -->
 <div class="page active" id="page-survey">
-  <div class="gpsbar" id="gpsBar">
-    <i class="ti ti-loader spin" id="gpsIcon"></i>
+
+  <div class="gpsbar">
+    <i class="ti ti-loader spin" id="gpsIcon" style="color:var(--cy);font-size:14px;flex-shrink:0"></i>
     <div class="gpsdot live" id="gpsDot"></div>
-    <span id="gpsTxt">Acquiring GPS...</span>
-    <span style="margin-left:auto;font-size:10px;color:var(--t3)" id="gpsAcc"></span>
+    <span id="gpsTxt" style="flex:1">Acquiring GPS…</span>
+    <span id="gpsAcc" style="font-size:10px;color:var(--t3)"></span>
   </div>
 
-  <button class="sbtn" id="surveyBtn" onclick="handleSurveyBtn()">
-    <i class="ti ti-player-record" id="btnIcon"></i>
-    <span id="btnTxt">Start Survey Point</span>
+  <button class="scanbtn" id="scanBtn" onclick="handleScan()">
+    <i class="ti ti-radar" id="scanIcon"></i>
+    <span id="scanTxt">Run IoT Site Survey</span>
   </button>
   <div class="prog"><div class="progf" id="progBar"></div></div>
 
-  <!-- 4 big metrics -->
-  <div class="bigmet">
-    <div class="bm">
-      <div class="bmv" id="dlVal" style="color:var(--cy)">--</div>
-      <div class="bmu">Mbps Download</div>
-      <div class="bml" id="dlQual">tap to measure</div>
-    </div>
-    <div class="bm">
-      <div class="bmv" id="ulVal" style="color:var(--cy)">--</div>
-      <div class="bmu">Mbps Upload</div>
-      <div class="bml" id="ulQual">tap to measure</div>
-    </div>
+  <!-- RECOMMENDATION (shown after scan) -->
+  <div id="recSection" style="display:none"></div>
+
+  <!-- OPERATOR RESULTS -->
+  <div id="opSection" style="display:none">
+    <div class="ctit" style="margin-bottom:8px"><i class="ti ti-antenna"></i> Available Networks at This Location</div>
+    <div id="opList"></div>
   </div>
-  <div class="bigmet">
-    <div class="bm">
-      <div class="bmv" id="pingVal" style="color:var(--gr)">--</div>
-      <div class="bmu">ms Ping</div>
-      <div class="bml" id="pingQual">tap to measure</div>
+
+  <!-- SPEED METRICS -->
+  <div id="speedSection" style="display:none">
+    <div class="ctit" style="margin-bottom:8px"><i class="ti ti-speedboat"></i> Network Performance</div>
+    <div class="mets">
+      <div class="met"><div class="metv" id="dlV" style="color:var(--cy)">--</div><div class="metu">Mbps Download</div><div class="metl" id="dlQ">--</div></div>
+      <div class="met"><div class="metv" id="ulV" style="color:var(--cy)">--</div><div class="metu">Mbps Upload</div><div class="metl" id="ulQ">--</div></div>
     </div>
-    <div class="bm">
-      <div class="bmv" id="jitterVal" style="color:var(--am)">--</div>
-      <div class="bmu">ms Jitter</div>
-      <div class="bml" id="jitterQual">tap to measure</div>
+    <div class="mets">
+      <div class="met"><div class="metv" id="pgV" style="color:var(--gr)">--</div><div class="metu">ms Ping</div><div class="metl" id="pgQ">--</div></div>
+      <div class="met"><div class="metv" id="jtV" style="color:var(--am)">--</div><div class="metu">ms Jitter</div><div class="metl" id="jtQ">--</div></div>
     </div>
   </div>
 
-  <!-- Network & IoT availability -->
-  <div class="card-cy">
-    <div class="ctit"><i class="ti ti-wifi"></i> Network Info <span class="rbdg">REAL</span></div>
-    <div id="netInfo">
-      <div class="strow"><span class="stlbl">Connection Type</span><span id="nConnType" class="stval">--</span></div>
-      <div class="strow"><span class="stlbl">Effective Type</span><span id="nEffType">--</span></div>
-      <div class="strow"><span class="stlbl">Reported Downlink</span><span id="nDownlink" class="stval">--</span></div>
-      <div class="strow"><span class="stlbl">Reported RTT</span><span id="nRtt" class="stval">--</span></div>
-      <div class="strow"><span class="stlbl">Data Saver</span><span id="nSaver" class="stval">--</span></div>
-      <div class="strow"><span class="stlbl">Online</span><span id="nOnline">--</span></div>
-    </div>
+  <!-- IoT PLATFORM REACHABILITY -->
+  <div id="iotSection" style="display:none">
+    <div class="ctit" style="margin-bottom:8px"><i class="ti ti-sim-card"></i> IoT Platform Connectivity</div>
+    <div id="iotList"></div>
   </div>
 
-  <!-- IoT Service Detection -->
-  <div class="card">
-    <div class="ctit"><i class="ti ti-antenna"></i> IoT Service Availability</div>
-    <div id="iotSection">
-      <div style="font-size:11px;color:var(--t3);margin-bottom:10px">Tap survey to detect reachability of IoT endpoints at this location.</div>
-      <div id="iotResults"></div>
-    </div>
-  </div>
-
-  <!-- GPS Card -->
-  <div class="card">
-    <div class="ctit"><i class="ti ti-map-pin"></i> GPS <span class="rbdg">REAL</span></div>
+  <!-- GPS DETAIL -->
+  <div class="card" style="margin-top:10px">
+    <div class="ctit"><i class="ti ti-map-pin"></i> GPS Location</div>
     <div class="strow"><span class="stlbl">Latitude</span><span class="stval" id="gLat">--</span></div>
     <div class="strow"><span class="stlbl">Longitude</span><span class="stval" id="gLng">--</span></div>
     <div class="strow"><span class="stlbl">Accuracy</span><span class="stval" id="gAcc">--</span></div>
     <div class="strow"><span class="stlbl">Altitude</span><span class="stval" id="gAlt">--</span></div>
-    <div class="strow"><span class="stlbl">Speed</span><span class="stval" id="gSpd">--</span></div>
-    <div class="strow"><span class="stlbl">Heading</span><span class="stval" id="gHdg">--</span></div>
+    <div class="strow"><span class="stlbl">Timestamp</span><span class="stval" id="gTs">--</span></div>
+    <div class="strow"><span class="stlbl">Connection Type</span><span id="gConn">--</span></div>
   </div>
 
-  <!-- Honest Notice -->
-  <div class="card" style="border-color:rgba(239,159,39,.3)">
-    <div class="ctit"><i class="ti ti-alert-triangle" style="color:var(--am)"></i> Browser Limitation</div>
-    <div style="font-size:11px;color:var(--t2);line-height:1.7">
-      <span style="color:var(--gr)">✓ Real:</span> GPS · Speed · Ping · Connection type · IoT reachability<br>
-      <span style="color:var(--rd)">✗ Needs native app:</span> RSSI · Cell ID · MCC-MNC · Band · RSRP/RSRQ
-    </div>
-  </div>
 </div>
 
-<!-- LOG PAGE -->
+<!-- ── LOG PAGE ───────────────────────────────── -->
 <div class="page" id="page-log">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-    <div style="font-size:13px;font-weight:600" id="logCount">0 points</div>
+    <div style="font-size:13px;font-weight:600" id="logCnt">0 surveys</div>
     <div style="display:flex;gap:6px">
       <button class="expbtn" onclick="exportCSV()"><i class="ti ti-file-text"></i> CSV</button>
       <button class="expbtn" onclick="exportJSON()"><i class="ti ti-code"></i> JSON</button>
@@ -183,329 +184,364 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
   <div id="logList"></div>
 </div>
 
-<!-- MAP PAGE -->
+<!-- ── MAP PAGE ───────────────────────────────── -->
 <div class="page" id="page-map">
-  <div class="card-cy" style="margin-bottom:10px">
-    <div class="ctit"><i class="ti ti-map"></i> Coverage Map</div>
-    <div style="font-size:11px;color:var(--t2);margin-bottom:8px">Survey points on map. Colour = download speed.</div>
-    <div style="display:flex;gap:10px;font-size:10px">
-      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00C864;vertical-align:middle;margin-right:3px"></span>&gt;10 Mbps</span>
-      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#EF9F27;vertical-align:middle;margin-right:3px"></span>1–10 Mbps</span>
-      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#E24B4A;vertical-align:middle;margin-right:3px"></span>&lt;1 Mbps</span>
+  <div class="cardcy">
+    <div class="ctit"><i class="ti ti-map"></i> Survey Coverage Map</div>
+    <div style="font-size:11px;color:var(--t2);margin-bottom:8px">Each pin = one survey point. Tap for full details.</div>
+    <div style="display:flex;gap:10px;font-size:10px;flex-wrap:wrap">
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00C864;vertical-align:middle;margin-right:3px"></span>NB-IoT available</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#EF9F27;vertical-align:middle;margin-right:3px"></span>4G only</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#E24B4A;vertical-align:middle;margin-right:3px"></span>Weak/No IoT</span>
     </div>
   </div>
-  <div id="mapContainer" style="border-radius:12px;overflow:hidden;border:0.5px solid var(--br);height:420px;background:var(--sf2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--t3)">
+  <div id="mapContainer" style="border-radius:12px;overflow:hidden;border:.5px solid var(--br);height:420px;background:var(--sf2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--t3)">
     <i class="ti ti-map" style="font-size:32px"></i>
-    <span style="font-size:12px">Add survey points to see map</span>
+    <span style="font-size:12px">Run a survey to see map</span>
   </div>
 </div>
 
-<!-- ABOUT PAGE -->
+<!-- ── ABOUT PAGE ─────────────────────────────── -->
 <div class="page" id="page-about">
-  <div class="card-cy">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+  <div class="cardcy">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
       <div class="lbox" style="width:48px;height:48px"><div class="lcts">CTS</div><div class="lprd">PROD</div></div>
-      <div>
-        <div style="font-size:17px;font-weight:600;color:var(--tx)">CTS Field Survey</div>
-        <div style="font-size:11px;color:var(--cy);margin-top:2px">City Technical Solutions</div>
-      </div>
+      <div><div style="font-size:16px;font-weight:700;color:var(--tx)">CTS IoT Site Survey</div><div style="font-size:11px;color:var(--cy);margin-top:2px">City Technical Solutions · v1.0</div></div>
     </div>
-    <div class="irow"><span class="ik">Version</span><span class="iv">2.0.0</span></div>
-    <div class="irow"><span class="ik">Platform</span><span class="iv">PWA — All devices</span></div>
-    <div class="irow"><span class="ik">Speed test</span><span class="iv">Cloudflare edge servers</span></div>
-    <div class="irow"><span class="ik">IoT check</span><span class="iv">MQTT / HTTP endpoint reachability</span></div>
-    <div class="irow"><span class="ik">Map</span><span class="iv">OpenStreetMap via Leaflet</span></div>
-    <div class="irow"><span class="ik">Export</span><span class="iv">CSV + JSON</span></div>
+    <div class="irow"><span class="ik">Purpose</span><span class="iv">IoT device deployment site check</span></div>
+    <div class="irow"><span class="ik">Platform</span><span class="iv">PWA — Android, iOS, PC, tablet</span></div>
+    <div class="irow"><span class="ik">GPS</span><span class="iv">Real device hardware</span></div>
+    <div class="irow"><span class="ik">Speed test</span><span class="iv">Real — Cloudflare edge fetch</span></div>
+    <div class="irow"><span class="ik">NB-IoT data</span><span class="iv">Hardcoded operator deployment DB</span></div>
+    <div class="irow"><span class="ik">IoT reachability</span><span class="iv">Real — HTTP fetch to endpoints</span></div>
+    <div class="irow"><span class="ik">1NCE / Telnyx</span><span class="iv">Roaming partner lookup + API ping</span></div>
   </div>
   <div class="card">
-    <div style="font-size:10px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">What is real</div>
-    <div class="irow"><span class="ik">GPS</span><span class="iv">Device hardware sensor</span></div>
-    <div class="irow"><span class="ik">Download / Upload</span><span class="iv">Measured via Cloudflare fetch timing</span></div>
-    <div class="irow"><span class="ik">Ping / Jitter</span><span class="iv">Measured via 3 parallel HEAD requests</span></div>
-    <div class="irow"><span class="ik">Connection type</span><span class="iv">Network Information API</span></div>
-    <div class="irow"><span class="ik">IoT reachability</span><span class="iv">Actual HTTP fetch to IoT endpoints</span></div>
-  </div>
-  <div class="card" style="border-color:rgba(239,159,39,.3)">
-    <div style="font-size:10px;font-weight:600;color:var(--am);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Not available in browser</div>
-    <div style="font-size:11px;color:var(--t2);line-height:1.8">RSSI · RSRP · RSRQ · SINR · Cell ID · MCC-MNC · Frequency band<br><span style="font-size:10px;color:var(--t3)">Requires native Android/iOS app with modem API access.</span></div>
+    <div style="font-size:10px;font-weight:700;color:var(--am);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Honest Limitations</div>
+    <div class="irow"><span class="ik">RSSI / Signal level</span><span class="iv" style="color:var(--rd)">Not available in browser</span></div>
+    <div class="irow"><span class="ik">Cell ID / eNodeB</span><span class="iv" style="color:var(--rd)">Not available in browser</span></div>
+    <div class="irow"><span class="ik">MCC-MNC (live)</span><span class="iv" style="color:var(--rd)">Not available in browser</span></div>
+    <div class="irow"><span class="ik">NB-IoT confirmed</span><span class="iv" style="color:var(--am)">Based on known deployments</span></div>
+    <div class="irow"><span class="ik">Operator detection</span><span class="iv" style="color:var(--am)">Based on GPS country lookup</span></div>
+    <div style="font-size:10px;color:var(--t3);margin-top:10px;line-height:1.6">For RSSI and Cell ID, use Network Cell Info Lite (Android) alongside this tool.</div>
   </div>
 </div>
 
-</div>
+</div><!-- /pw -->
 <nav class="bnav">
-  <button class="ni active" id="nav-survey" onclick="navTo('survey')"><i class="ti ti-player-record"></i><span>Survey</span></button>
+  <button class="ni active" id="nav-survey" onclick="navTo('survey')"><i class="ti ti-radar"></i><span>Survey</span></button>
   <button class="ni" id="nav-log" onclick="navTo('log')"><i class="ti ti-clipboard-list"></i><span>Log</span></button>
   <button class="ni" id="nav-map" onclick="navTo('map')"><i class="ti ti-map"></i><span>Map</span></button>
   <button class="ni" id="nav-about" onclick="navTo('about')"><i class="ti ti-info-circle"></i><span>About</span></button>
 </nav>
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" id="bttBtn" style="position:fixed;bottom:calc(68px + env(safe-area-inset-bottom,0px));right:16px;z-index:300;width:38px;height:38px;border-radius:50%;background:var(--cy);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 16px rgba(0,0,0,.3)" aria-label="Back to top"><i class="ti ti-arrow-up"></i></button>
 
 <script>
-var surveyLog=[], currentGPS=null, isSurveying=false, isDark=false, mapLoaded=false, leafletMap=null, markers=[];
+const OPERATORS={"MY": [{"id": "maxis", "name": "Maxis", "col": "#FF6200", "mcc": "502", "mnc": "12", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "maxis.com.my", "notes": "NB-IoT on B3/B8. 1NCE roaming partner."}, {"id": "celcom", "name": "CelcomDigi", "col": "#0050A0", "mcc": "502", "mnc": "17", "nbiot": true, "ltem": true, "fourg": true, "fiveg": false, "domain": "celcomdigi.com", "notes": "NB-IoT deployed. 1NCE & Transatel partner."}, {"id": "digi", "name": "Digi", "col": "#FDD800", "mcc": "502", "mnc": "16", "nbiot": false, "ltem": false, "fourg": true, "fiveg": false, "domain": "digi.com.my", "notes": "4G only. No NB-IoT deployment confirmed."}, {"id": "umobile", "name": "U Mobile", "col": "#7B1FA2", "mcc": "502", "mnc": "18", "nbiot": false, "ltem": false, "fourg": true, "fiveg": false, "domain": "u.com.my", "notes": "4G only. No IoT network."}, {"id": "yes", "name": "Yes 4G", "col": "#00AA44", "mcc": "502", "mnc": "19", "nbiot": false, "ltem": false, "fourg": true, "fiveg": false, "domain": "yes.my", "notes": "4G LTE only."}], "SG": [{"id": "singtel", "name": "Singtel", "col": "#CC0000", "mcc": "525", "mnc": "05", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "singtel.com", "notes": "Full NB-IoT/LTE-M. 1NCE & Transatel roaming."}, {"id": "starhub", "name": "StarHub", "col": "#6600CC", "mcc": "525", "mnc": "05", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "starhub.com", "notes": "NB-IoT deployed."}], "AU": [{"id": "telstra", "name": "Telstra", "col": "#1964B4", "mcc": "505", "mnc": "01", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "telstra.com.au", "notes": "Australia's largest NB-IoT/LTE-M network. 1NCE partner."}, {"id": "optus", "name": "Optus", "col": "#00A99D", "mcc": "505", "mnc": "02", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "optus.com.au", "notes": "NB-IoT on B28."}, {"id": "tpgau", "name": "TPG/VF AU", "col": "#E60000", "mcc": "505", "mnc": "38", "nbiot": false, "ltem": false, "fourg": true, "fiveg": true, "domain": "vodafone.com.au", "notes": "4G/5G. Limited IoT network."}], "GB": [{"id": "ee", "name": "EE UK", "col": "#00AA55", "mcc": "234", "mnc": "30", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "ee.co.uk", "notes": "Full NB-IoT. Telnyx & 1NCE partner."}, {"id": "voda", "name": "Vodafone", "col": "#E60000", "mcc": "234", "mnc": "15", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "vodafone.co.uk", "notes": "NB-IoT nationwide. Telnyx partner."}, {"id": "o2uk", "name": "O2 UK", "col": "#003C8F", "mcc": "234", "mnc": "10", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "o2.co.uk", "notes": "NB-IoT deployed."}, {"id": "three", "name": "Three UK", "col": "#FF6600", "mcc": "234", "mnc": "20", "nbiot": false, "ltem": false, "fourg": true, "fiveg": true, "domain": "three.co.uk", "notes": "No NB-IoT confirmed."}], "DE": [{"id": "deutsche", "name": "Telekom DE", "col": "#E20074", "mcc": "262", "mnc": "01", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "telekom.com", "notes": "Full NB-IoT/LTE-M. 1NCE home network."}, {"id": "voda_de", "name": "Vodafone DE", "col": "#E60000", "mcc": "262", "mnc": "02", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "vodafone.de", "notes": "NB-IoT nationwide."}, {"id": "o2de", "name": "O2 Germany", "col": "#003C8F", "mcc": "262", "mnc": "07", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "o2online.de", "notes": "NB-IoT deployed."}], "US": [{"id": "att", "name": "AT&T", "col": "#00A8E0", "mcc": "310", "mnc": "410", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "att.com", "notes": "Full NB-IoT/LTE-M. 1NCE & Telnyx partner."}, {"id": "tmobile", "name": "T-Mobile", "col": "#E20074", "mcc": "310", "mnc": "260", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "t-mobile.com", "notes": "LTE-M nationwide. Telnyx partner."}, {"id": "verizon", "name": "Verizon", "col": "#CD040B", "mcc": "311", "mnc": "480", "nbiot": false, "ltem": true, "fourg": true, "fiveg": true, "domain": "verizon.com", "notes": "LTE-M only (no NB-IoT)."}], "JP": [{"id": "ntt", "name": "NTT Docomo", "col": "#CC0033", "mcc": "440", "mnc": "10", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "nttdocomo.com", "notes": "Full NB-IoT/LTE-M. 1NCE roaming."}, {"id": "softbank", "name": "SoftBank", "col": "#CC0000", "mcc": "440", "mnc": "20", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "softbank.jp", "notes": "NB-IoT deployed."}, {"id": "kddi", "name": "KDDI au", "col": "#E60033", "mcc": "440", "mnc": "50", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "au.com", "notes": "LTE-M & NB-IoT."}], "IN": [{"id": "airtel", "name": "Airtel", "col": "#CC0000", "mcc": "404", "mnc": "10", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "airtel.in", "notes": "NB-IoT deployed major cities."}, {"id": "jio", "name": "Reliance Jio", "col": "#0B3CC1", "mcc": "405", "mnc": "840", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "jio.com", "notes": "NB-IoT expanding."}, {"id": "vi", "name": "Vi India", "col": "#CC0000", "mcc": "404", "mnc": "20", "nbiot": false, "ltem": false, "fourg": true, "fiveg": false, "domain": "myvi.in", "notes": "4G only."}], "TH": [{"id": "ais", "name": "AIS", "col": "#E60028", "mcc": "520", "mnc": "01", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "ais.th", "notes": "NB-IoT/LTE-M deployed."}, {"id": "dtac", "name": "DTAC", "col": "#003082", "mcc": "520", "mnc": "05", "nbiot": true, "ltem": false, "fourg": true, "fiveg": false, "domain": "dtac.co.th", "notes": "NB-IoT on B8."}, {"id": "true", "name": "True Move", "col": "#CC0000", "mcc": "520", "mnc": "04", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "true.th", "notes": "NB-IoT deployed."}], "ID": [{"id": "telkomsel", "name": "Telkomsel", "col": "#CC0000", "mcc": "510", "mnc": "10", "nbiot": true, "ltem": false, "fourg": true, "fiveg": false, "domain": "telkomsel.com", "notes": "NB-IoT major cities."}, {"id": "indosat", "name": "Indosat", "col": "#FFCC00", "mcc": "510", "mnc": "01", "nbiot": false, "ltem": false, "fourg": true, "fiveg": false, "domain": "indosatooredoo.com", "notes": "4G only."}, {"id": "xlaxiata", "name": "XL Axiata", "col": "#0055A5", "mcc": "510", "mnc": "11", "nbiot": false, "ltem": false, "fourg": true, "fiveg": false, "domain": "xl.co.id", "notes": "4G only."}], "SA": [{"id": "stc", "name": "STC Saudi", "col": "#7B1FA2", "mcc": "420", "mnc": "01", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "stc.com.sa", "notes": "Full NB-IoT/LTE-M. 1NCE roaming."}, {"id": "mobily", "name": "Mobily", "col": "#00AA44", "mcc": "420", "mnc": "03", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "mobily.com.sa", "notes": "NB-IoT deployed."}], "AE": [{"id": "etisalat", "name": "Etisalat", "col": "#009900", "mcc": "424", "mnc": "02", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "etisalat.ae", "notes": "Full NB-IoT/LTE-M."}, {"id": "du", "name": "du UAE", "col": "#333333", "mcc": "424", "mnc": "03", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "du.ae", "notes": "NB-IoT deployed."}], "NZ": [{"id": "spark", "name": "Spark NZ", "col": "#E60028", "mcc": "530", "mnc": "05", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "spark.co.nz", "notes": "Full NB-IoT/LTE-M."}, {"id": "onenznz", "name": "One NZ", "col": "#E60000", "mcc": "530", "mnc": "05", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "one.nz", "notes": "NB-IoT deployed."}], "FR": [{"id": "orange", "name": "Orange", "col": "#FF6600", "mcc": "208", "mnc": "01", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "orange.com", "notes": "NB-IoT/LTE-M. 1NCE partner."}, {"id": "sfr", "name": "SFR", "col": "#CC0000", "mcc": "208", "mnc": "10", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "sfr.fr", "notes": "NB-IoT deployed."}], "CA": [{"id": "bell", "name": "Bell Canada", "col": "#003082", "mcc": "302", "mnc": "610", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "bell.ca", "notes": "Full LTE-M/NB-IoT. Telnyx partner."}, {"id": "rogers", "name": "Rogers", "col": "#CC0000", "mcc": "302", "mnc": "720", "nbiot": false, "ltem": true, "fourg": true, "fiveg": true, "domain": "rogers.com", "notes": "LTE-M only."}, {"id": "telus", "name": "Telus", "col": "#4B286D", "mcc": "302", "mnc": "220", "nbiot": false, "ltem": true, "fourg": true, "fiveg": true, "domain": "telus.com", "notes": "LTE-M nationwide."}], "KR": [{"id": "skt", "name": "SK Telecom", "col": "#EE1C25", "mcc": "450", "mnc": "05", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "skt.com", "notes": "Full NB-IoT/LTE-M."}, {"id": "kt", "name": "KT Korea", "col": "#CC0000", "mcc": "450", "mnc": "08", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "kt.com", "notes": "Full NB-IoT/LTE-M."}, {"id": "lgu", "name": "LG U+", "col": "#E31837", "mcc": "450", "mnc": "06", "nbiot": true, "ltem": true, "fourg": true, "fiveg": true, "domain": "lguplus.com", "notes": "Full NB-IoT/LTE-M."}], "CN": [{"id": "chinamobile", "name": "China Mobile", "col": "#009900", "mcc": "460", "mnc": "00", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "10086.cn", "notes": "World's largest NB-IoT network."}, {"id": "chinaunicom", "name": "China Unicom", "col": "#CC0000", "mcc": "460", "mnc": "01", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "10010.com", "notes": "NB-IoT deployed."}, {"id": "chinatelecom", "name": "China Telecom", "col": "#0070BB", "mcc": "460", "mnc": "03", "nbiot": true, "ltem": false, "fourg": true, "fiveg": true, "domain": "189.cn", "notes": "NB-IoT nationwide."}]};
+const IOT_SIMS={"1nce": {"name": "1NCE", "col": "#AFA9EC", "mcc": "901", "mnc": "05", "desc": "NB-IoT/LTE-M eSIM", "url": "https://api.1nce.com", "partners": {"MY": ["maxis", "celcom"], "SG": ["singtel"], "AU": ["telstra"], "GB": ["ee", "voda"], "DE": ["deutsche", "voda_de"], "US": ["att", "tmobile"], "JP": ["ntt"], "TH": ["ais"], "ID": ["telkomsel"], "SA": ["stc"], "AE": ["etisalat"], "NZ": ["spark"], "FR": ["orange"], "CA": ["bell"], "KR": ["skt"], "CN": ["chinamobile"], "IN": ["airtel"]}}, "telnyx": {"name": "Telnyx", "col": "#7EC8E3", "mcc": "901", "mnc": "34", "desc": "LTE/NB-IoT eSIM", "url": "https://api.telnyx.com", "partners": {"US": ["tmobile", "att", "verizon"], "GB": ["ee", "voda"], "DE": ["deutsche"], "CA": ["bell", "rogers"], "AU": ["optus"], "SG": ["singtel"], "JP": ["ntt"], "FR": ["orange"]}}, "transatel": {"name": "Transatel", "col": "#7F77DD", "mcc": "901", "mnc": "12", "desc": "NB-IoT/LTE-M eSIM", "url": "https://api.netaxis.be", "partners": {"MY": ["celcom", "maxis"], "SG": ["singtel"], "FR": ["orange", "sfr"], "DE": ["deutsche"], "US": ["att"], "JP": ["ntt"]}}, "hologram": {"name": "Hologram", "col": "#F4A261", "mcc": "901", "mnc": "55", "desc": "LTE/3G IoT SIM", "url": "https://dashboard.hologram.io", "partners": {"US": ["tmobile", "att", "verizon"], "GB": ["voda"], "DE": ["deutsche"], "CA": ["rogers"]}}, "twilio": {"name": "Twilio", "col": "#F22F46", "mcc": "901", "mnc": "99", "desc": "LTE/3G/2G IoT SIM", "url": "https://wireless.twilio.com", "partners": {"US": ["tmobile", "att"], "GB": ["voda", "o2uk"], "DE": ["deutsche"], "CA": ["tmobile"]}}};
+const CNAMES={"MY": "Malaysia", "SG": "Singapore", "AU": "Australia", "GB": "United Kingdom", "DE": "Germany", "US": "United States", "JP": "Japan", "TH": "Thailand", "ID": "Indonesia", "SA": "Saudi Arabia", "AE": "UAE", "NZ": "New Zealand", "FR": "France", "CA": "Canada", "KR": "South Korea", "CN": "China", "IN": "India", "NL": "Netherlands", "BE": "Belgium", "IT": "Italy", "ES": "Spain", "SE": "Sweden", "NO": "Norway", "FI": "Finland", "DK": "Denmark", "PL": "Poland", "TR": "Turkey", "BR": "Brazil", "MX": "Mexico", "ZA": "South Africa", "NG": "Nigeria", "KE": "Kenya", "PH": "Philippines", "VN": "Vietnam"};
+const FLAGS={"MY": "\ud83c\uddf2\ud83c\uddfe", "SG": "\ud83c\uddf8\ud83c\uddec", "AU": "\ud83c\udde6\ud83c\uddfa", "GB": "\ud83c\uddec\ud83c\udde7", "DE": "\ud83c\udde9\ud83c\uddea", "US": "\ud83c\uddfa\ud83c\uddf8", "JP": "\ud83c\uddef\ud83c\uddf5", "TH": "\ud83c\uddf9\ud83c\udded", "ID": "\ud83c\uddee\ud83c\udde9", "SA": "\ud83c\uddf8\ud83c\udde6", "AE": "\ud83c\udde6\ud83c\uddea", "NZ": "\ud83c\uddf3\ud83c\uddff", "FR": "\ud83c\uddeb\ud83c\uddf7", "CA": "\ud83c\udde8\ud83c\udde6", "KR": "\ud83c\uddf0\ud83c\uddf7", "CN": "\ud83c\udde8\ud83c\uddf3", "IN": "\ud83c\uddee\ud83c\uddf3", "NL": "\ud83c\uddf3\ud83c\uddf1", "BE": "\ud83c\udde7\ud83c\uddea", "IT": "\ud83c\uddee\ud83c\uddf9", "ES": "\ud83c\uddea\ud83c\uddf8", "SE": "\ud83c\uddf8\ud83c\uddea", "NO": "\ud83c\uddf3\ud83c\uddf4", "FI": "\ud83c\uddeb\ud83c\uddee", "DK": "\ud83c\udde9\ud83c\uddf0", "PL": "\ud83c\uddf5\ud83c\uddf1", "TR": "\ud83c\uddf9\ud83c\uddf7", "BR": "\ud83c\udde7\ud83c\uddf7", "MX": "\ud83c\uddf2\ud83c\uddfd", "ZA": "\ud83c\uddff\ud83c\udde6", "NG": "\ud83c\uddf3\ud83c\uddec", "KE": "\ud83c\uddf0\ud83c\uddea", "PH": "\ud83c\uddf5\ud83c\udded", "VN": "\ud83c\uddfb\ud83c\uddf3"};
+const TZ_MAP={"Kuala_Lumpur": "MY", "Singapore": "SG", "Sydney": "AU", "Melbourne": "AU", "Brisbane": "AU", "Perth": "AU", "London": "GB", "Berlin": "DE", "New_York": "US", "Chicago": "US", "Los_Angeles": "US", "Tokyo": "JP", "Bangkok": "TH", "Jakarta": "ID", "Riyadh": "SA", "Dubai": "AE", "Auckland": "NZ", "Paris": "FR", "Toronto": "CA", "Seoul": "KR", "Shanghai": "CN", "Kolkata": "IN", "Mumbai": "IN", "Amsterdam": "NL", "Brussels": "BE", "Rome": "IT", "Madrid": "ES", "Stockholm": "SE", "Oslo": "NO", "Helsinki": "FI", "Copenhagen": "DK", "Warsaw": "PL", "Istanbul": "TR", "Sao_Paulo": "BR", "Mexico_City": "MX", "Johannesburg": "ZA", "Lagos": "NG", "Nairobi": "KE", "Manila": "PH", "Ho_Chi_Minh": "VN"};
+
+var surveyLog=[],currentGPS=null,isSurveying=false,isDark=false,mapLoaded=false,leafletMap=null,markers=[],detectedCC=null;
 
 // ── THEME / NAV ───────────────────────────────────
 function toggleTheme(){isDark=!isDark;document.body.classList.toggle('light',!isDark);document.getElementById('themeIcon').className=isDark?'ti ti-sun':'ti ti-moon';if(leafletMap)leafletMap.invalidateSize();}
 function navTo(id){document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});document.querySelectorAll('.ni').forEach(function(n){n.classList.remove('active');});document.getElementById('page-'+id).classList.add('active');document.getElementById('nav-'+id).classList.add('active');if(id==='log')renderLog();if(id==='map')renderMap();}
-function s(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+function sv(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+function sh(id,v){var e=document.getElementById(id);if(e)e.innerHTML=v;}
 function sleep(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function hrgb(h){return parseInt(h.slice(1,3),16)+','+parseInt(h.slice(3,5),16)+','+parseInt(h.slice(5,7),16);}
 
 // ── GPS ───────────────────────────────────────────
 function startGPS(){
-  if(!navigator.geolocation){s('gpsTxt','GPS not available');return;}
+  if(!navigator.geolocation){sv('gpsTxt','GPS not available');return;}
   document.getElementById('gpsDot').classList.add('live');
   navigator.geolocation.watchPosition(function(pos){
     currentGPS=pos;var c=pos.coords;
     document.getElementById('gpsTxt').textContent=c.latitude.toFixed(5)+', '+c.longitude.toFixed(5);
     document.getElementById('gpsAcc').textContent='±'+Math.round(c.accuracy)+'m';
     document.getElementById('gpsIcon').className='ti ti-map-pin';
-    document.getElementById('gpsDot').style.background='var(--gr)';
-    s('gLat',c.latitude.toFixed(7)+'°');s('gLng',c.longitude.toFixed(7)+'°');
-    s('gAcc',Math.round(c.accuracy)+'m');
-    s('gAlt',c.altitude!=null?Math.round(c.altitude)+'m':'N/A');
-    s('gSpd',c.speed!=null?(c.speed*3.6).toFixed(1)+' km/h':'N/A');
-    s('gHdg',c.heading!=null?Math.round(c.heading)+'°':'N/A');
-  },function(){
-    document.getElementById('gpsIcon').className='ti ti-map-pin-off';
-    document.getElementById('gpsDot').style.background='var(--rd)';
-    s('gpsTxt','GPS denied');
-  },{enableHighAccuracy:true,maximumAge:5000,timeout:15000});
+    document.getElementById('gpsDot').classList.remove('live');document.getElementById('gpsDot').classList.add('ok');
+    sv('gLat',c.latitude.toFixed(7)+'°');sv('gLng',c.longitude.toFixed(7)+'°');
+    sv('gAcc',Math.round(c.accuracy)+' m');
+    sv('gAlt',c.altitude!=null?Math.round(c.altitude)+' m':'N/A');
+    sv('gTs',new Date(pos.timestamp).toLocaleTimeString());
+  },function(){sv('gpsTxt','GPS denied — location required for survey');document.getElementById('gpsIcon').className='ti ti-map-pin-off';},{enableHighAccuracy:true,maximumAge:5000,timeout:15000});
+}
+
+// ── DETECT COUNTRY ────────────────────────────────
+async function detectCountry(lat,lng){
+  try{
+    var ctrl=new AbortController();
+    setTimeout(function(){ctrl.abort();},5000);
+    var r=await fetch('https://nominatim.openstreetmap.org/reverse?lat='+lat+'&lon='+lng+'&format=json',{cache:'no-store',signal:ctrl.signal});
+    var d=await r.json();
+    return (d.address&&d.address.country_code||'').toUpperCase();
+  }catch(e){
+    // Fallback to timezone
+    var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';
+    var cc='';
+    Object.keys(TZ_MAP).forEach(function(k){if(tz.indexOf(k)>=0)cc=TZ_MAP[k];});
+    return cc||'MY';
+  }
 }
 
 // ── CONNECTION INFO ────────────────────────────────
-function updateConn(){
+function getConnInfo(){
   var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
-  if(nc){
-    var t=nc.type||''; var e=nc.effectiveType||'--';
-    s('nConnType',t?t.toUpperCase()+' / '+e.toUpperCase():e.toUpperCase());
-    var ec=e==='4g'?'good':e==='3g'?'warn':'bad';
-    document.getElementById('nEffType').innerHTML='<span class="bdg '+ec+'">'+e.toUpperCase()+'</span>';
-    s('nDownlink',nc.downlink!=null?nc.downlink+' Mbps':'N/A');
-    s('nRtt',nc.rtt!=null?nc.rtt+' ms':'N/A');
-    s('nSaver',nc.saveData?'On':'Off');
-    if(nc.onchange!==undefined)nc.onchange=updateConn;
-  }else{s('nConnType','API not supported');}
-  var ol=navigator.onLine;
-  document.getElementById('nOnline').innerHTML=ol?'<span class="bdg good">✓ Online</span>':'<span class="bdg bad">✗ Offline</span>';
+  var eff=nc?nc.effectiveType||'unknown':'unknown';
+  var type=nc?nc.type||eff:eff;
+  var bdgCls=eff==='4g'?'good':eff==='3g'?'warn':'bad';
+  sh('gConn','<span class="bdg '+bdgCls+'">'+eff.toUpperCase()+'</span>'+(nc&&nc.downlink?' &nbsp;<span style="font-size:11px;color:var(--t2)">'+nc.downlink+' Mbps reported</span>':''));
+  return{eff:eff,type:type,downlink:nc?nc.downlink:null,rtt:nc?nc.rtt:null};
 }
 
-// ── FAST PING ─────────────────────────────────────
-// Uses 3 parallel HEAD requests with 2s timeout each
+// ── FAST TESTS ────────────────────────────────────
 async function measurePing(){
-  var urls=['https://1.1.1.1/cdn-cgi/trace','https://8.8.8.8','https://www.cloudflare.com/cdn-cgi/trace'];
-  var promises=urls.map(function(url){
-    return new Promise(function(resolve){
-      var t0=performance.now();
-      var ctrl=new AbortController();
-      var timer=setTimeout(function(){ctrl.abort();resolve(null);},2000);
-      fetch(url+'?t='+Date.now(),{method:'HEAD',cache:'no-store',mode:'no-cors',signal:ctrl.signal})
-        .then(function(){clearTimeout(timer);resolve(performance.now()-t0);})
-        .catch(function(){clearTimeout(timer);resolve(null);});
-    });
-  });
-  var results=(await Promise.all(promises)).filter(function(v){return v!==null;});
-  if(!results.length){
-    var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
-    return{ping:nc&&nc.rtt?nc.rtt:99,jitter:0};
-  }
-  var avg=results.reduce(function(a,b){return a+b;})/results.length;
-  var jitter=results.length>1?Math.round(Math.max.apply(null,results)-Math.min.apply(null,results)):0;
-  return{ping:Math.round(avg),jitter:jitter};
+  var urls=['https://1.1.1.1/cdn-cgi/trace','https://www.cloudflare.com/cdn-cgi/trace','https://dns.google'];
+  var p=urls.map(function(u){return new Promise(function(res){var t0=performance.now(),ctrl=new AbortController(),tm=setTimeout(function(){ctrl.abort();res(null);},2000);fetch(u+'?t='+Date.now(),{method:'HEAD',cache:'no-store',mode:'no-cors',signal:ctrl.signal}).then(function(){clearTimeout(tm);res(Math.round(performance.now()-t0));}).catch(function(){clearTimeout(tm);res(null);});});});
+  var r=(await Promise.all(p)).filter(function(v){return v!==null;});
+  if(!r.length){var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;return{ping:nc&&nc.rtt?nc.rtt:99,jitter:0};}
+  var avg=Math.round(r.reduce(function(a,b){return a+b;})/r.length);
+  var jitter=r.length>1?Math.round(Math.max.apply(null,r)-Math.min.apply(null,r)):0;
+  return{ping:avg,jitter:jitter};
 }
-
-// ── FAST DOWNLOAD ─────────────────────────────────
-// Fetches from Cloudflare CDN with 5s hard timeout
-async function measureDownload(){
-  var sizes=[1000000,500000,200000];
+async function measureDL(){
+  var sizes=[1000000,500000];
   for(var i=0;i<sizes.length;i++){
-    try{
-      var ctrl=new AbortController();
-      var t=setTimeout(function(){ctrl.abort();},5000);
-      var t0=performance.now();
-      var r=await fetch('https://speed.cloudflare.com/__down?bytes='+sizes[i]+'&nonce='+Date.now(),{cache:'no-store',signal:ctrl.signal});
-      var buf=await r.arrayBuffer();
-      clearTimeout(t);
-      var sec=(performance.now()-t0)/1000;
-      if(sec<0.1)continue;
-      return Math.round((buf.byteLength*8)/(sec*1e6)*10)/10;
-    }catch(e){continue;}
+    try{var ctrl=new AbortController(),tm=setTimeout(function(){ctrl.abort();},6000),t0=performance.now();var r=await fetch('https://speed.cloudflare.com/__down?bytes='+sizes[i]+'&n='+Date.now(),{cache:'no-store',signal:ctrl.signal});var b=await r.arrayBuffer();clearTimeout(tm);var s=(performance.now()-t0)/1000;if(s<0.1)continue;return Math.round((b.byteLength*8)/(s*1e6)*10)/10;}catch(e){continue;}
   }
-  var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
-  return nc&&nc.downlink?nc.downlink:null;
+  var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;return nc&&nc.downlink?nc.downlink:null;
+}
+async function measureUL(){
+  try{var sz=300000,d=new Uint8Array(sz);crypto.getRandomValues(d);var ctrl=new AbortController(),tm=setTimeout(function(){ctrl.abort();},6000),t0=performance.now();await fetch('https://speed.cloudflare.com/__up?n='+Date.now(),{method:'POST',body:new Blob([d]),cache:'no-store',signal:ctrl.signal,headers:{'Content-Type':'application/octet-stream'}});clearTimeout(tm);var s=(performance.now()-t0)/1000;if(s<0.05)throw 0;return Math.round((sz*8)/(s*1e6)*10)/10;}catch(e){var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;return nc&&nc.downlink?Math.round(nc.downlink*0.4*10)/10:null;}
+}
+async function checkEndpoint(url){
+  return new Promise(function(res){var t0=performance.now(),ctrl=new AbortController(),tm=setTimeout(function(){ctrl.abort();res({ok:false,ms:Math.round(performance.now()-t0)});},4000);fetch(url+'?t='+Date.now(),{method:'HEAD',cache:'no-store',mode:'no-cors',signal:ctrl.signal}).then(function(){clearTimeout(tm);res({ok:true,ms:Math.round(performance.now()-t0)});}).catch(function(){clearTimeout(tm);res({ok:false,ms:Math.round(performance.now()-t0)});});});
 }
 
-// ── FAST UPLOAD ───────────────────────────────────
-async function measureUpload(){
-  try{
-    var sz=300000;
-    var data=new Uint8Array(sz);
-    crypto.getRandomValues(data);
-    var ctrl=new AbortController();
-    var t=setTimeout(function(){ctrl.abort();},5000);
-    var t0=performance.now();
-    await fetch('https://speed.cloudflare.com/__up?nonce='+Date.now(),{method:'POST',body:new Blob([data]),cache:'no-store',signal:ctrl.signal,headers:{'Content-Type':'application/octet-stream'}});
-    clearTimeout(t);
-    var sec=(performance.now()-t0)/1000;
-    if(sec<0.05)throw new Error('skip');
-    return Math.round((sz*8)/(sec*1e6)*10)/10;
-  }catch(e){
-    var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
-    return nc&&nc.downlink?Math.round(nc.downlink*0.4*10)/10:null;
-  }
-}
-
-// ── IoT SERVICE DETECTION ─────────────────────────
-// Tests reachability of key IoT/cloud endpoints from current location
-var IOT_ENDPOINTS=[
-  {name:'Azure IoT Hub',  url:'https://global.azure-devices-provisioning.net',        icon:'ti-brand-azure',  col:'#0078D4',type:'Cloud IoT'},
-  {name:'AWS IoT Core',   url:'https://data.iot.us-east-1.amazonaws.com',             icon:'ti-brand-aws',    col:'#FF9900',type:'Cloud IoT'},
-  {name:'1NCE API',       url:'https://api.1nce.com',                                 icon:'ti-sim-card',     col:'#AFA9EC',type:'IoT SIM'},
-  {name:'Telnyx API',     url:'https://api.telnyx.com',                               icon:'ti-sim-card',     col:'#7EC8E3',type:'IoT SIM'},
-  {name:'Cloudflare',     url:'https://www.cloudflare.com/cdn-cgi/trace',             icon:'ti-cloud',        col:'#F48120',type:'CDN'},
-  {name:'MQTT (HiveMQ)',  url:'https://broker.hivemq.com',                            icon:'ti-antenna',      col:'#00C864',type:'MQTT Broker'},
-  {name:'Google DNS',     url:'https://dns.google',                                   icon:'ti-brand-google', col:'#4285F4',type:'DNS'},
-  {name:'Nominatim/OSM',  url:'https://nominatim.openstreetmap.org',                  icon:'ti-map',          col:'#7EBC6F',type:'Location'},
-];
-
-async function checkIoTEndpoints(){
-  var container=document.getElementById('iotResults');
-  container.innerHTML='<div style="font-size:11px;color:var(--t3)"><i class="ti ti-loader spin" style="margin-right:6px"></i>Checking IoT endpoints...</div>';
-  var results=await Promise.all(IOT_ENDPOINTS.map(async function(ep){
-    var t0=performance.now();
-    var ok=false;var latency=null;
-    try{
-      var ctrl=new AbortController();
-      var timer=setTimeout(function(){ctrl.abort();},4000);
-      var r=await fetch(ep.url+'?_='+Date.now(),{method:'HEAD',cache:'no-store',mode:'no-cors',signal:ctrl.signal});
-      clearTimeout(timer);
-      ok=true;latency=Math.round(performance.now()-t0);
-    }catch(e){latency=Math.round(performance.now()-t0);}
-    return{...ep,ok:ok,latency:latency};
-  }));
+// ── RENDER OPERATOR CARDS ─────────────────────────
+function renderOperators(cc,connInfo){
+  var ops=OPERATORS[cc]||[];
+  if(!ops.length)return '<div class="card" style="text-align:center;padding:24px;color:var(--t3)"><i class="ti ti-alert-triangle" style="font-size:24px;display:block;margin-bottom:8px"></i>No operator data for this country yet.</div>';
   var html='';
-  results.forEach(function(r){
-    var status=r.ok?'<span class="bdg good">✓ Reachable</span>':'<span class="bdg bad">✗ Unreachable</span>';
-    var lat=r.latency!==null?'<span style="font-size:10px;color:var(--t3);margin-left:6px">'+r.latency+'ms</span>':'';
-    html+='<div class="strow">'
-      +'<i class="ti '+r.icon+'" style="font-size:14px;color:'+r.col+';flex-shrink:0;margin-right:6px"></i>'
-      +'<div style="flex:1"><div style="font-size:11px;font-weight:500;color:var(--tx)">'+r.name+'</div>'
-      +'<div style="font-size:9px;color:var(--t3)">'+r.type+'</div></div>'
-      +status+lat
+  ops.forEach(function(op,i){
+    var isBest=i===0;
+    // Check which IoT SIMs roam on this op in this cc
+    var roamingSims=[];
+    Object.keys(IOT_SIMS).forEach(function(sid){
+      var sim=IOT_SIMS[sid];
+      var partners=sim.partners[cc]||[];
+      if(partners.indexOf(op.id)>=0)roamingSims.push(sim);
+    });
+    var nbbdg=op.nbiot?'<span class="nbdg nb-yes">NB-IoT</span>':'<span class="nbdg nb-no">No NB-IoT</span>';
+    var ltembdg=op.ltem?'<span class="nbdg nb-yes" style="margin-left:3px">LTE-M</span>':'';
+    var fiveg=op.fiveg?'<span class="nbdg nb-yes" style="margin-left:3px;background:rgba(93,202,165,.15);color:#5DCAA5;border-color:rgba(93,202,165,.3)">5G</span>':'';
+    var bestMark=isBest?'<span class="bdg good" style="margin-left:4px">★ Best</span>':'';
+    var logoDiv='<div class="oplo" style="background:'+op.col+'">'
+      +'<img src="https://www.google.com/s2/favicons?domain='+op.domain+'&sz=64" alt="'+op.name
+      +'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\'"'
+      +' onload="this.nextSibling.style.display=\'none\'">'
+      +'<div class="fb" style="color:#fff">'+op.name.substring(0,3).toUpperCase()+'</div></div>';
+    html+='<div class="opcard'+(isBest?' best':'')+'"><div class="ophd" style="background:rgba('+hrgb(op.col)+',.08)">'
+      +logoDiv
+      +'<div style="flex:1;min-width:0">'
+      +'<div class="opnm">'+op.name+bestMark+'</div>'
+      +'<div class="opmt">MCC '+op.mcc+'-'+op.mnc+' &middot; '+op.notes+'</div>'
+      +'</div>'
+      +'<div class="opr">'
+      +'<div style="display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end">'+nbbdg+ltembdg+fiveg+'</div>'
+      +'</div></div>'
+      // IoT tag row
+      +'<div class="iotrow">'
+      +'<span style="font-size:9px;color:var(--t3);margin-right:4px">IoT SIMs:</span>'
+      +(roamingSims.length?roamingSims.map(function(sim){return '<span class="simchip" style="color:'+sim.col+';background:rgba('+hrgb(sim.col)+',.1);border-color:rgba('+hrgb(sim.col)+',.3)"><i class="ti ti-sim-card" style="font-size:10px"></i>'+sim.name+'</span>';}).join('')
+        :'<span style="font-size:9px;color:var(--t3)">No IoT SIM partners confirmed</span>')
+      +'</div>'
       +'</div>';
   });
-  container.innerHTML=html;
-  return results;
+  return html;
 }
 
-// ── SURVEY RUNNER ─────────────────────────────────
-function setP(pct){var e=document.getElementById('progBar');if(e)e.style.width=pct+'%';}
+// ── RENDER RECOMMENDATION ─────────────────────────
+function renderRecommendation(cc,iotResults){
+  var ops=OPERATORS[cc]||[];
+  var nbiotOps=ops.filter(function(o){return o.nbiot;});
+  var onceAvail=false,telnyxAvail=false;
+  Object.keys(IOT_SIMS).forEach(function(sid){
+    var sim=IOT_SIMS[sid];
+    var partners=sim.partners[cc]||[];
+    var hasPartner=partners.some(function(pid){return ops.find(function(o){return o.id===pid;});});
+    if(sid==='1nce'&&hasPartner)onceAvail=true;
+    if(sid==='telnyx'&&hasPartner)telnyxAvail=true;
+  });
+  var iotOnce=iotResults.find(function(r){return r.name==='1NCE API';});
+  var iotTelnyx=iotResults.find(function(r){return r.name==='Telnyx API';});
+  var onceReach=iotOnce&&iotOnce.ok;
+  var telnyxReach=iotTelnyx&&iotTelnyx.ok;
+  var html='<div class="ctit" style="margin-bottom:8px"><i class="ti ti-clipboard-check"></i> Installation Recommendation</div>';
+  // Overall verdict
+  if(nbiotOps.length&&(onceAvail||telnyxAvail)&&(onceReach||telnyxReach)){
+    html+='<div class="recbox green"><div style="font-size:13px;font-weight:700;color:var(--gr);margin-bottom:6px">✅ SUITABLE for IoT Device Installation</div>'
+      +'<div style="font-size:11px;color:var(--t2);line-height:1.7">'
+      +(onceAvail&&onceReach?'<b>1NCE eSIM</b> — roaming on '+nbiotOps.filter(function(o){return(IOT_SIMS['1nce'].partners[cc]||[]).indexOf(o.id)>=0;}).map(function(o){return o.name;}).join(', ')+'. NB-IoT available.<br>':'')
+      +(telnyxAvail&&telnyxReach?'<b>Telnyx eSIM</b> — roaming on '+ops.filter(function(o){return(IOT_SIMS['telnyx'].partners[cc]||[]).indexOf(o.id)>=0;}).map(function(o){return o.name;}).join(', ')+'.<br>':'')
+      +'</div></div>';
+  }else if(nbiotOps.length){
+    html+='<div class="recbox amber"><div style="font-size:13px;font-weight:700;color:var(--am);margin-bottom:6px">⚠️ PARTIAL — Check IoT SIM availability</div>'
+      +'<div style="font-size:11px;color:var(--t2);line-height:1.7">NB-IoT coverage exists ('+nbiotOps.map(function(o){return o.name;}).join(', ')+') but IoT SIM API not reachable from this network. Check data connection.</div></div>';
+  }else{
+    html+='<div class="recbox red"><div style="font-size:13px;font-weight:700;color:var(--rd);margin-bottom:6px">❌ NOT RECOMMENDED for NB-IoT installation</div>'
+      +'<div style="font-size:11px;color:var(--t2);line-height:1.7">No confirmed NB-IoT deployment found for this location. Standard 4G only available.</div></div>';
+  }
+  // SIM recommendation table
+  html+='<div class="card" style="margin-top:0"><div style="font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">IoT SIM Suitability</div>';
+  [['1nce','1NCE eSIM','NB-IoT/LTE-M',onceAvail,onceReach],
+   ['telnyx','Telnyx eSIM','LTE/NB-IoT',telnyxAvail,telnyxReach]].forEach(function(row){
+    var avail=row[3],reach=row[4];
+    var cls=avail&&reach?'good':avail?'warn':'bad';
+    var verdict=avail&&reach?'✓ Recommended':(avail?'⚠ Check connection':'✗ Not available here');
+    html+='<div class="strow"><span class="stlbl" style="font-weight:500">'+row[1]+'<span style="font-size:9px;color:var(--t3);display:block">'+row[2]+'</span></span><span class="bdg '+cls+'">'+verdict+'</span></div>';
+  });
+  html+='</div>';
+  return html;
+}
 
-async function runSurvey(){
+// ── IoT ENDPOINT RENDER ───────────────────────────
+function renderIoT(results){
+  var html='<div class="card" style="padding:12px">';
+  results.forEach(function(r){
+    var cls=r.ok?'good':'bad';
+    var icon=r.ok?'ti-check':'ti-x';
+    html+='<div class="strow">'
+      +'<div style="display:flex;align-items:center;gap:8px;flex:1">'
+      +'<i class="ti ti-'+r.icon+'" style="color:'+r.col+';font-size:14px;flex-shrink:0"></i>'
+      +'<div><div style="font-size:11px;font-weight:500;color:var(--tx)">'+r.name+'</div>'
+      +'<div style="font-size:9px;color:var(--t3)">'+r.type+'</div></div></div>'
+      +'<span class="bdg '+cls+'">'+r.ms+'ms</span></div>';
+  });
+  return html+'</div>';
+}
+
+// ── MAIN SCAN ─────────────────────────────────────
+async function runScan(){
   isSurveying=true;
-  var btn=document.getElementById('surveyBtn');
-  document.getElementById('btnIcon').className='ti ti-loader spin';
-  document.getElementById('btnTxt').textContent='Testing...';
+  var btn=document.getElementById('scanBtn');
+  document.getElementById('scanIcon').className='ti ti-loader spin';
+  sv('scanTxt','Scanning…');
   btn.classList.add('running');
-  document.getElementById('recBadge').textContent='● TESTING';
-  setP(5);
+  sv('recBadge','● SCANNING');
+  document.getElementById('recSection').style.display='none';
+  document.getElementById('opSection').style.display='none';
+  document.getElementById('speedSection').style.display='none';
+  document.getElementById('iotSection').style.display='none';
 
-  // GPS snap
+  // Phase 1: GPS + country
+  setP(10);
   var gps=currentGPS;
   if(!gps){for(var w=0;w<10;w++){await sleep(300);if(currentGPS){gps=currentGPS;break;}}}
-  setP(15);
+  var cc='MY';
+  if(gps){cc=await detectCountry(gps.coords.latitude,gps.coords.longitude);}
+  else{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';Object.keys(TZ_MAP).forEach(function(k){if(tz.indexOf(k)>=0)cc=TZ_MAP[k];});}
+  detectedCC=cc;
+  setP(25);
 
-  // All tests in parallel for maximum speed
-  updateConn();
-  var [pingRes, dlMbps, ulMbps, iotResults] = await Promise.all([
+  // Phase 2+3+4: All parallel
+  var connInfo=getConnInfo();
+  var iotEndpoints=[
+    {name:'1NCE API',      url:'https://api.1nce.com',                      icon:'sim-card',  col:'#AFA9EC',type:'IoT SIM'},
+    {name:'Telnyx API',    url:'https://api.telnyx.com',                    icon:'sim-card',  col:'#7EC8E3',type:'IoT SIM'},
+    {name:'Azure IoT Hub', url:'https://global.azure-devices-provisioning.net',icon:'brand-azure',col:'#0078D4',type:'Cloud IoT'},
+    {name:'AWS IoT Core',  url:'https://data.iot.us-east-1.amazonaws.com',  icon:'brand-aws', col:'#FF9900',type:'Cloud IoT'},
+    {name:'MQTT HiveMQ',   url:'https://broker.hivemq.com',                 icon:'antenna',   col:'#00C864',type:'MQTT'},
+    {name:'Cloudflare',    url:'https://www.cloudflare.com/cdn-cgi/trace',  icon:'cloud',     col:'#F48120',type:'CDN'},
+  ];
+  var [pingRes,dlMbps,ulMbps,iotRaw]=await Promise.all([
     measurePing(),
-    measureDownload(),
-    measureUpload(),
-    checkIoTEndpoints()
+    measureDL(),
+    measureUL(),
+    Promise.all(iotEndpoints.map(async function(ep){var r=await checkEndpoint(ep.url);return Object.assign({},ep,r);}))
   ]);
-  setP(90);
+  setP(85);
 
-  // Update UI
-  s('pingVal', pingRes.ping); s('jitterVal', pingRes.jitter);
-  s('pingQual', pingRes.ping<50?'Excellent':pingRes.ping<100?'Good':pingRes.ping<200?'Fair':'High');
-  s('jitterQual', pingRes.jitter<20?'Stable':pingRes.jitter<50?'Moderate':'Unstable');
-  s('dlVal', dlMbps!==null?dlMbps:'--');
-  s('dlQual', dlMbps!==null?(dlMbps>=10?'Excellent':dlMbps>=2?'Good':dlMbps>=0.5?'Fair':'Slow'):'Failed');
-  s('ulVal', ulMbps!==null?ulMbps:'--');
-  s('ulQual', ulMbps!==null?(ulMbps>=5?'Excellent':ulMbps>=1?'Good':ulMbps>=0.3?'Fair':'Slow'):'Failed');
+  // Update speed UI
+  sv('dlV',dlMbps!==null?dlMbps:'--');sv('dlQ',dlMbps!==null?(dlMbps>=10?'Excellent':dlMbps>=2?'Good':dlMbps>=0.5?'Fair':'Slow'):'Failed');
+  sv('ulV',ulMbps!==null?ulMbps:'--');sv('ulQ',ulMbps!==null?(ulMbps>=5?'Excellent':ulMbps>=1?'Good':ulMbps>=0.3?'Fair':'Slow'):'Failed');
+  sv('pgV',pingRes.ping);sv('pgQ',pingRes.ping<50?'Excellent':pingRes.ping<100?'Good':pingRes.ping<200?'Fair':'High');
+  sv('jtV',pingRes.jitter);sv('jtQ',pingRes.jitter<20?'Stable':pingRes.jitter<50?'Moderate':'Unstable');
 
-  // Save point
+  // Show all sections
+  sh('recSection',renderRecommendation(cc,iotRaw));
+  document.getElementById('recSection').style.display='block';
+  sh('opList',renderOperators(cc,connInfo));
+  document.getElementById('opSection').style.display='block';
+  document.getElementById('speedSection').style.display='block';
+  sh('iotList',renderIoT(iotRaw));
+  document.getElementById('iotSection').style.display='block';
+
+  // Save to log
+  var ops=OPERATORS[cc]||[];
+  var nbiotOps=ops.filter(function(o){return o.nbiot;}).map(function(o){return o.name;}).join('; ');
+  var simAvail=[];
+  Object.keys(IOT_SIMS).forEach(function(sid){var sim=IOT_SIMS[sid];var partners=sim.partners[cc]||[];if(partners.length)simAvail.push(sim.name);});
   var nc=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
-  var pt={
-    id:surveyLog.length+1, ts:new Date().toISOString(),
-    tsLocal:new Date().toLocaleString(),
-    lat:gps?gps.coords.latitude:null, lng:gps?gps.coords.longitude:null,
-    accuracy:gps?Math.round(gps.coords.accuracy):null,
-    altitude:gps&&gps.coords.altitude!=null?Math.round(gps.coords.altitude):null,
-    dl:dlMbps, ul:ulMbps, ping:pingRes.ping, jitter:pingRes.jitter,
+  surveyLog.push({
+    id:surveyLog.length+1,ts:new Date().toISOString(),tsLocal:new Date().toLocaleString(),
+    cc:cc,country:CNAMES[cc]||cc,
+    lat:gps?gps.coords.latitude:null,lng:gps?gps.coords.longitude:null,accuracy:gps?Math.round(gps.coords.accuracy):null,
+    dl:dlMbps,ul:ulMbps,ping:pingRes.ping,jitter:pingRes.jitter,
     effType:nc?nc.effectiveType||'unknown':'unknown',
-    connType:nc?nc.type||nc.effectiveType||'unknown':'unknown',
-    rtt:nc?nc.rtt:null, dlReported:nc?nc.downlink:null,
-    online:navigator.onLine,
-    iotReachable:iotResults.filter(function(r){return r.ok;}).map(function(r){return r.name;}).join('; '),
-  };
-  surveyLog.push(pt);
-  setP(100);
+    nbiotOperators:nbiotOps,
+    iotSimsAvailable:simAvail.join('; '),
+    once_reachable:iotRaw.find(function(r){return r.name==='1NCE API';})?iotRaw.find(function(r){return r.name==='1NCE API';}).ok:false,
+    telnyx_reachable:iotRaw.find(function(r){return r.name==='Telnyx API';})?iotRaw.find(function(r){return r.name==='Telnyx API';}).ok:false,
+    iotEndpoints:iotRaw.map(function(r){return r.name+(r.ok?':✓':':x');}).join('; '),
+    notes:''
+  });
 
-  // Reset button
-  document.getElementById('recBadge').textContent='● LIVE';
-  document.getElementById('recBadge').style.cssText='';
-  btn.classList.remove('running');
-  document.getElementById('btnIcon').className='ti ti-player-record';
-  document.getElementById('btnTxt').textContent='New Point (#'+(surveyLog.length+1)+')';
+  setP(100);sv('recBadge','● LIVE');btn.classList.remove('running');
+  document.getElementById('scanIcon').className='ti ti-radar';
+  sv('scanTxt','Scan Again (#'+(surveyLog.length+1)+')');
   isSurveying=false;
   setTimeout(function(){setP(0);},2000);
 }
-
-function handleSurveyBtn(){if(!isSurveying)runSurvey();}
+function setP(p){var e=document.getElementById('progBar');if(e)e.style.width=p+'%';}
+function handleScan(){if(!isSurveying)runScan();}
 
 // ── LOG ───────────────────────────────────────────
 function renderLog(){
-  s('logCount',surveyLog.length+' point'+(surveyLog.length!==1?'s':''));
+  sv('logCnt',surveyLog.length+' survey'+(surveyLog.length!==1?'s':''));
   var el=document.getElementById('logList');
-  if(!surveyLog.length){el.innerHTML='<div class="card" style="text-align:center;padding:32px"><i class="ti ti-clipboard-list" style="font-size:28px;color:var(--t3);display:block;margin-bottom:8px"></i><div style="color:var(--t3);font-size:13px">No survey points yet</div></div>';return;}
-  var html='<div class="card" style="padding:0;overflow:hidden"><div style="overflow-x:auto"><table class="logtbl"><thead><tr><th>#</th><th>Time</th><th>DL</th><th>UL</th><th>Ping</th><th>Type</th><th>IoT OK</th><th>GPS</th></tr></thead><tbody>';
+  if(!surveyLog.length){el.innerHTML='<div class="card" style="text-align:center;padding:32px"><i class="ti ti-clipboard-list" style="font-size:28px;color:var(--t3);display:block;margin-bottom:8px"></i><div style="font-size:13px;color:var(--t3)">No surveys yet</div></div>';return;}
+  var html='<div class="card" style="padding:0;overflow:hidden"><div style="overflow-x:auto"><table class="logtbl"><thead><tr><th>#</th><th>Time</th><th>Country</th><th>DL</th><th>Ping</th><th>Type</th><th>NB-IoT</th><th>1NCE</th><th>Telnyx</th></tr></thead><tbody>';
   surveyLog.slice().reverse().forEach(function(p){
     var dc=p.dl>=10?'var(--gr)':p.dl>=2?'var(--am)':'var(--rd)';
-    var pc=p.ping<50?'var(--gr)':p.ping<150?'var(--am)':'var(--rd)';
-    var iotCount=p.iotReachable?p.iotReachable.split('; ').length:0;
-    html+='<tr><td>'+p.id+'</td>'
+    var nb=p.nbiotOperators?p.nbiotOperators.split(';').length:0;
+    html+='<tr>'
+      +'<td>'+p.id+'</td>'
       +'<td style="white-space:nowrap;font-size:10px">'+p.tsLocal.split(',')[1].trim()+'</td>'
+      +'<td>'+(FLAGS[p.cc]||'')+' '+p.country+'</td>'
       +'<td style="color:'+dc+';font-weight:600">'+(p.dl||'--')+'</td>'
-      +'<td>'+(p.ul||'--')+'</td>'
-      +'<td style="color:'+pc+'">'+(p.ping||'--')+'</td>'
+      +'<td>'+(p.ping||'--')+'</td>'
       +'<td><span class="bdg info">'+p.effType.toUpperCase()+'</span></td>'
-      +'<td><span class="bdg '+(iotCount>=4?'good':iotCount>=2?'warn':'bad')+'">'+iotCount+'/'+IOT_ENDPOINTS.length+'</span></td>'
-      +'<td style="font-size:10px;color:var(--t3)">'+(p.lat?p.lat.toFixed(4)+','+p.lng.toFixed(4):'--')+'</td>'
+      +'<td><span class="bdg '+(nb>0?'good':'bad')+'">'+(nb>0?nb+' ops':'None')+'</span></td>'
+      +'<td><span class="bdg '+(p.once_reachable?'good':'bad')+'">'+(p.once_reachable?'✓':'✗')+'</span></td>'
+      +'<td><span class="bdg '+(p.telnyx_reachable?'good':'bad')+'">'+(p.telnyx_reachable?'✓':'✗')+'</span></td>'
       +'</tr>';
   });
   html+='</tbody></table></div></div>';
-  if(surveyLog.length>1){
-    var dls=surveyLog.filter(function(p){return p.dl!==null;}).map(function(p){return p.dl;});
-    var pings=surveyLog.map(function(p){return p.ping;});
-    var avgDl=dls.length?Math.round(dls.reduce(function(a,b){return a+b;})/dls.length*10)/10:'--';
-    var avgPing=Math.round(pings.reduce(function(a,b){return a+b;})/pings.length);
-    html+='<div class="card-cy" style="margin-top:10px"><div class="ctit"><i class="ti ti-chart-bar"></i> Summary</div>'
-      +'<div class="strow"><span class="stlbl">Points</span><span class="stval">'+surveyLog.length+'</span></div>'
-      +(dls.length?'<div class="strow"><span class="stlbl">Avg Download</span><span class="stval" style="color:var(--cy)">'+avgDl+' Mbps</span></div>':'')
-      +(dls.length?'<div class="strow"><span class="stlbl">Best / Worst DL</span><span class="stval">'+Math.max.apply(null,dls)+' / '+Math.min.apply(null,dls)+' Mbps</span></div>':'')
-      +'<div class="strow"><span class="stlbl">Avg Ping</span><span class="stval">'+avgPing+' ms</span></div>'
-      +'</div>';
-  }
   el.innerHTML=html;
 }
 
 // ── MAP ───────────────────────────────────────────
 function renderMap(){
   var pts=surveyLog.filter(function(p){return p.lat&&p.lng;});
-  if(!pts.length){document.getElementById('mapContainer').innerHTML='<i class="ti ti-map-pin-off" style="font-size:28px;color:var(--t3)"></i><span style="font-size:12px;color:var(--t3)">No GPS data yet</span>';return;}
+  if(!pts.length){document.getElementById('mapContainer').innerHTML='<i class="ti ti-map-pin-off" style="font-size:28px;color:var(--t3)"></i><span style="font-size:12px;color:var(--t3)">No GPS data</span>';return;}
   if(!mapLoaded){
     document.getElementById('mapContainer').innerHTML='<div id="leafletMap" style="width:100%;height:420px"></div>';
     var css=document.createElement('link');css.rel='stylesheet';css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';document.head.appendChild(css);
-    var scr=document.createElement('script');scr.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-    scr.onload=function(){initMap(pts);};document.head.appendChild(scr);mapLoaded=true;
+    var scr=document.createElement('script');scr.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';scr.onload=function(){initMap(pts);};document.head.appendChild(scr);mapLoaded=true;
   }else if(leafletMap){updateMarkers(pts);}
 }
 function initMap(pts){
@@ -516,11 +552,15 @@ function initMap(pts){
 function updateMarkers(pts){
   markers.forEach(function(m){leafletMap.removeLayer(m);});markers=[];
   pts.forEach(function(p){
-    var col=p.dl>=10?'#00C864':p.dl>=2?'#EF9F27':'#E24B4A';
-    var icon=L.divIcon({html:'<div style="width:14px;height:14px;border-radius:50%;background:'+col+';border:2.5px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.4)"></div>',iconSize:[14,14],iconAnchor:[7,7],className:''});
-    var m=L.marker([p.lat,p.lng],{icon:icon})
-      .bindPopup('<b>#'+p.id+'</b> '+p.tsLocal+'<br>DL: '+(p.dl||'--')+' Mbps &nbsp; Ping: '+p.ping+' ms<br>Type: '+p.effType.toUpperCase()+'<br>IoT: '+p.iotReachable)
-      .addTo(leafletMap);
+    var nb=p.nbiotOperators&&p.nbiotOperators.length>0;
+    var col=nb&&p.once_reachable?'#00C864':nb?'#EF9F27':'#E24B4A';
+    var icon=L.divIcon({html:'<div style="width:16px;height:16px;border-radius:50%;background:'+col+';border:2.5px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.4)"></div>',iconSize:[16,16],iconAnchor:[8,8],className:''});
+    var popup='<b>#'+p.id+' '+p.country+'</b><br>'+p.tsLocal
+      +'<br>DL: '+(p.dl||'--')+' Mbps &nbsp; Ping: '+p.ping+' ms'
+      +'<br>NB-IoT: '+(p.nbiotOperators||'None')
+      +'<br>1NCE: '+(p.once_reachable?'✓ Reachable':'✗ Not reachable')
+      +'<br>Telnyx: '+(p.telnyx_reachable?'✓ Reachable':'✗ Not reachable');
+    var m=L.marker([p.lat,p.lng],{icon:icon}).bindPopup(popup).addTo(leafletMap);
     markers.push(m);
   });
   if(pts.length>1)leafletMap.fitBounds(L.latLngBounds(pts.map(function(p){return[p.lat,p.lng];}))),{padding:[20,20]};
@@ -529,22 +569,20 @@ function updateMarkers(pts){
 // ── EXPORT ────────────────────────────────────────
 function exportCSV(){
   if(!surveyLog.length){alert('No data.');return;}
-  var k=['id','tsLocal','lat','lng','accuracy','altitude','dl','ul','ping','jitter','effType','connType','rtt','dlReported','iotReachable'];
+  var k=['id','tsLocal','cc','country','lat','lng','accuracy','dl','ul','ping','jitter','effType','nbiotOperators','iotSimsAvailable','once_reachable','telnyx_reachable','iotEndpoints'];
   var rows=[k.join(',')].concat(surveyLog.map(function(p){return k.map(function(f){var v=p[f];if(v==null)return'';if(typeof v==='string'&&v.indexOf(',')>=0)return'"'+v+'"';return v;}).join(',');}));
-  dl('CTS_Survey_'+new Date().toISOString().slice(0,10)+'.csv',rows.join('\n'),'text/csv');
+  dlFile('CTS_IoT_Survey_'+new Date().toISOString().slice(0,10)+'.csv',rows.join('\n'),'text/csv');
 }
 function exportJSON(){
   if(!surveyLog.length){alert('No data.');return;}
-  dl('CTS_Survey_'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify({survey:surveyLog,exported:new Date().toISOString(),app:'CTS Field Survey v2.0'},null,2),'application/json');
+  dlFile('CTS_IoT_Survey_'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify({survey:surveyLog,exported:new Date().toISOString(),tool:'CTS IoT Site Survey v1.0'},null,2),'application/json');
 }
-function dl(name,content,type){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type:type}));a.download=name;a.click();}
-function clearLog(){if(surveyLog.length&&confirm('Clear '+surveyLog.length+' points?')){surveyLog=[];renderLog();if(leafletMap){markers.forEach(function(m){leafletMap.removeLayer(m);});markers=[];}};}
+function dlFile(name,content,type){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type:type}));a.download=name;a.click();}
+function clearLog(){if(surveyLog.length&&confirm('Clear all '+surveyLog.length+' surveys?')){surveyLog=[];renderLog();if(leafletMap){markers.forEach(function(m){leafletMap.removeLayer(m);});markers=[];}}}
 
 // ── INIT ─────────────────────────────────────────
+window.addEventListener('scroll',function(){var b=document.getElementById('bttBtn');if(b)b.style.display=window.scrollY>200?'flex':'none';});
 startGPS();
-updateConn();
-window.addEventListener('online', updateConn);
-window.addEventListener('offline', updateConn);
 </script>
 </body>
 </html>
